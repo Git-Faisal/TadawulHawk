@@ -1,0 +1,2 @@
+symbol,company_name,exchange,data_date,last_close_price,price_1m_ago,price_3m_ago,price_6m_ago,price_9m_ago,price_12m_ago,week_52_high,week_52_low,year_3_high,year_3_low,year_5_high,year_5_low,created_at,updated_at
+2222.SR,Saudi Arabian Oil Company,Tadawul,2025-09-30,24.620,23.600,24.442,25.616,26.975,25.674,27.889,23.040,32.092,23.040,34.089,22.766,2025-09-30 20:37:29.568083+03:00,2025-09-30 20:38:22.483382+03:00

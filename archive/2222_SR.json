@@ -1,0 +1,175 @@
+{
+  "stock_info": {
+    "symbol": "2222.SR",
+    "company_name": "Saudi Arabian Oil Company",
+    "exchange": "Tadawul",
+    "sector": "Energy",
+    "industry": "Oil & Gas Integrated",
+    "currency": "SAR",
+    "listing_date": null,
+    "created_at": "2025-09-30T20:37:29.568083+03:00",
+    "updated_at": "2025-09-30T20:37:29.568083+03:00"
+  },
+  "price_history": [
+    {
+      "data_date": "2025-09-30",
+      "last_close_price": 24.62,
+      "price_1m_ago": 23.6,
+      "price_3m_ago": 24.442,
+      "price_6m_ago": 25.616,
+      "price_9m_ago": 26.975,
+      "price_12m_ago": 25.674,
+      "week_52_high": 27.889,
+      "week_52_low": 23.04,
+      "year_3_high": 32.092,
+      "year_3_low": 23.04,
+      "year_5_high": 34.089,
+      "year_5_low": 22.766,
+      "created_at": "2025-09-30T20:37:29.568083+03:00",
+      "updated_at": "2025-09-30T20:38:22.483382+03:00"
+    }
+  ],
+  "quarterly_fundamentals": [
+    {
+      "fiscal_year": 2025,
+      "fiscal_quarter": 2,
+      "quarter_end_date": "2025-06-30",
+      "revenue": 407142000000.0,
+      "gross_profit": 190610000000.0,
+      "net_income": 85632000000.0,
+      "operating_cash_flow": 103284000000.0,
+      "free_cash_flow": 57126000000.0,
+      "created_at": "2025-09-30T20:37:29.568083+03:00",
+      "updated_at": "2025-09-30T20:37:29.568083+03:00"
+    },
+    {
+      "fiscal_year": 2025,
+      "fiscal_quarter": 1,
+      "quarter_end_date": "2025-03-31",
+      "revenue": 429612000000.0,
+      "gross_profit": 213363000000.0,
+      "net_income": 95676000000.0,
+      "operating_cash_flow": 118908000000.0,
+      "free_cash_flow": 71849000000.0,
+      "created_at": "2025-09-30T20:37:29.568083+03:00",
+      "updated_at": "2025-09-30T20:37:29.568083+03:00"
+    },
+    {
+      "fiscal_year": 2024,
+      "fiscal_quarter": 4,
+      "quarter_end_date": "2024-12-31",
+      "revenue": 428591000000.0,
+      "gross_profit": 204764000000.0,
+      "net_income": 86756000000.0,
+      "operating_cash_flow": 134275000000.0,
+      "free_cash_flow": 81090000000.0,
+      "created_at": "2025-09-30T20:37:29.568083+03:00",
+      "updated_at": "2025-09-30T20:37:29.568083+03:00"
+    },
+    {
+      "fiscal_year": 2024,
+      "fiscal_quarter": 3,
+      "quarter_end_date": "2024-09-30",
+      "revenue": 464625000000.0,
+      "gross_profit": 214514000000.0,
+      "net_income": 97621000000.0,
+      "operating_cash_flow": 132058000000.0,
+      "free_cash_flow": 82465000000.0,
+      "created_at": "2025-09-30T20:37:29.568083+03:00",
+      "updated_at": "2025-09-30T20:37:29.568083+03:00"
+    },
+    {
+      "fiscal_year": 2024,
+      "fiscal_quarter": 2,
+      "quarter_end_date": "2024-06-30",
+      "revenue": 470611000000.0,
+      "gross_profit": 231044000000.0,
+      "net_income": 106158000000.0,
+      "operating_cash_flow": 116586000000.0,
+      "free_cash_flow": 71095000000.0,
+      "created_at": "2025-09-30T20:37:29.568083+03:00",
+      "updated_at": "2025-09-30T20:37:29.568083+03:00"
+    },
+    {
+      "fiscal_year": 2024,
+      "fiscal_quarter": 1,
+      "quarter_end_date": "2024-03-31",
+      "revenue": null,
+      "gross_profit": null,
+      "net_income": null,
+      "operating_cash_flow": null,
+      "free_cash_flow": null,
+      "created_at": "2025-09-30T20:37:29.568083+03:00",
+      "updated_at": "2025-09-30T20:37:29.568083+03:00"
+    },
+    {
+      "fiscal_year": 2023,
+      "fiscal_quarter": 4,
+      "quarter_end_date": "2023-12-31",
+      "revenue": null,
+      "gross_profit": null,
+      "net_income": null,
+      "operating_cash_flow": null,
+      "free_cash_flow": null,
+      "created_at": "2025-09-30T20:37:29.568083+03:00",
+      "updated_at": "2025-09-30T20:37:29.568083+03:00"
+    }
+  ],
+  "annual_fundamentals": [
+    {
+      "fiscal_year": 2024,
+      "year_end_date": "2024-12-31",
+      "revenue": 1801674000000.0,
+      "gross_profit": 878228000000.0,
+      "net_income": 393891000000.0,
+      "operating_cash_flow": 508888000000.0,
+      "free_cash_flow": 319998000000.0,
+      "created_at": "2025-09-30T20:37:29.568083+03:00",
+      "updated_at": "2025-09-30T20:37:29.568083+03:00"
+    },
+    {
+      "fiscal_year": 2023,
+      "year_end_date": "2023-12-31",
+      "revenue": 1856373000000.0,
+      "gross_profit": 959790000000.0,
+      "net_income": 452753000000.0,
+      "operating_cash_flow": 537814000000.0,
+      "free_cash_flow": 379506000000.0,
+      "created_at": "2025-09-30T20:37:29.568083+03:00",
+      "updated_at": "2025-09-30T20:37:29.568083+03:00"
+    },
+    {
+      "fiscal_year": 2022,
+      "year_end_date": "2022-12-31",
+      "revenue": 2266373000000.0,
+      "gross_profit": 1582153000000.0,
+      "net_income": 597215000000.0,
+      "operating_cash_flow": 698152000000.0,
+      "free_cash_flow": 556991000000.0,
+      "created_at": "2025-09-30T20:37:29.568083+03:00",
+      "updated_at": "2025-09-30T20:37:29.568083+03:00"
+    },
+    {
+      "fiscal_year": 2021,
+      "year_end_date": "2021-12-31",
+      "revenue": 1501758000000.0,
+      "gross_profit": 842572000000.0,
+      "net_income": 395203000000.0,
+      "operating_cash_flow": 522601000000.0,
+      "free_cash_flow": 402956000000.0,
+      "created_at": "2025-09-30T20:37:29.568083+03:00",
+      "updated_at": "2025-09-30T20:37:29.568083+03:00"
+    },
+    {
+      "fiscal_year": 2020,
+      "year_end_date": "2020-12-31",
+      "revenue": null,
+      "gross_profit": null,
+      "net_income": null,
+      "operating_cash_flow": null,
+      "free_cash_flow": null,
+      "created_at": "2025-09-30T20:37:29.568083+03:00",
+      "updated_at": "2025-09-30T20:37:29.568083+03:00"
+    }
+  ]
+}

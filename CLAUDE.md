@@ -721,18 +721,18 @@ python tadawul_collector.py --all-stocks --export both
 ## Collectors Module
 - [x] collectors/__init__.py
 - [x] collectors/symbol_provider.py (loads from file with pipe-delimited format)
-- [x] collectors/argaam_scraper.py (scrapes Argaam.com)
+- [x] collectors/argaam_scraper.py (scrapes Argaam.com for Tadawul and NOMU)
 - [x] collectors/tadawul_scraper.py (attempted, blocked by 403)
-- [ ] collectors/stock_collector.py
+- [x] collectors/stock_collector.py
 
 ## Validators Module
-- [ ] validators/__init__.py
-- [ ] validators/data_validator.py
+- [x] validators/__init__.py
+- [x] validators/data_validator.py
 
 ## Exporters Module
-- [ ] exporters/__init__.py
-- [ ] exporters/json_exporter.py
-- [ ] exporters/csv_exporter.py
+- [x] exporters/__init__.py
+- [x] exporters/json_exporter.py
+- [x] exporters/csv_exporter.py
 
 ## Utils Module
 - [x] utils/__init__.py
@@ -740,18 +740,25 @@ python tadawul_collector.py --all-stocks --export both
 - [x] utils/helpers.py
 
 ## Main Application
-- [ ] tadawul_collector.py
+- [x] tadawul_collector.py
+
+## Archive (Development Test Files)
+- [x] archive/README.md
+- [x] archive/test_*.py (all stage test files)
+- [x] archive/debug_*.py (investigation files)
+- [x] archive/migrate_database.py
 
 ---
 
 # CURRENT STATUS
 
-**Stage:** 5 Complete (Data Collection)
-**Next Action:** Commit Stage 5 to branch, merge to main, then begin Stage 6 (Database Integration)
-**Last Updated:** 2025-09-30 (Stage 5 Complete)
-**Git Status:** On branch stage-5-data-collection, ready to merge to main
+**Stage:** 9 Complete (Main Application) ✅
+**Next Action:** Stage 10 (Documentation) and Stage 11 (Final Testing with all 403 stocks)
+**Last Updated:** 2025-09-30 (Stage 9 Complete)
+**Git Status:** On branch main, all stages 1-9 merged
 **Stock Count:** 403 stocks (277 Tadawul + 126 NOMU)
-**Data Collection:** All methods working with rate limiting and retry logic
+**Application Status:** Fully functional CLI with test/resume/all-stocks modes
+**Test Results:** Successfully collected 3 stocks in 14 seconds with 100% success rate
 
 ---
 
@@ -802,6 +809,48 @@ python tadawul_collector.py --all-stocks --export both
 **Result:** Successfully scraped 277 stocks from all 23 tables
 **Location:** collectors/argaam_scraper.py, lines 92-154
 
+## Error 6: Timezone Comparison Issue (Stage 5)
+**Date:** 2025-09-30
+**Issue:** `Invalid comparison between dtype=datetime64[ns, Asia/Riyadh] and datetime`
+**Root Cause:** Comparing timezone-aware pandas timestamps with timezone-naive Python datetime objects
+**Fix:** Changed to use `pd.Timestamp.now(tz=hist.index.tz)` to match data timezone
+**Location:** collectors/stock_collector.py, fetch_historical_prices() and calculate_high_low()
+
+## Error 7: TimedeltaIndex .abs() Method (Stage 5)
+**Date:** 2025-09-30
+**Issue:** `'TimedeltaIndex' object has no attribute 'abs'`
+**Root Cause:** Calling `.abs()` directly on TimedeltaIndex doesn't work
+**Fix:** Changed to `time_diffs = abs(available_dates.index - target_date)`
+**Location:** collectors/stock_collector.py, fetch_historical_prices()
+
+## Error 8: Missing 'exchange' Column (Stage 6)
+**Date:** 2025-09-30
+**Issue:** `psycopg2.errors.UndefinedColumn: column stocks.exchange does not exist`
+**Root Cause:** ORM model updated with 'exchange' field but database tables not migrated
+**Fix:** Created migrate_database.py to drop and recreate all tables with new schema
+**Location:** database/db_manager.py
+
+## Error 9: Collection Log Check Constraint Violation (Stage 6)
+**Date:** 2025-09-30
+**Issue:** `check constraint "chk_collection_type" violated` - used 'complete' instead of valid type
+**Root Cause:** Constraint only allows 'price', 'quarterly', 'annual', 'metadata'
+**Fix:** Changed to use 'price' as collection_type
+**Location:** database/db_manager.py, save_collected_data()
+
+## Error 10: Decimal Not JSON Serializable (Stage 8)
+**Date:** 2025-09-30
+**Issue:** `Object of type Decimal is not JSON serializable`
+**Root Cause:** PostgreSQL numeric fields return Decimal objects which JSON can't serialize
+**Fix:** Added Decimal handling in _serialize_dates() method: `elif isinstance(obj, Decimal): return float(obj)`
+**Location:** exporters/json_exporter.py
+
+## Error 11: Wrong Column Names in CSV Export (Stage 8)
+**Date:** 2025-09-30
+**Issue:** `AttributeError: type object 'PriceHistory' has no attribute 'collected_at'`
+**Root Cause:** Used 'collected_at' field name but actual field is 'created_at'
+**Fix:** Changed all references from collected_at to created_at and updated_at
+**Location:** exporters/csv_exporter.py
+
 ---
 
 # TIME TRACKING
@@ -812,17 +861,24 @@ python tadawul_collector.py --all-stocks --export both
 | Stage 1-2 | 50 min | 40 min | ✅ |
 | Stage 3 | 45 min | 35 min | ✅ |
 | Stage 4 | 20 min | 45 min | ✅ |
-| Stage 5 | 90 min | - | 🔴 |
-| Stage 6 | 45 min | - | 🔴 |
-| Stage 7 | 30 min | - | 🔴 |
-| Stage 8 | 60 min | - | 🔴 |
-| Stage 9 | 45 min | - | 🔴 |
+| Stage 5 | 90 min | 75 min | ✅ |
+| Stage 6 | 45 min | 50 min | ✅ |
+| Stage 7 | 30 min | 60 min | ✅ |
+| Stage 8 | 60 min | 45 min | ✅ |
+| Stage 9 | 45 min | 40 min | ✅ |
 | Stage 10 | 45 min | - | 🔴 |
 | Stage 11 | 60 min | - | 🔴 |
-| **TOTAL** | **~6-7 hrs** | **180 min** | ⏳ In Progress |
+| **TOTAL** | **~6-7 hrs** | **~7.5 hrs** | ⏳ Stage 9 Complete |
+
+**Notes:**
+- Stage 5: Timezone handling and pandas datetime issues added time
+- Stage 6: Database migration and constraint fixes added time
+- Stage 7: Yahoo Finance data quality investigation (Jarir, Aramco) added significant time
+- Stage 8: Decimal serialization and column name fixes
+- Stage 9: Completed faster than estimated - clean implementation
 
 ---
 
 **END OF TRACKING FILE**
-**Last Updated: 2025-09-30 (Stage 3 Complete)**
-**Next: Commit Stage 3, merge to main, then begin Stage 4 (Stock Symbols)**
+**Last Updated: 2025-09-30 (Stage 9 Complete)**
+**Next: Stage 10 (Documentation) and Stage 11 (Final Testing with all 403 stocks)**
