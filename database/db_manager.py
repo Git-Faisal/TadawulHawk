@@ -783,6 +783,112 @@ class DatabaseManager:
             logger.error(f"Failed to save data for {symbol}: {e}", exc_info=True)
             return False
 
+    def export_stock_data(self, symbol: str) -> Optional[Dict[str, Any]]:
+        """
+        Export all data for a stock in dictionary format.
+
+        Args:
+            symbol: Stock symbol
+
+        Returns:
+            Dict with all stock data or None if not found
+        """
+        try:
+            with self.get_session() as session:
+                # Get stock
+                stock = session.query(Stock).filter(Stock.symbol == symbol).first()
+
+                if not stock:
+                    logger.warning(f"Stock {symbol} not found for export")
+                    return None
+
+                # Build export data
+                export_data = {
+                    'stock_info': {
+                        'symbol': stock.symbol,
+                        'company_name': stock.company_name,
+                        'exchange': stock.exchange,
+                        'sector': stock.sector,
+                        'industry': stock.industry,
+                        'currency': stock.currency,
+                        'listing_date': stock.listing_date,
+                        'created_at': stock.created_at,
+                        'updated_at': stock.updated_at
+                    },
+                    'price_history': [],
+                    'quarterly_fundamentals': [],
+                    'annual_fundamentals': []
+                }
+
+                # Get price history
+                prices = session.query(PriceHistory).filter(PriceHistory.stock_id == stock.id).all()
+                for price in prices:
+                    export_data['price_history'].append({
+                        'data_date': price.data_date,
+                        'last_close_price': price.last_close_price,
+                        'price_1m_ago': price.price_1m_ago,
+                        'price_3m_ago': price.price_3m_ago,
+                        'price_6m_ago': price.price_6m_ago,
+                        'price_9m_ago': price.price_9m_ago,
+                        'price_12m_ago': price.price_12m_ago,
+                        'week_52_high': price.week_52_high,
+                        'week_52_low': price.week_52_low,
+                        'year_3_high': price.year_3_high,
+                        'year_3_low': price.year_3_low,
+                        'year_5_high': price.year_5_high,
+                        'year_5_low': price.year_5_low,
+                        'created_at': price.created_at,
+                        'updated_at': price.updated_at
+                    })
+
+                # Get quarterly fundamentals
+                quarterlies = session.query(QuarterlyFundamental).filter(
+                    QuarterlyFundamental.stock_id == stock.id
+                ).order_by(QuarterlyFundamental.fiscal_year.desc(),
+                          QuarterlyFundamental.fiscal_quarter.desc()).all()
+
+                for q in quarterlies:
+                    export_data['quarterly_fundamentals'].append({
+                        'fiscal_year': q.fiscal_year,
+                        'fiscal_quarter': q.fiscal_quarter,
+                        'quarter_end_date': q.quarter_end_date,
+                        'revenue': q.revenue,
+                        'gross_profit': q.gross_profit,
+                        'net_income': q.net_income,
+                        'operating_cash_flow': q.operating_cash_flow,
+                        'free_cash_flow': q.free_cash_flow,
+                        'created_at': q.created_at,
+                        'updated_at': q.updated_at
+                    })
+
+                # Get annual fundamentals
+                annuals = session.query(AnnualFundamental).filter(
+                    AnnualFundamental.stock_id == stock.id
+                ).order_by(AnnualFundamental.fiscal_year.desc()).all()
+
+                for a in annuals:
+                    export_data['annual_fundamentals'].append({
+                        'fiscal_year': a.fiscal_year,
+                        'year_end_date': a.year_end_date,
+                        'revenue': a.revenue,
+                        'gross_profit': a.gross_profit,
+                        'net_income': a.net_income,
+                        'operating_cash_flow': a.operating_cash_flow,
+                        'free_cash_flow': a.free_cash_flow,
+                        'created_at': a.created_at,
+                        'updated_at': a.updated_at
+                    })
+
+                logger.info(f"Exported data for {symbol}: {len(export_data['price_history'])} price records, "
+                          f"{len(export_data['quarterly_fundamentals'])} quarterly, "
+                          f"{len(export_data['annual_fundamentals'])} annual")
+
+                return export_data
+
+        except Exception as e:
+            logger.error(f"Failed to export data for {symbol}: {e}", exc_info=True)
+            return None
+
     def test_connection(self) -> bool:
         """Test database connection."""
         try:
