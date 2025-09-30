@@ -536,17 +536,18 @@ time.sleep(0.5)
 
 ---
 
-## 🔴 STAGE 5: DATA COLLECTION (0/7 Complete)
+## ✅ STAGE 5: DATA COLLECTION (8/8 Complete)
 
-- [ ] collectors/stock_collector.py
-- [ ] Method: fetch_price_data()
-- [ ] Method: fetch_historical_prices() [30 days lookback]
-- [ ] Method: calculate_high_low() [52w, 3y, 5y]
-- [ ] Method: fetch_quarterly_fundamentals()
-- [ ] Method: fetch_annual_fundamentals()
-- [ ] Implement rate limiting (0.5s + exponential backoff)
+- [x] collectors/stock_collector.py
+- [x] Method: fetch_stock_info() (company name, sector, industry)
+- [x] Method: fetch_price_data() (current price)
+- [x] Method: fetch_historical_prices() [1m, 3m, 6m, 9m, 12m ago - 30 days lookback]
+- [x] Method: calculate_high_low() [52w, 3y, 5y high/low]
+- [x] Method: fetch_quarterly_fundamentals() (last 5 years)
+- [x] Method: fetch_annual_fundamentals() (last 5 years)
+- [x] Implement rate limiting (0.5s delay + exponential backoff: 1s, 2s, 4s)
 
-**Test:** Successfully collect all data for 2222.SR
+**Test:** Successfully collected all data for 3 test stocks (2222.SR, 1120.SR, 7010.SR) ✅
 
 ---
 
@@ -672,11 +673,12 @@ time.sleep(0.5)
 
 # CURRENT STATUS
 
-**Stage:** 4 Complete (Stock Symbols - Tadawul + NOMU)
-**Next Action:** Commit Stage 4 to branch, merge to main, then begin Stage 5 (Data Collection)
-**Last Updated:** 2025-09-30 (Stage 4 Complete)
-**Git Status:** On branch stage-4-stock-symbols, ready to merge to main
-**Stock Count:** 403 stocks successfully scraped and validated (277 Tadawul + 126 NOMU)
+**Stage:** 5 Complete (Data Collection)
+**Next Action:** Commit Stage 5 to branch, merge to main, then begin Stage 6 (Database Integration)
+**Last Updated:** 2025-09-30 (Stage 5 Complete)
+**Git Status:** On branch stage-5-data-collection, ready to merge to main
+**Stock Count:** 403 stocks (277 Tadawul + 126 NOMU)
+**Data Collection:** All methods working with rate limiting and retry logic
 
 ---
 
