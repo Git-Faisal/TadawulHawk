@@ -269,7 +269,7 @@ class DatabaseManager:
 
     def upsert_stock(self, symbol: str, company_name: Optional[str] = None,
                      sector: Optional[str] = None, industry: Optional[str] = None,
-                     listing_date: Optional[datetime] = None) -> Stock:
+                     exchange: Optional[str] = None, listing_date: Optional[datetime] = None) -> Stock:
         """
         Insert or update stock metadata.
 
@@ -278,7 +278,8 @@ class DatabaseManager:
             company_name: Company name
             sector: Sector classification
             industry: Industry classification
-            listing_date: Date of listing on Tadawul
+            exchange: Exchange market ('Tadawul' or 'NOMU')
+            listing_date: Date of listing
 
         Returns:
             Stock object
@@ -294,6 +295,8 @@ class DatabaseManager:
                     stock.sector = sector
                 if industry:
                     stock.industry = industry
+                if exchange:
+                    stock.exchange = exchange
                 if listing_date:
                     stock.listing_date = listing_date
                 logger.debug(f"Updated stock: {symbol}")
@@ -304,6 +307,7 @@ class DatabaseManager:
                     company_name=company_name,
                     sector=sector,
                     industry=industry,
+                    exchange=exchange or 'Tadawul',
                     listing_date=listing_date
                 )
                 session.add(stock)
@@ -585,6 +589,199 @@ class DatabaseManager:
                 export_data.append(stock_data)
 
             return export_data
+
+    # ============================================
+    # Bulk Save Operations
+    # ============================================
+
+    def save_collected_data(self, symbol: str, collected_data: Dict[str, Any], exchange: str = 'Tadawul') -> bool:
+        """
+        Save all data collected by StockCollector in one transaction.
+
+        Args:
+            symbol: Stock symbol
+            collected_data: Data from StockCollector.collect_all_data()
+            exchange: Exchange market ('Tadawul' or 'NOMU')
+
+        Returns:
+            True if successful, False otherwise
+        """
+        try:
+            with self.get_session() as session:
+                # 1. Upsert stock metadata
+                stock_info = collected_data.get('stock_info', {})
+                stock = session.query(Stock).filter(Stock.symbol == symbol).first()
+
+                if stock:
+                    # Update existing
+                    if stock_info.get('company_name'):
+                        stock.company_name = stock_info['company_name']
+                    if stock_info.get('sector'):
+                        stock.sector = stock_info['sector']
+                    if stock_info.get('industry'):
+                        stock.industry = stock_info['industry']
+                    if exchange:
+                        stock.exchange = exchange
+                    logger.debug(f"Updated stock metadata: {symbol}")
+                else:
+                    # Insert new
+                    stock = Stock(
+                        symbol=symbol,
+                        company_name=stock_info.get('company_name'),
+                        sector=stock_info.get('sector'),
+                        industry=stock_info.get('industry'),
+                        exchange=exchange,
+                        currency=stock_info.get('currency', 'SAR')
+                    )
+                    session.add(stock)
+                    logger.info(f"Inserted new stock: {symbol}")
+
+                session.flush()
+                stock_id = stock.id
+
+                # 2. Upsert price data
+                current_price = collected_data.get('current_price', {})
+                historical_prices = collected_data.get('historical_prices', {})
+                high_low = collected_data.get('high_low', {})
+
+                if current_price.get('data_date'):
+                    from datetime import date
+                    data_date = current_price['data_date']
+                    if isinstance(data_date, str):
+                        data_date = date.fromisoformat(data_date)
+
+                    price_rec = session.query(PriceHistory).filter(
+                        PriceHistory.stock_id == stock_id,
+                        PriceHistory.data_date == data_date
+                    ).first()
+
+                    if price_rec:
+                        # Update
+                        price_rec.last_close_price = current_price.get('last_close_price')
+                        price_rec.price_1m_ago = historical_prices.get(1)
+                        price_rec.price_3m_ago = historical_prices.get(3)
+                        price_rec.price_6m_ago = historical_prices.get(6)
+                        price_rec.price_9m_ago = historical_prices.get(9)
+                        price_rec.price_12m_ago = historical_prices.get(12)
+                        price_rec.week_52_high = high_low.get('week_52_high')
+                        price_rec.week_52_low = high_low.get('week_52_low')
+                        price_rec.year_3_high = high_low.get('year_3_high')
+                        price_rec.year_3_low = high_low.get('year_3_low')
+                        price_rec.year_5_high = high_low.get('year_5_high')
+                        price_rec.year_5_low = high_low.get('year_5_low')
+                        logger.debug(f"Updated price history for {symbol}")
+                    else:
+                        # Insert
+                        price_rec = PriceHistory(
+                            stock_id=stock_id,
+                            data_date=data_date,
+                            last_close_price=current_price.get('last_close_price'),
+                            price_1m_ago=historical_prices.get(1),
+                            price_3m_ago=historical_prices.get(3),
+                            price_6m_ago=historical_prices.get(6),
+                            price_9m_ago=historical_prices.get(9),
+                            price_12m_ago=historical_prices.get(12),
+                            week_52_high=high_low.get('week_52_high'),
+                            week_52_low=high_low.get('week_52_low'),
+                            year_3_high=high_low.get('year_3_high'),
+                            year_3_low=high_low.get('year_3_low'),
+                            year_5_high=high_low.get('year_5_high'),
+                            year_5_low=high_low.get('year_5_low')
+                        )
+                        session.add(price_rec)
+                        logger.info(f"Inserted price history for {symbol}")
+
+                # 3. Upsert quarterly fundamentals
+                quarterly_data = collected_data.get('quarterly_fundamentals', [])
+                for quarter in quarterly_data:
+                    from datetime import date
+                    quarter_end = quarter['quarter_end_date']
+                    if isinstance(quarter_end, str):
+                        quarter_end = date.fromisoformat(quarter_end)
+
+                    qf = session.query(QuarterlyFundamental).filter(
+                        QuarterlyFundamental.stock_id == stock_id,
+                        QuarterlyFundamental.fiscal_year == quarter['fiscal_year'],
+                        QuarterlyFundamental.fiscal_quarter == quarter['fiscal_quarter']
+                    ).first()
+
+                    if qf:
+                        # Update
+                        qf.quarter_end_date = quarter_end
+                        qf.revenue = quarter.get('revenue')
+                        qf.gross_profit = quarter.get('gross_profit')
+                        qf.net_income = quarter.get('net_income')
+                        qf.operating_cash_flow = quarter.get('operating_cash_flow')
+                        qf.free_cash_flow = quarter.get('free_cash_flow')
+                    else:
+                        # Insert
+                        qf = QuarterlyFundamental(
+                            stock_id=stock_id,
+                            fiscal_year=quarter['fiscal_year'],
+                            fiscal_quarter=quarter['fiscal_quarter'],
+                            quarter_end_date=quarter_end,
+                            revenue=quarter.get('revenue'),
+                            gross_profit=quarter.get('gross_profit'),
+                            net_income=quarter.get('net_income'),
+                            operating_cash_flow=quarter.get('operating_cash_flow'),
+                            free_cash_flow=quarter.get('free_cash_flow')
+                        )
+                        session.add(qf)
+
+                logger.info(f"Saved {len(quarterly_data)} quarterly records for {symbol}")
+
+                # 4. Upsert annual fundamentals
+                annual_data = collected_data.get('annual_fundamentals', [])
+                for year in annual_data:
+                    from datetime import date
+                    year_end = year['year_end_date']
+                    if isinstance(year_end, str):
+                        year_end = date.fromisoformat(year_end)
+
+                    af = session.query(AnnualFundamental).filter(
+                        AnnualFundamental.stock_id == stock_id,
+                        AnnualFundamental.fiscal_year == year['fiscal_year']
+                    ).first()
+
+                    if af:
+                        # Update
+                        af.year_end_date = year_end
+                        af.revenue = year.get('revenue')
+                        af.gross_profit = year.get('gross_profit')
+                        af.net_income = year.get('net_income')
+                        af.operating_cash_flow = year.get('operating_cash_flow')
+                        af.free_cash_flow = year.get('free_cash_flow')
+                    else:
+                        # Insert
+                        af = AnnualFundamental(
+                            stock_id=stock_id,
+                            fiscal_year=year['fiscal_year'],
+                            year_end_date=year_end,
+                            revenue=year.get('revenue'),
+                            gross_profit=year.get('gross_profit'),
+                            net_income=year.get('net_income'),
+                            operating_cash_flow=year.get('operating_cash_flow'),
+                            free_cash_flow=year.get('free_cash_flow')
+                        )
+                        session.add(af)
+
+                logger.info(f"Saved {len(annual_data)} annual records for {symbol}")
+
+                # 5. Log collection success (using 'price' as type since it covers all data)
+                log_entry = DataCollectionLog(
+                    stock_id=stock_id,
+                    collection_type='price',
+                    status='success',
+                    records_collected=1 + len(quarterly_data) + len(annual_data)
+                )
+                session.add(log_entry)
+
+                logger.info(f"Successfully saved all data for {symbol}")
+                return True
+
+        except Exception as e:
+            logger.error(f"Failed to save data for {symbol}: {e}", exc_info=True)
+            return False
 
     def test_connection(self) -> bool:
         """Test database connection."""
