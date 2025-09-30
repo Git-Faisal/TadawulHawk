@@ -20,13 +20,15 @@ CREATE TABLE stocks (
     company_name VARCHAR(255),
     sector VARCHAR(100),
     industry VARCHAR(100),
+    exchange VARCHAR(50) DEFAULT 'Tadawul',
     listing_date DATE,
     currency VARCHAR(10) DEFAULT 'SAR',
     is_active BOOLEAN DEFAULT TRUE,
     created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
 
-    CONSTRAINT chk_symbol_format CHECK (symbol LIKE '%.SR')
+    CONSTRAINT chk_symbol_format CHECK (symbol LIKE '%.SR'),
+    CONSTRAINT chk_exchange CHECK (exchange IN ('Tadawul', 'NOMU'))
 );
 
 -- Indexes for stocks table
@@ -36,7 +38,8 @@ CREATE INDEX idx_stocks_is_active ON stocks(is_active);
 
 COMMENT ON TABLE stocks IS 'Stock metadata for Tadawul-listed companies';
 COMMENT ON COLUMN stocks.symbol IS 'Stock symbol with .SR suffix (e.g., 2222.SR)';
-COMMENT ON COLUMN stocks.listing_date IS 'Date when stock was first listed on Tadawul';
+COMMENT ON COLUMN stocks.exchange IS 'Exchange market: Tadawul (main) or NOMU (parallel)';
+COMMENT ON COLUMN stocks.listing_date IS 'Date when stock was first listed';
 
 -- ============================================
 -- Table 2: price_history (Price Data)

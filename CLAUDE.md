@@ -1,10 +1,10 @@
 # TADAWUL HAWK - MASTER TRACKING FILE
 
-**Project:** Tadawul Hawk - Comprehensive Saudi Tadawul Exchange Stock Data Collector
+**Project:** Tadawul Hawk - Comprehensive Saudi Stock Market Data Collector (Tadawul + NOMU)
 **Version:** v0.0
 **Start Date:** 2025-09-30
-**Last Updated:** 2025-09-30 (Stage 3 Complete - Database Foundation)
-**Overall Status:** ✅ STAGE 3 COMPLETE - READY TO MERGE TO MAIN
+**Last Updated:** 2025-09-30 (Stage 4 Complete - Stock Symbols)
+**Overall Status:** ✅ STAGE 4 COMPLETE - READY TO MERGE TO MAIN
 
 ---
 
@@ -26,10 +26,11 @@
 
 ## ⚠️ IMPORTANT NOTES
 
-1. **Stock Count:** Number of Tadawul stocks is UNCERTAIN (~387 estimated, but not confirmed)
-   - **ACTION REQUIRED:** Must implement method to get ALL stocks dynamically
-   - Do NOT hardcode stock count
-   - Verify complete coverage of entire Tadawul exchange
+1. **Stock Count:** ✅ CONFIRMED - 403 stocks total (277 Tadawul + 126 NOMU)
+   - Both main market (Tadawul) and parallel market (NOMU) are included
+   - Scraped dynamically from Argaam.com (updated source)
+   - Database 'exchange' field tracks market classification
+   - **Export Strategy:** Separate output files for Tadawul vs NOMU
 
 2. **Connection Issues Expected:** This file tracks all progress to enable resuming after disconnections
 
@@ -520,13 +521,18 @@ time.sleep(0.5)
 
 ---
 
-## 🔴 STAGE 4: STOCK SYMBOLS (0/3 Complete)
+## ✅ STAGE 4: STOCK SYMBOLS (7/7 Complete)
 
-- [ ] collectors/__init__.py
-- [ ] collectors/symbol_provider.py
-- [ ] **VERIFY:** Method to get ALL Tadawul stocks dynamically
+- [x] collectors/__init__.py
+- [x] collectors/symbol_provider.py (loads from file, supports pipe-delimited format)
+- [x] collectors/argaam_scraper.py (supports both Tadawul and NOMU markets)
+- [x] collectors/tadawul_scraper.py (attempted Saudi Exchange - blocked by 403)
+- [x] data/tadawul_symbols.txt (403 stocks: 277 Tadawul + 126 NOMU)
+- [x] Updated database schema with 'exchange' field (Tadawul/NOMU)
+- [x] Updated ORM model with 'exchange' field and constraint
 
-**Test:** Complete list of stocks retrieved (verify count)
+**Test:** Complete list of 403 stocks retrieved and validated (100% success rate) ✅
+**Breakdown:** Tadawul: 277 stocks | NOMU: 126 stocks
 
 ---
 
@@ -639,8 +645,10 @@ time.sleep(0.5)
 - [x] database/init_db.py
 
 ## Collectors Module
-- [ ] collectors/__init__.py
-- [ ] collectors/symbol_provider.py (DYNAMIC fetching)
+- [x] collectors/__init__.py
+- [x] collectors/symbol_provider.py (loads from file with pipe-delimited format)
+- [x] collectors/argaam_scraper.py (scrapes Argaam.com)
+- [x] collectors/tadawul_scraper.py (attempted, blocked by 403)
 - [ ] collectors/stock_collector.py
 
 ## Validators Module
@@ -664,26 +672,60 @@ time.sleep(0.5)
 
 # CURRENT STATUS
 
-**Stage:** 3 Complete (Database Foundation)
-**Next Action:** Commit Stage 3 to branch, merge to main, then begin Stage 4 (Stock Symbols)
-**Last Updated:** 2025-09-30 (Stage 3 Complete)
-**Git Status:** On branch stage-3-database, ready to merge to main
+**Stage:** 4 Complete (Stock Symbols - Tadawul + NOMU)
+**Next Action:** Commit Stage 4 to branch, merge to main, then begin Stage 5 (Data Collection)
+**Last Updated:** 2025-09-30 (Stage 4 Complete)
+**Git Status:** On branch stage-4-stock-symbols, ready to merge to main
+**Stock Count:** 403 stocks successfully scraped and validated (277 Tadawul + 126 NOMU)
 
 ---
 
 # CRITICAL REMINDERS
 
-1. ⚠️ **STOCK COUNT UNCERTAIN** - Must fetch ALL stocks dynamically, do NOT assume 387
-2. ⚠️ **UPDATE THIS FILE** after every major step
-3. ⚠️ **TEST WITH 3 STOCKS** before running on all stocks
-4. ⚠️ **HISTORICAL PRICES** = 30 calendar days, rounded to nearest trading day
-5. ⚠️ **RESUME CAPABILITY** is essential due to connection issues
+1. ✅ **STOCK COUNT CONFIRMED** - 403 stocks total (277 Tadawul + 126 NOMU)
+2. ⚠️ **SEPARATE EXPORTS** - Final exports must separate Tadawul vs NOMU data
+3. ⚠️ **UPDATE THIS FILE** after every major step
+4. ⚠️ **TEST WITH 3 STOCKS** before running on all stocks
+5. ⚠️ **HISTORICAL PRICES** = 30 calendar days, rounded to nearest trading day
+6. ⚠️ **RESUME CAPABILITY** is essential due to connection issues
 
 ---
 
 # ERROR LOG
 
-**No errors yet. This section will track all issues encountered.**
+## Error 1: SQLAlchemy 2.0+ Syntax Issue (Stage 3)
+**Date:** 2025-09-30
+**Issue:** `session.execute("SELECT 1")` failed with error about text() wrapper
+**Fix:** Added `from sqlalchemy import text` and changed to `session.execute(text("SELECT 1"))`
+**Location:** database/db_manager.py, test_connection() method
+
+## Error 2: yfinance Version Incompatibility (Stage 4)
+**Date:** 2025-09-30
+**Issue:** Symbol validation returned 0/5 valid (0% success rate)
+**Root Cause:** User had older yfinance version without Tadawul support
+**Fix:** User upgraded via `pip install --upgrade yfinance` to version 0.2.40+
+**Action Taken:** Updated requirements.txt to require `yfinance>=0.2.40`
+
+## Error 3: Saudi Exchange Website Blocking (Stage 4)
+**Date:** 2025-09-30
+**Issue:** 403 Forbidden error when scraping https://www.saudiexchange.sa/.../issuer-directory
+**Root Cause:** Website uses anti-bot protection (likely Cloudflare)
+**Fix:** Switched to alternative source: Argaam.com (https://www.argaam.com/en/company/companies-prices/3)
+**Location:** collectors/tadawul_scraper.py (created but not used in production)
+
+## Error 4: Unicode Encoding in Windows Console (Stage 4)
+**Date:** 2025-09-30
+**Issue:** `UnicodeEncodeError` when printing checkmark characters (✓)
+**Fix:** Changed all `✓` to `[OK]` and `✗` to `X` in print statements
+**Location:** collectors/argaam_scraper.py
+
+## Error 5: Incomplete Symbol Scraping (Stage 4)
+**Date:** 2025-09-30
+**Issue:** Only scraped 6 symbols instead of all stocks from Argaam.com
+**Root Cause:** Row extraction logic was outside the table processing loop
+**Fix:** Moved entire row extraction logic inside the `for table_idx, target_table in enumerate(target_tables):` loop
+**Result:** Successfully scraped 277 stocks from all 23 tables
+**Location:** collectors/argaam_scraper.py, lines 92-154
 
 ---
 
@@ -694,7 +736,7 @@ time.sleep(0.5)
 | Planning | 60 min | 60 min | ✅ |
 | Stage 1-2 | 50 min | 40 min | ✅ |
 | Stage 3 | 45 min | 35 min | ✅ |
-| Stage 4 | 20 min | - | 🔴 |
+| Stage 4 | 20 min | 45 min | ✅ |
 | Stage 5 | 90 min | - | 🔴 |
 | Stage 6 | 45 min | - | 🔴 |
 | Stage 7 | 30 min | - | 🔴 |
@@ -702,7 +744,7 @@ time.sleep(0.5)
 | Stage 9 | 45 min | - | 🔴 |
 | Stage 10 | 45 min | - | 🔴 |
 | Stage 11 | 60 min | - | 🔴 |
-| **TOTAL** | **~6-7 hrs** | **100 min** | ⏳ In Progress |
+| **TOTAL** | **~6-7 hrs** | **180 min** | ⏳ In Progress |
 
 ---
 

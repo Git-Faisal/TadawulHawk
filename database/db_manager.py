@@ -34,6 +34,7 @@ class Stock(Base):
     company_name = Column(String(255))
     sector = Column(String(100))
     industry = Column(String(100))
+    exchange = Column(String(50), default='Tadawul')
     listing_date = Column(Date)
     currency = Column(String(10), default='SAR')
     is_active = Column(Boolean, default=True)
@@ -49,10 +50,11 @@ class Stock(Base):
     # Constraints
     __table_args__ = (
         CheckConstraint("symbol LIKE '%.SR'", name='chk_symbol_format'),
+        CheckConstraint("exchange IN ('Tadawul', 'NOMU')", name='chk_exchange'),
     )
 
     def __repr__(self):
-        return f"<Stock(symbol='{self.symbol}', company='{self.company_name}')>"
+        return f"<Stock(symbol='{self.symbol}', company='{self.company_name}', exchange='{self.exchange}')>"
 
 
 class PriceHistory(Base):
