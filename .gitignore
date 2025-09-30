@@ -1,0 +1,97 @@
+# Tadawul Stock Collector - Git Ignore File
+
+# ============================================
+# Environment & Configuration
+# ============================================
+.env
+*.env
+!.env.example
+
+# ============================================
+# Python
+# ============================================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# ============================================
+# Logs
+# ============================================
+logs/*.log
+logs/*.txt
+*.log
+
+# ============================================
+# Data & Exports
+# ============================================
+# Keep the directories but ignore contents
+exports/json/*.json
+exports/csv/*.csv
+data/*.csv
+data/*.json
+data/*.txt
+
+# But keep directory structure
+!exports/json/.gitkeep
+!exports/csv/.gitkeep
+!data/.gitkeep
+
+# ============================================
+# Database
+# ============================================
+*.db
+*.sqlite
+*.sqlite3
+
+# ============================================
+# OS Files
+# ============================================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ============================================
+# Temporary Files
+# ============================================
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
