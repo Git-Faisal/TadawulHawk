@@ -627,16 +627,44 @@ time.sleep(0.5)
 
 ---
 
-## 🔴 STAGE 9: MAIN APPLICATION (0/5 Complete)
+## ✅ STAGE 9: MAIN APPLICATION (8/8 Complete)
 
-- [ ] tadawul_collector.py (main script)
-- [ ] Implement CLI with argparse
-- [ ] Add --test flag (3 stocks)
-- [ ] Add --resume flag
-- [ ] Add --all-stocks flag
-- [ ] Add progress bars (tqdm)
+- [x] tadawul_collector.py (main script)
+- [x] TadawulHawk class with collection orchestration
+- [x] CLI with argparse (mutually exclusive modes)
+- [x] --test flag (3 stocks: Aramco, Al Rajhi, STC)
+- [x] --resume flag (skips already collected stocks)
+- [x] --all-stocks flag (collects all 403 stocks)
+- [x] Progress bars with tqdm (real-time updates)
+- [x] --export option (json, csv, both)
+- [x] Collection statistics and summary
+- [x] Graceful interrupt handling (Ctrl+C)
 
-**Test:** All CLI modes work correctly
+**Test:** --test mode successfully collected 3 stocks ✅
+
+**Features:**
+- Automatic symbol discovery using ArgaamScraper
+- Data validation before saving
+- Transaction-safe database saves
+- Progress tracking with ETA
+- Comprehensive error handling
+- Resume capability for interrupted collections
+- Optional export after collection
+
+**Usage Examples:**
+```bash
+# Test with 3 stocks
+python tadawul_collector.py --test
+
+# Resume interrupted collection
+python tadawul_collector.py --resume
+
+# Collect all 403 stocks
+python tadawul_collector.py --all-stocks
+
+# Collect with export
+python tadawul_collector.py --all-stocks --export both
+```
 
 ---
 
