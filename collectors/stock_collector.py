@@ -387,6 +387,47 @@ class StockCollector:
         result = self._retry_with_backoff(_fetch)
         return result or []
 
+    def fetch_valuation_data(self) -> Dict[str, Any]:
+        """
+        Fetch valuation data (market cap, debt, cash, book value) for analysis.
+
+        Returns:
+            Dict with valuation metrics
+        """
+        logger.info(f"Fetching valuation data for {self.symbol}")
+
+        def _fetch():
+            ticker = self._get_ticker()
+            info = ticker.info
+
+            # Get market cap
+            market_cap = info.get('marketCap')
+
+            # Get debt (try multiple field names)
+            total_debt = (info.get('totalDebt') or
+                         info.get('longTermDebt', 0) + info.get('shortLongTermDebt', 0))
+
+            # Get cash
+            total_cash = info.get('totalCash') or info.get('cash', 0)
+
+            # Get book value (try multiple approaches)
+            book_value = (info.get('bookValue') or
+                         info.get('totalStockholderEquity'))
+
+            return {
+                'market_cap': market_cap,
+                'total_debt': total_debt if total_debt else 0,
+                'total_cash': total_cash if total_cash else 0,
+                'book_value': book_value
+            }
+
+        result = self._retry_with_backoff(_fetch)
+        if result and result.get('market_cap'):
+            logger.info(f"Successfully fetched valuation data for {self.symbol}")
+        else:
+            logger.warning(f"Limited valuation data available for {self.symbol}")
+        return result or {'market_cap': None, 'total_debt': 0, 'total_cash': 0, 'book_value': None}
+
     def collect_all_data(self) -> Dict[str, Any]:
         """
         Collect all data for this stock (info, prices, fundamentals).
@@ -403,7 +444,8 @@ class StockCollector:
             'historical_prices': self.fetch_historical_prices(),
             'high_low': self.calculate_high_low(),
             'quarterly_fundamentals': self.fetch_quarterly_fundamentals(),
-            'annual_fundamentals': self.fetch_annual_fundamentals()
+            'annual_fundamentals': self.fetch_annual_fundamentals(),
+            'valuation_data': self.fetch_valuation_data()
         }
 
         logger.info(f"Data collection complete for {self.symbol}")

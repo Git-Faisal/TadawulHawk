@@ -693,6 +693,23 @@ class DatabaseManager:
 
                 # 3. Upsert quarterly fundamentals
                 quarterly_data = collected_data.get('quarterly_fundamentals', [])
+
+                # Deduplicate by (fiscal_year, fiscal_quarter), keeping most recent quarter_end_date
+                # (Yahoo Finance sometimes returns duplicate quarters)
+                seen_quarters = {}
+                for quarter in quarterly_data:
+                    key = (quarter['fiscal_year'], quarter['fiscal_quarter'])
+                    from datetime import date
+                    quarter_end = quarter['quarter_end_date']
+                    if isinstance(quarter_end, str):
+                        quarter_end = date.fromisoformat(quarter_end)
+
+                    if key not in seen_quarters or quarter_end > seen_quarters[key]['quarter_end_date']:
+                        quarter['quarter_end_date'] = quarter_end
+                        seen_quarters[key] = quarter
+
+                quarterly_data = list(seen_quarters.values())
+
                 for quarter in quarterly_data:
                     from datetime import date
                     quarter_end = quarter['quarter_end_date']
@@ -732,6 +749,23 @@ class DatabaseManager:
 
                 # 4. Upsert annual fundamentals
                 annual_data = collected_data.get('annual_fundamentals', [])
+
+                # Deduplicate by fiscal_year, keeping most recent year_end_date
+                # (Yahoo Finance sometimes returns duplicate fiscal years)
+                seen_years = {}
+                for year in annual_data:
+                    fiscal_year = year['fiscal_year']
+                    from datetime import date
+                    year_end = year['year_end_date']
+                    if isinstance(year_end, str):
+                        year_end = date.fromisoformat(year_end)
+
+                    if fiscal_year not in seen_years or year_end > seen_years[fiscal_year]['year_end_date']:
+                        year['year_end_date'] = year_end
+                        seen_years[fiscal_year] = year
+
+                annual_data = list(seen_years.values())
+
                 for year in annual_data:
                     from datetime import date
                     year_end = year['year_end_date']

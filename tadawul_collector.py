@@ -60,12 +60,12 @@ class TadawulHawk:
 
         # Scrape Tadawul symbols
         tadawul_scraper = ArgaamScraper(market='tadawul')
-        tadawul_data = tadawul_scraper.scrape_symbols()
+        tadawul_data = tadawul_scraper.scrape_all_symbols()
         tadawul_symbols = [stock['symbol'] for stock in tadawul_data]
 
         # Scrape NOMU symbols
         nomu_scraper = ArgaamScraper(market='nomu')
-        nomu_data = nomu_scraper.scrape_symbols()
+        nomu_data = nomu_scraper.scrape_all_symbols()
         nomu_symbols = [stock['symbol'] for stock in nomu_data]
 
         logger.info(f"Found {len(tadawul_symbols)} Tadawul stocks, {len(nomu_symbols)} NOMU stocks")

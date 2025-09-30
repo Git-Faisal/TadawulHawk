@@ -1,0 +1,404 @@
+symbol,company_name,exchange,sector,industry,currency,listing_date,created_at,updated_at
+2222.SR,Saudi Arabian Oil Company,Tadawul,Energy,Oil & Gas Integrated,SAR,,2025-09-30 20:37:29.568083+03:00,2025-09-30 20:37:29.568083+03:00
+1120.SR,Al Rajhi Banking and Investment Corporation,Tadawul,Financial Services,Banks - Regional,SAR,,2025-09-30 21:28:44.146231+03:00,2025-09-30 21:28:44.146231+03:00
+7010.SR,Saudi Telecom Company,Tadawul,Communication Services,Telecom Services,SAR,,2025-09-30 21:28:48.409666+03:00,2025-09-30 21:28:48.409666+03:00
+2381.SR,Arabian Drilling Company,Tadawul,Energy,Oil & Gas Drilling,SAR,,2025-09-30 21:50:27.497483+03:00,2025-09-30 21:50:27.497483+03:00
+2382.SR,ADES Holding Company,Tadawul,Energy,Oil & Gas Drilling,SAR,,2025-09-30 21:50:31.814274+03:00,2025-09-30 21:50:31.814274+03:00
+2380.SR,Rabigh Refining and Petrochemical Company,Tadawul,Energy,Oil & Gas Refining & Marketing,SAR,,2025-09-30 21:50:36.059720+03:00,2025-09-30 21:50:36.059720+03:00
+4030.SR,The National Shipping Company of Saudi Arabia,Tadawul,Industrials,Marine Shipping,SAR,,2025-09-30 21:50:40.464966+03:00,2025-09-30 21:50:40.464966+03:00
+2030.SR,Saudi Arabian Refineries Company,Tadawul,Industrials,Conglomerates,SAR,,2025-09-30 21:50:45.394819+03:00,2025-09-30 21:50:45.394819+03:00
+1202.SR,Middle East Company for Manufacturing and Producing Paper,Tadawul,Basic Materials,Paper & Paper Products,SAR,,2025-09-30 21:50:49.649584+03:00,2025-09-30 21:50:49.649584+03:00
+3007.SR,Zahrat Al Waha For Trading Company,Tadawul,Consumer Cyclical,Packaging & Containers,SAR,,2025-09-30 21:50:53.942355+03:00,2025-09-30 21:50:53.942355+03:00
+1201.SR,Takween Advanced Industries,Tadawul,Consumer Cyclical,Packaging & Containers,SAR,,2025-09-30 21:50:58.290350+03:00,2025-09-30 21:50:58.290350+03:00
+1322.SR,Al Masane Al Kobra Mining Company,Tadawul,Basic Materials,Other Precious Metals & Mining,SAR,,2025-09-30 21:51:02.766578+03:00,2025-09-30 21:51:02.766578+03:00
+4143.SR,Al Taiseer Group TALCO Industrial Company,Tadawul,Basic Materials,Aluminum,SAR,,2025-09-30 21:51:07.101515+03:00,2025-09-30 21:51:07.101515+03:00
+2150.SR,The National Company for Glass Industries,Tadawul,Consumer Cyclical,Packaging & Containers,SAR,,2025-09-30 21:51:11.355871+03:00,2025-09-30 21:51:11.355871+03:00
+2180.SR,Filling and Packing Materials Manufacturing Company,Tadawul,Consumer Cyclical,Packaging & Containers,SAR,,2025-09-30 21:51:15.628349+03:00,2025-09-30 21:51:15.628349+03:00
+2220.SR,National Metal Manufacturing and Casting Co.,Tadawul,Basic Materials,Steel,SAR,,2025-09-30 21:55:20.496544+03:00,2025-09-30 21:55:20.496544+03:00
+2300.SR,Saudi Paper Manufacturing Company,Tadawul,Basic Materials,Paper & Paper Products,SAR,,2025-09-30 21:55:24.895564+03:00,2025-09-30 21:55:24.895564+03:00
+1323.SR,United Carton Industries Company,Tadawul,Consumer Cyclical,Packaging & Containers,SAR,,2025-09-30 21:55:29.098398+03:00,2025-09-30 21:55:29.098398+03:00
+3008.SR,Al Kathiri Holding Company,Tadawul,Basic Materials,Building Materials,SAR,,2025-09-30 21:55:33.664266+03:00,2025-09-30 21:55:33.664266+03:00
+1301.SR,United Wire Factories Company,Tadawul,Industrials,Building Products & Equipment,SAR,,2025-09-30 21:55:38.138794+03:00,2025-09-30 21:55:38.138794+03:00
+1320.SR,Saudi Steel Pipes Company,Tadawul,Basic Materials,Steel,SAR,,2025-09-30 21:55:42.520087+03:00,2025-09-30 21:55:42.520087+03:00
+2090.SR,National Gypsum Company,Tadawul,Basic Materials,Building Materials,SAR,,2025-09-30 21:55:47.029321+03:00,2025-09-30 21:55:47.029321+03:00
+2200.SR,Arabian Pipes Company,Tadawul,Basic Materials,Steel,SAR,,2025-09-30 21:55:51.394785+03:00,2025-09-30 21:55:51.394785+03:00
+2240.SR,Zamil Industrial Investment Company,Tadawul,Industrials,Building Products & Equipment,SAR,,2025-09-30 21:55:55.756469+03:00,2025-09-30 21:55:55.756469+03:00
+2360.SR,Saudi Vitrified Clay Pipe Company,Tadawul,Industrials,Building Products & Equipment,SAR,,2025-09-30 21:56:00.350606+03:00,2025-09-30 21:56:00.350606+03:00
+1210.SR,Basic Chemical Industries Company,Tadawul,Basic Materials,Chemicals,SAR,,2025-09-30 21:56:04.625696+03:00,2025-09-30 21:56:04.625696+03:00
+1211.SR,Saudi Arabian Mining Company (Ma'aden),Tadawul,Basic Materials,Other Industrial Metals & Mining,SAR,,2025-09-30 21:56:08.983849+03:00,2025-09-30 21:56:08.983849+03:00
+1304.SR,Al Yamamah Steel Industries Company,Tadawul,Basic Materials,Steel,SAR,,2025-09-30 21:56:13.519704+03:00,2025-09-30 21:56:13.519704+03:00
+1321.SR,East Pipes Integrated Company for Industry,Tadawul,Basic Materials,Steel,SAR,,2025-09-30 21:56:17.793124+03:00,2025-09-30 21:56:17.793124+03:00
+2223.SR,Saudi Aramco Base Oil Company - Luberef,Tadawul,Energy,Oil & Gas Refining & Marketing,SAR,,2025-09-30 21:56:22.106624+03:00,2025-09-30 21:56:22.106624+03:00
+2001.SR,Methanol Chemicals Company,Tadawul,Basic Materials,Chemicals,SAR,,2025-09-30 21:56:26.608969+03:00,2025-09-30 21:56:26.608969+03:00
+2010.SR,Saudi Basic Industries Corporation,Tadawul,Basic Materials,Chemicals,SAR,,2025-09-30 21:56:31.152500+03:00,2025-09-30 21:56:31.152500+03:00
+2020.SR,SABIC Agri-Nutrients Company,Tadawul,Basic Materials,Agricultural Inputs,SAR,,2025-09-30 21:56:35.523294+03:00,2025-09-30 21:56:35.523294+03:00
+2060.SR,National Industrialization Company,Tadawul,Basic Materials,Chemicals,SAR,,2025-09-30 21:56:39.865056+03:00,2025-09-30 21:56:39.865056+03:00
+2170.SR,Alujain Corporation,Tadawul,Basic Materials,Specialty Chemicals,SAR,,2025-09-30 21:56:44.355027+03:00,2025-09-30 21:56:44.355027+03:00
+2210.SR,Nama Chemicals Company,Tadawul,Basic Materials,Chemicals,SAR,,2025-09-30 21:56:48.657222+03:00,2025-09-30 21:56:48.657222+03:00
+2250.SR,Saudi Industrial Investment Group,Tadawul,Basic Materials,Specialty Chemicals,SAR,,2025-09-30 21:56:53.349929+03:00,2025-09-30 21:56:53.349929+03:00
+2290.SR,Yanbu National Petrochemical Company,Tadawul,Basic Materials,Chemicals,SAR,,2025-09-30 21:56:57.643313+03:00,2025-09-30 21:56:57.643313+03:00
+2310.SR,Sahara International Petrochemical Company,Tadawul,Basic Materials,Chemicals,SAR,,2025-09-30 21:57:02.384296+03:00,2025-09-30 21:57:02.384296+03:00
+2330.SR,Advanced Petrochemical Company,Tadawul,Basic Materials,Chemicals,SAR,,2025-09-30 21:57:07.061277+03:00,2025-09-30 21:57:07.061277+03:00
+2350.SR,Saudi Kayan Petrochemical Company,Tadawul,Basic Materials,Chemicals,SAR,,2025-09-30 21:57:11.377159+03:00,2025-09-30 21:57:11.377159+03:00
+3002.SR,Najran Cement Company,Tadawul,Basic Materials,Building Materials,SAR,,2025-09-30 21:57:15.723574+03:00,2025-09-30 21:57:15.723574+03:00
+3003.SR,City Cement Company,Tadawul,Basic Materials,Building Materials,SAR,,2025-09-30 21:57:20.110460+03:00,2025-09-30 21:57:20.110460+03:00
+3004.SR,Northern Region Cement Company,Tadawul,Basic Materials,Building Materials,SAR,,2025-09-30 21:57:24.380118+03:00,2025-09-30 21:57:24.380118+03:00
+3010.SR,Arabian Cement Company,Tadawul,Basic Materials,Building Materials,SAR,,2025-09-30 21:57:28.681767+03:00,2025-09-30 21:57:28.681767+03:00
+3020.SR,YAMAMA Cement Company,Tadawul,Basic Materials,Building Materials,SAR,,2025-09-30 21:57:32.994028+03:00,2025-09-30 21:57:32.994028+03:00
+3030.SR,Saudi Cement Company,Tadawul,Basic Materials,Building Materials,SAR,,2025-09-30 21:57:37.376595+03:00,2025-09-30 21:57:37.376595+03:00
+3040.SR,Qassim Cement Company,Tadawul,Basic Materials,Building Materials,SAR,,2025-09-30 21:57:41.794801+03:00,2025-09-30 21:57:41.794801+03:00
+3050.SR,Southern Province Cement Company,Tadawul,Basic Materials,Building Materials,SAR,,2025-09-30 21:57:46.124728+03:00,2025-09-30 21:57:46.124728+03:00
+3060.SR,Yanbu Cement Company,Tadawul,Basic Materials,Building Materials,SAR,,2025-09-30 21:57:50.504040+03:00,2025-09-30 21:57:50.504040+03:00
+3080.SR,Eastern Province Cement Company,Tadawul,Basic Materials,Building Materials,SAR,,2025-09-30 21:57:54.797078+03:00,2025-09-30 21:57:54.797078+03:00
+3090.SR,Tabuk Cement Company,Tadawul,Basic Materials,Building Materials,SAR,,2025-09-30 21:57:59.127080+03:00,2025-09-30 21:57:59.127080+03:00
+3091.SR,Al Jouf Cement Company,Tadawul,Basic Materials,Building Materials,SAR,,2025-09-30 21:58:03.345174+03:00,2025-09-30 21:58:03.345174+03:00
+3005.SR,Umm Al-Qura Cement Company,Tadawul,Basic Materials,Building Materials,SAR,,2025-09-30 21:58:07.763559+03:00,2025-09-30 21:58:07.763559+03:00
+3092.SR,Riyadh Cement Company,Tadawul,Basic Materials,Building Materials,SAR,,2025-09-30 21:58:12.085842+03:00,2025-09-30 21:58:12.085842+03:00
+1010.SR,Riyad Bank,Tadawul,Financial Services,Banks - Regional,SAR,,2025-09-30 22:20:48.739059+03:00,2025-09-30 22:20:48.739059+03:00
+4142.SR,Riyadh Cables Group Company,Tadawul,Industrials,Electrical Equipment & Parts,SAR,,2025-09-30 21:58:16.468621+03:00,2025-09-30 21:58:16.468621+03:00
+1214.SR,Al Hassan Ghazi Ibrahim Shaker Company,Tadawul,Technology,Electronics & Computer Distribution,SAR,,2025-09-30 21:58:20.823521+03:00,2025-09-30 21:58:20.823521+03:00
+1212.SR,Astra Industrial Group Company,Tadawul,Industrials,Conglomerates,SAR,,2025-09-30 21:58:25.117611+03:00,2025-09-30 21:58:25.117611+03:00
+1302.SR,Bawan Company,Tadawul,Industrials,Building Products & Equipment,SAR,,2025-09-30 21:58:29.410004+03:00,2025-09-30 21:58:29.410004+03:00
+2370.SR,Middle East Specialized Cables Company,Tadawul,Industrials,Electrical Equipment & Parts,SAR,,2025-09-30 21:58:33.712875+03:00,2025-09-30 21:58:33.712875+03:00
+1303.SR,Electrical Industries Company,Tadawul,Industrials,Electrical Equipment & Parts,SAR,,2025-09-30 21:58:38.065727+03:00,2025-09-30 21:58:38.065727+03:00
+2320.SR,Al-Babtain Power and Telecommunications Company,Tadawul,Industrials,Engineering & Construction,SAR,,2025-09-30 21:58:42.326741+03:00,2025-09-30 21:58:42.326741+03:00
+2160.SR,The Saudi Arabian Amiantit Company,Tadawul,Industrials,Building Products & Equipment,SAR,,2025-09-30 21:58:46.801000+03:00,2025-09-30 21:58:46.801000+03:00
+2110.SR,Saudi Cable Company,Tadawul,Industrials,Electrical Equipment & Parts,SAR,,2025-09-30 21:58:51.117084+03:00,2025-09-30 21:58:51.117084+03:00
+2040.SR,Saudi Ceramic Company,Tadawul,Industrials,Building Products & Equipment,SAR,,2025-09-30 21:58:55.441184+03:00,2025-09-30 21:58:55.441184+03:00
+4110.SR,Batic Investments and Logistics Company,Tadawul,Industrials,Conglomerates,SAR,,2025-09-30 21:58:59.906729+03:00,2025-09-30 21:58:59.906729+03:00
+4140.SR,Saudi Industrial Export Company,Tadawul,Industrials,Integrated Freight & Logistics,SAR,,2025-09-30 21:59:04.124041+03:00,2025-09-30 21:59:04.124041+03:00
+4145.SR,Al Obeikan Glass Company,Tadawul,Industrials,Building Products & Equipment,SAR,,2025-09-30 21:59:08.724280+03:00,2025-09-30 21:59:08.724280+03:00
+4144.SR,Raoom Trading Co.,Tadawul,Industrials,Building Products & Equipment,SAR,,2025-09-30 21:59:13.291397+03:00,2025-09-30 21:59:13.291397+03:00
+4141.SR,Al-Omran Industrial Trading Company,Tadawul,Industrials,Conglomerates,SAR,,2025-09-30 21:59:17.630245+03:00,2025-09-30 21:59:17.630245+03:00
+4270.SR,Saudi Printing and Packaging Co.,Tadawul,Industrials,Specialty Business Services,SAR,,2025-09-30 21:59:21.913611+03:00,2025-09-30 21:59:21.913611+03:00
+1831.SR,Maharah for Human Resources Company,Tadawul,Industrials,Staffing & Employment Services,SAR,,2025-09-30 21:59:26.273387+03:00,2025-09-30 21:59:26.273387+03:00
+1832.SR,Sadr Logistics Company,Tadawul,Industrials,Metal Fabrication,SAR,,2025-09-30 21:59:30.612417+03:00,2025-09-30 21:59:30.612417+03:00
+6004.SR,CATRION Catering Holding Company,Tadawul,Industrials,Airports & Air Services,SAR,,2025-09-30 21:59:34.912181+03:00,2025-09-30 21:59:34.912181+03:00
+1835.SR,Tamkeen Human Resources Company,Tadawul,Industrials,Staffing & Employment Services,SAR,,2025-09-30 21:59:39.125635+03:00,2025-09-30 21:59:39.125635+03:00
+1833.SR,Almawarid Manpower Company,Tadawul,Industrials,Staffing & Employment Services,SAR,,2025-09-30 21:59:43.409773+03:00,2025-09-30 21:59:43.409773+03:00
+1834.SR,Saudi Manpower Solutions Company,Tadawul,Industrials,Staffing & Employment Services,SAR,,2025-09-30 21:59:48.040454+03:00,2025-09-30 21:59:48.040454+03:00
+4260.SR,United International Transportation Company,Tadawul,Industrials,Rental & Leasing Services,SAR,,2025-09-30 21:59:52.363428+03:00,2025-09-30 21:59:52.363428+03:00
+4031.SR,Saudi Ground Services Company,Tadawul,Industrials,Airports & Air Services,SAR,,2025-09-30 21:59:56.692281+03:00,2025-09-30 21:59:56.692281+03:00
+4261.SR,Theeb Rent A Car Company,Tadawul,Industrials,Rental & Leasing Services,SAR,,2025-09-30 22:00:00.982886+03:00,2025-09-30 22:00:00.982886+03:00
+4262.SR,Lumi Rental Company,Tadawul,Industrials,Rental & Leasing Services,SAR,,2025-09-30 22:00:05.339713+03:00,2025-09-30 22:00:05.339713+03:00
+4263.SR,SAL Saudi Logistics Services Co,Tadawul,Industrials,Integrated Freight & Logistics,SAR,,2025-09-30 22:00:09.606585+03:00,2025-09-30 22:00:09.606585+03:00
+4264.SR,Flynas Company,Tadawul,Industrials,Airlines,SAR,,2025-09-30 22:00:13.854957+03:00,2025-09-30 22:00:13.854957+03:00
+4040.SR,Saudi Public Transport Company,Tadawul,Industrials,Railroads,SAR,,2025-09-30 22:00:18.323264+03:00,2025-09-30 22:00:18.323264+03:00
+2190.SR,Sustained Infrastructure Holding Company,Tadawul,Industrials,Marine Shipping,SAR,,2025-09-30 22:00:22.957587+03:00,2025-09-30 22:00:22.957587+03:00
+4012.SR,Thob Al Aseel Company,Tadawul,Consumer Cyclical,Apparel Manufacturing,SAR,,2025-09-30 22:00:27.503149+03:00,2025-09-30 22:00:27.503149+03:00
+2340.SR,Artex Industrial Investment Company,Tadawul,Consumer Cyclical,Textile Manufacturing,SAR,,2025-09-30 22:00:31.840426+03:00,2025-09-30 22:00:31.840426+03:00
+4011.SR,L'azurde Company for Jewelry,Tadawul,Consumer Cyclical,Luxury Goods,SAR,,2025-09-30 22:00:36.166382+03:00,2025-09-30 22:00:36.166382+03:00
+4180.SR,Fitaihi Holding Group,Tadawul,Consumer Cyclical,Luxury Goods,SAR,,2025-09-30 22:00:40.494645+03:00,2025-09-30 22:00:40.494645+03:00
+2130.SR,Saudi Industrial Development Co.,Tadawul,Consumer Cyclical,"Furnishings, Fixtures & Appliances",SAR,,2025-09-30 22:00:44.843416+03:00,2025-09-30 22:00:44.843416+03:00
+1213.SR,Naseej International Trading Company,Tadawul,Consumer Cyclical,"Furnishings, Fixtures & Appliances",SAR,,2025-09-30 22:00:49.151722+03:00,2025-09-30 22:00:49.151722+03:00
+6002.SR,Herfy Food Services Company,Tadawul,Consumer Cyclical,Restaurants,SAR,,2025-09-30 22:00:53.493163+03:00,2025-09-30 22:00:53.493163+03:00
+1810.SR,Seera Holding Group,Tadawul,Consumer Cyclical,Travel Services,SAR,,2025-09-30 22:00:58.043597+03:00,2025-09-30 22:00:58.043597+03:00
+4170.SR,Tourism Enterprise Company (Shams),Tadawul,Consumer Cyclical,Resorts & Casinos,SAR,,2025-09-30 22:01:02.379701+03:00,2025-09-30 22:01:02.379701+03:00
+1820.SR,BAAN Holding Group Company,Tadawul,Consumer Cyclical,Lodging,SAR,,2025-09-30 22:01:06.936919+03:00,2025-09-30 22:01:06.936919+03:00
+6016.SR,Shatirah House Restaurant Co.,Tadawul,Consumer Cyclical,Restaurants,SAR,,2025-09-30 22:01:11.378837+03:00,2025-09-30 22:01:11.378837+03:00
+6018.SR,Sport Clubs Company,Tadawul,Consumer Cyclical,Leisure,SAR,,2025-09-30 22:01:15.652414+03:00,2025-09-30 22:01:15.652414+03:00
+6017.SR,Jahez International Company for Information Systems Technology,Tadawul,Consumer Cyclical,Internet Retail,SAR,,2025-09-30 22:01:19.931026+03:00,2025-09-30 22:01:19.931026+03:00
+6013.SR,Development Works Food Company,Tadawul,Consumer Cyclical,Restaurants,SAR,,2025-09-30 22:01:24.261907+03:00,2025-09-30 22:01:24.261907+03:00
+4290.SR,Al Khaleej Training and Education Company,Tadawul,Consumer Defensive,Education & Training Services,SAR,,2025-09-30 22:01:29.051228+03:00,2025-09-30 22:01:29.051228+03:00
+1830.SR,Leejam Sports Company,Tadawul,Consumer Cyclical,Leisure,SAR,,2025-09-30 22:01:33.584125+03:00,2025-09-30 22:01:33.584125+03:00
+4291.SR,National Company for Learning and Education,Tadawul,Consumer Defensive,Education & Training Services,SAR,,2025-09-30 22:01:37.929082+03:00,2025-09-30 22:01:37.929082+03:00
+4292.SR,Ataa Educational Company,Tadawul,Consumer Defensive,Education & Training Services,SAR,,2025-09-30 22:01:42.260071+03:00,2025-09-30 22:01:42.260071+03:00
+6014.SR,Alamar Foods Company,Tadawul,Consumer Cyclical,Restaurants,SAR,,2025-09-30 22:01:46.599905+03:00,2025-09-30 22:01:46.599905+03:00
+6015.SR,Americana Restaurants International PLC,Tadawul,Consumer Cyclical,Restaurants,SAR,,2025-09-30 22:01:50.882899+03:00,2025-09-30 22:01:50.882899+03:00
+6012.SR,Raydan Food Company,Tadawul,Consumer Cyclical,Restaurants,SAR,,2025-09-30 22:01:55.330942+03:00,2025-09-30 22:01:55.330942+03:00
+4071.SR,Arabian Contracting Services Company,Tadawul,Communication Services,Advertising Agencies,SAR,,2025-09-30 22:01:59.610732+03:00,2025-09-30 22:01:59.610732+03:00
+4072.SR,MBC Group Co.,Tadawul,Communication Services,Broadcasting,SAR,,2025-09-30 22:02:03.849729+03:00,2025-09-30 22:02:03.849729+03:00
+4070.SR,"Tihama for Advertising, Public Relations and Marketing Company",Tadawul,Communication Services,Advertising Agencies,SAR,,2025-09-30 22:02:08.116736+03:00,2025-09-30 22:02:08.116736+03:00
+4210.SR,Saudi Research and Media Group,Tadawul,Communication Services,Publishing,SAR,,2025-09-30 22:02:12.646348+03:00,2025-09-30 22:02:12.646348+03:00
+4194.SR,Marketing Home Group Company for Trading Company,Tadawul,Industrials,Industrial Distribution,SAR,,2025-09-30 22:02:17.056807+03:00,2025-09-30 22:02:17.056807+03:00
+4051.SR,Baazeem Trading Company,Tadawul,Industrials,Conglomerates,SAR,,2025-09-30 22:02:21.347500+03:00,2025-09-30 22:02:21.347500+03:00
+4192.SR,Al-Saif Stores for Development & Investment Company,Tadawul,Consumer Cyclical,"Furnishings, Fixtures & Appliances",SAR,,2025-09-30 22:02:25.706941+03:00,2025-09-30 22:02:25.706941+03:00
+4193.SR,Nice One Beauty Digital Marketing Company,Tadawul,Consumer Defensive,Household & Personal Products,SAR,,2025-09-30 22:02:30.242778+03:00,2025-09-30 22:02:30.242778+03:00
+4008.SR,Saudi Company for Hardware SACO,Tadawul,Consumer Cyclical,Specialty Retail,SAR,,2025-09-30 22:02:34.683438+03:00,2025-09-30 22:02:34.683438+03:00
+4191.SR,Abdullah Saad Mohammed Abo Moati for Bookstores Company,Tadawul,Consumer Cyclical,Specialty Retail,SAR,,2025-09-30 22:02:39.033790+03:00,2025-09-30 22:02:39.033790+03:00
+4003.SR,United Electronics Company,Tadawul,Consumer Cyclical,Specialty Retail,SAR,,2025-09-30 22:02:43.286469+03:00,2025-09-30 22:02:43.286469+03:00
+4050.SR,Saudi Automotive Services Company,Tadawul,Consumer Cyclical,Specialty Retail,SAR,,2025-09-30 22:02:47.696873+03:00,2025-09-30 22:02:47.696873+03:00
+4190.SR,Jarir Marketing Company,Tadawul,Consumer Cyclical,Specialty Retail,SAR,,2025-09-30 22:02:51.984371+03:00,2025-09-30 22:02:51.984371+03:00
+4200.SR,Aldrees Petroleum and Transport Services Company,Tadawul,Consumer Cyclical,Specialty Retail,SAR,,2025-09-30 22:02:56.225544+03:00,2025-09-30 22:02:56.225544+03:00
+4240.SR,Fawaz Abdulaziz Al Hokair & Company,Tadawul,Consumer Cyclical,Apparel Retail,SAR,,2025-09-30 22:03:00.567320+03:00,2025-09-30 22:03:00.567320+03:00
+4160.SR,Thimar Development Holding Company,Tadawul,Consumer Defensive,Farm Products,SAR,,2025-09-30 22:03:04.893955+03:00,2025-09-30 22:03:04.893955+03:00
+4006.SR,Saudi Marketing Company,Tadawul,Consumer Cyclical,Department Stores,SAR,,2025-09-30 22:03:09.271334+03:00,2025-09-30 22:03:09.271334+03:00
+4001.SR,Abdullah Al-Othaim Markets Company,Tadawul,Consumer Defensive,Grocery Stores,SAR,,2025-09-30 22:03:13.646406+03:00,2025-09-30 22:03:13.646406+03:00
+4162.SR,Almunajem Foods Company,Tadawul,Consumer Defensive,Food Distribution,SAR,,2025-09-30 22:03:18.030778+03:00,2025-09-30 22:03:18.030778+03:00
+4164.SR,Nahdi Medical Company,Tadawul,Healthcare,Pharmaceutical Retailers,SAR,,2025-09-30 22:03:22.308456+03:00,2025-09-30 22:03:22.308456+03:00
+4163.SR,Al-Dawaa Medical Services Company,Tadawul,Healthcare,Pharmaceutical Retailers,SAR,,2025-09-30 22:03:26.709437+03:00,2025-09-30 22:03:26.709437+03:00
+4161.SR,BinDawood Holding Company,Tadawul,Consumer Defensive,Grocery Stores,SAR,,2025-09-30 22:03:31.145414+03:00,2025-09-30 22:03:31.145414+03:00
+4061.SR,Anaam International Holding Group Company,Tadawul,Consumer Defensive,Food Distribution,SAR,,2025-09-30 22:03:35.574374+03:00,2025-09-30 22:03:35.574374+03:00
+6001.SR,Halwani Bros. Co. Ltd.,Tadawul,Consumer Defensive,Packaged Foods,SAR,,2025-09-30 22:03:39.799640+03:00,2025-09-30 22:03:39.799640+03:00
+2282.SR,Naqi Water Company,Tadawul,Consumer Defensive,Beverages - Non-Alcoholic,SAR,,2025-09-30 22:03:44.146093+03:00,2025-09-30 22:03:44.146093+03:00
+2283.SR,The First Milling Company,Tadawul,Consumer Defensive,Packaged Foods,SAR,,2025-09-30 22:03:48.777398+03:00,2025-09-30 22:03:48.777398+03:00
+2284.SR,Modern Mills for Food Products ,Tadawul,Consumer Defensive,Packaged Foods,SAR,,2025-09-30 22:03:53.099795+03:00,2025-09-30 22:03:53.099795+03:00
+2285.SR,Arabian Mills for Food Products,Tadawul,Consumer Defensive,Farm Products,SAR,,2025-09-30 22:18:29.545964+03:00,2025-09-30 22:18:29.545964+03:00
+2286.SR,Fourth Milling Co.,Tadawul,Consumer Defensive,Farm Products,SAR,,2025-09-30 22:18:33.938134+03:00,2025-09-30 22:18:33.938134+03:00
+6010.SR,The National Agricultural Development Company,Tadawul,Consumer Defensive,Packaged Foods,SAR,,2025-09-30 22:18:38.210164+03:00,2025-09-30 22:18:38.210164+03:00
+6020.SR,Al Gassim Investment Holding Company,Tadawul,Consumer Defensive,Farm Products,SAR,,2025-09-30 22:18:42.453385+03:00,2025-09-30 22:18:42.453385+03:00
+6040.SR,Tabuk Agricultural Development Company,Tadawul,Consumer Defensive,Farm Products,SAR,,2025-09-30 22:18:46.954999+03:00,2025-09-30 22:18:46.954999+03:00
+6050.SR,Saudi Fisheries Company,Tadawul,Consumer Defensive,Farm Products,SAR,,2025-09-30 22:18:51.525772+03:00,2025-09-30 22:18:51.525772+03:00
+6060.SR,Ash-Sharqiyah Development Co.,Tadawul,Consumer Defensive,Farm Products,SAR,,2025-09-30 22:18:55.824028+03:00,2025-09-30 22:18:55.824028+03:00
+6070.SR,Al-Jouf Agricultural Development Co.,Tadawul,Consumer Defensive,Packaged Foods,SAR,,2025-09-30 22:19:00.182404+03:00,2025-09-30 22:19:00.182404+03:00
+6090.SR,Jazan Development and Investment Company,Tadawul,Consumer Defensive,Farm Products,SAR,,2025-09-30 22:19:04.560988+03:00,2025-09-30 22:19:04.560988+03:00
+2281.SR,Tanmiah Food Company,Tadawul,Consumer Defensive,Packaged Foods,SAR,,2025-09-30 22:19:08.890229+03:00,2025-09-30 22:19:08.890229+03:00
+2050.SR,Savola Group Company,Tadawul,Consumer Defensive,Packaged Foods,SAR,,2025-09-30 22:19:13.354893+03:00,2025-09-30 22:19:13.354893+03:00
+2100.SR,Wafrah for Industry and Development Company,Tadawul,Consumer Defensive,Packaged Foods,SAR,,2025-09-30 22:19:17.830542+03:00,2025-09-30 22:19:17.830542+03:00
+2270.SR,Saudia Dairy & Foodstuff Company,Tadawul,Consumer Defensive,Packaged Foods,SAR,,2025-09-30 22:19:22.256772+03:00,2025-09-30 22:19:22.256772+03:00
+2280.SR,Almarai Company,Tadawul,Consumer Defensive,Packaged Foods,SAR,,2025-09-30 22:19:26.834994+03:00,2025-09-30 22:19:26.834994+03:00
+2287.SR,Arabian Company for Agricultura,Tadawul,Consumer Defensive,Packaged Foods,SAR,,2025-09-30 22:19:31.354562+03:00,2025-09-30 22:19:31.354562+03:00
+4080.SR,Sinad Holding Company,Tadawul,Industrials,Conglomerates,SAR,,2025-09-30 22:19:35.768986+03:00,2025-09-30 22:19:35.768986+03:00
+2140.SR,Ayyan Investment Company,Tadawul,Healthcare,Medical Care Facilities,SAR,,2025-09-30 22:19:40.050195+03:00,2025-09-30 22:19:40.050195+03:00
+2230.SR,Saudi Chemical Holding Company,Tadawul,Healthcare,Drug Manufacturers - Specialty & Generic,SAR,,2025-09-30 22:19:44.751507+03:00,2025-09-30 22:19:44.751507+03:00
+4014.SR,Scientific and Medical Equipment House Company,Tadawul,Healthcare,Medical Instruments & Supplies,SAR,,2025-09-30 22:19:49.124124+03:00,2025-09-30 22:19:49.124124+03:00
+4017.SR,Dr. Soliman Abdel Kader Fakeeh ,Tadawul,Healthcare,Medical Care Facilities,SAR,,2025-09-30 22:19:53.442166+03:00,2025-09-30 22:19:53.442166+03:00
+4013.SR,Dr. Sulaiman Al Habib Medical Services Group Company,Tadawul,Healthcare,Medical Care Facilities,SAR,,2025-09-30 22:19:57.963317+03:00,2025-09-30 22:19:57.963317+03:00
+4005.SR,National Medical Care Company,Tadawul,Healthcare,Medical Care Facilities,SAR,,2025-09-30 22:20:03.275905+03:00,2025-09-30 22:20:03.275905+03:00
+4002.SR,Mouwasat Medical Services Company,Tadawul,Healthcare,Medical Care Facilities,SAR,,2025-09-30 22:20:07.815670+03:00,2025-09-30 22:20:07.815670+03:00
+4004.SR,Dallah Healthcare Company,Tadawul,Healthcare,Medical Care Facilities,SAR,,2025-09-30 22:20:12.322594+03:00,2025-09-30 22:20:12.322594+03:00
+4007.SR,Al Hammadi Holding Company,Tadawul,Healthcare,Medical Care Facilities,SAR,,2025-09-30 22:20:17.046876+03:00,2025-09-30 22:20:17.046876+03:00
+4009.SR,Middle East Healthcare Company,Tadawul,Healthcare,Medical Care Facilities,SAR,,2025-09-30 22:20:21.537023+03:00,2025-09-30 22:20:21.537023+03:00
+4018.SR,Almoosa Health Company,Tadawul,Healthcare,Medical Care Facilities,SAR,,2025-09-30 22:20:25.837719+03:00,2025-09-30 22:20:25.837719+03:00
+4019.SR,Specialized Medical Company,Tadawul,Healthcare,Medical Care Facilities,SAR,,2025-09-30 22:20:30.063683+03:00,2025-09-30 22:20:30.063683+03:00
+2070.SR,Saudi Pharmaceutical Industries and Medical Appliances Corporation,Tadawul,Healthcare,Drug Manufacturers - Specialty & Generic,SAR,,2025-09-30 22:20:34.376524+03:00,2025-09-30 22:20:34.376524+03:00
+4015.SR,Jamjoom Pharmaceuticals Factory Company,Tadawul,Healthcare,Drug Manufacturers - Specialty & Generic,SAR,,2025-09-30 22:20:38.659968+03:00,2025-09-30 22:20:38.659968+03:00
+4016.SR,Middle East Pharmaceutical Industries Company,Tadawul,Healthcare,Drug Manufacturers - Specialty & Generic,SAR,,2025-09-30 22:20:44.469191+03:00,2025-09-30 22:20:44.469191+03:00
+1020.SR,Bank AlJazira,Tadawul,Financial Services,Banks - Regional,SAR,,2025-09-30 22:20:53.218853+03:00,2025-09-30 22:20:53.218853+03:00
+1030.SR,The Saudi Investment Bank,Tadawul,Financial Services,Banks - Regional,SAR,,2025-09-30 22:20:58.365665+03:00,2025-09-30 22:20:58.365665+03:00
+1050.SR,Banque Saudi Fransi,Tadawul,Financial Services,Banks - Regional,SAR,,2025-09-30 22:21:03.016662+03:00,2025-09-30 22:21:03.016662+03:00
+1060.SR,Saudi Awwal Bank,Tadawul,Financial Services,Banks - Regional,SAR,,2025-09-30 22:21:07.523428+03:00,2025-09-30 22:21:07.523428+03:00
+1080.SR,Arab National Bank,Tadawul,Financial Services,Banks - Regional,SAR,,2025-09-30 22:21:12.095412+03:00,2025-09-30 22:21:12.095412+03:00
+1140.SR,Bank Albilad,Tadawul,Financial Services,Banks - Regional,SAR,,2025-09-30 22:21:16.474813+03:00,2025-09-30 22:21:16.474813+03:00
+1150.SR,Alinma Bank,Tadawul,Financial Services,Banks - Regional,SAR,,2025-09-30 22:21:21.010475+03:00,2025-09-30 22:21:21.010475+03:00
+1180.SR,The Saudi National Bank,Tadawul,Financial Services,Banks - Regional,SAR,,2025-09-30 22:21:25.482907+03:00,2025-09-30 22:21:25.482907+03:00
+4083.SR,United International Holding Company,Tadawul,Financial Services,Asset Management,SAR,,2025-09-30 22:21:29.812520+03:00,2025-09-30 22:21:29.812520+03:00
+1183.SR,SHL Finance Company,Tadawul,Financial Services,Mortgage Finance,SAR,,2025-09-30 22:21:34.319967+03:00,2025-09-30 22:21:34.319967+03:00
+1182.SR,Amlak International Finance Company,Tadawul,Financial Services,Mortgage Finance,SAR,,2025-09-30 22:21:38.855357+03:00,2025-09-30 22:21:38.855357+03:00
+4081.SR,Nayifat Finance Company,Tadawul,Financial Services,Credit Services,SAR,,2025-09-30 22:21:43.316286+03:00,2025-09-30 22:21:43.316286+03:00
+1111.SR,Saudi Tadawul Group Holding Company,Tadawul,Financial Services,Capital Markets,SAR,,2025-09-30 22:21:47.574733+03:00,2025-09-30 22:21:47.574733+03:00
+4082.SR,Morabaha Marina Financing Company,Tadawul,Financial Services,Credit Services,SAR,,2025-09-30 22:21:52.724661+03:00,2025-09-30 22:21:52.724661+03:00
+4084.SR,Derayah Financial Company,Tadawul,Financial Services,Asset Management,SAR,,2025-09-30 22:21:56.977782+03:00,2025-09-30 22:21:56.977782+03:00
+2120.SR,Saudi Advanced Industries Company,Tadawul,Industrials,Conglomerates,SAR,,2025-09-30 22:22:01.514105+03:00,2025-09-30 22:22:01.514105+03:00
+4280.SR,Kingdom Holding Company,Tadawul,Industrials,Conglomerates,SAR,,2025-09-30 22:22:05.912498+03:00,2025-09-30 22:22:05.912498+03:00
+4130.SR,Darb Saudi Investment Company,Tadawul,Industrials,Conglomerates,SAR,,2025-09-30 22:22:10.262267+03:00,2025-09-30 22:22:10.262267+03:00
+8313.SR,Rasan Information Technology Company,Tadawul,Financial Services,Insurance Brokers,SAR,,2025-09-30 22:22:14.612725+03:00,2025-09-30 22:22:14.612725+03:00
+8010.SR,The Company for Cooperative Insurance,Tadawul,Financial Services,Insurance - Life,SAR,,2025-09-30 22:22:18.977085+03:00,2025-09-30 22:22:18.977085+03:00
+8020.SR,Malath Cooperative Insurance Company,Tadawul,Financial Services,Insurance - Property & Casualty,SAR,,2025-09-30 22:22:23.312493+03:00,2025-09-30 22:22:23.312493+03:00
+8030.SR,The Mediterranean and Gulf Cooperative Insurance and Reinsurance Company,Tadawul,Financial Services,Insurance - Life,SAR,,2025-09-30 22:22:27.689742+03:00,2025-09-30 22:22:27.689742+03:00
+8060.SR,Walaa Cooperative Insurance Company,Tadawul,Financial Services,Insurance - Diversified,SAR,,2025-09-30 22:22:32.083875+03:00,2025-09-30 22:22:32.083875+03:00
+8040.SR,Mutakamela Insurance Company,Tadawul,Financial Services,Insurance - Diversified,SAR,,2025-09-30 22:22:36.445221+03:00,2025-09-30 22:22:36.445221+03:00
+8070.SR,Arabian Shield Cooperative Insurance Company,Tadawul,Financial Services,Insurance - Property & Casualty,SAR,,2025-09-30 22:22:40.805343+03:00,2025-09-30 22:22:40.805343+03:00
+8050.SR,Salama Cooperative Insurance Company,Tadawul,Financial Services,Insurance - Property & Casualty,SAR,,2025-09-30 22:22:45.212554+03:00,2025-09-30 22:22:45.212554+03:00
+8100.SR,Saudi Arabian Cooperative Insurance Company,Tadawul,Financial Services,Insurance - Diversified,SAR,,2025-09-30 22:22:49.616508+03:00,2025-09-30 22:22:49.616508+03:00
+8012.SR,Aljazira Takaful Taawuni Company,Tadawul,Financial Services,Insurance - Life,SAR,,2025-09-30 22:22:53.876165+03:00,2025-09-30 22:22:53.876165+03:00
+8120.SR,Gulf Union Alahlia Cooperative Insurance Company,Tadawul,Financial Services,Insurance - Diversified,SAR,,2025-09-30 22:22:58.320670+03:00,2025-09-30 22:22:58.320670+03:00
+8150.SR,Allied Cooperative Insurance Group,Tadawul,Financial Services,Insurance - Property & Casualty,SAR,,2025-09-30 22:23:02.570798+03:00,2025-09-30 22:23:02.570798+03:00
+8160.SR,Arabia Insurance Cooperative Company,Tadawul,Financial Services,Insurance - Property & Casualty,SAR,,2025-09-30 22:23:07.024242+03:00,2025-09-30 22:23:07.024242+03:00
+8170.SR,Al-Etihad Cooperative Insurance Company,Tadawul,Financial Services,Insurance - Diversified,SAR,,2025-09-30 22:23:11.567309+03:00,2025-09-30 22:23:11.567309+03:00
+8180.SR,Al Sagr Cooperative Insurance Company,Tadawul,Financial Services,Insurance - Diversified,SAR,,2025-09-30 22:23:15.857909+03:00,2025-09-30 22:23:15.857909+03:00
+8190.SR,United Cooperative Assurance Company,Tadawul,Financial Services,Insurance - Diversified,SAR,,2025-09-30 22:23:20.147505+03:00,2025-09-30 22:23:20.147505+03:00
+8200.SR,Saudi Reinsurance Company,Tadawul,Financial Services,Insurance - Reinsurance,SAR,,2025-09-30 22:23:24.638255+03:00,2025-09-30 22:23:24.638255+03:00
+8210.SR,Bupa Arabia for Cooperative Insurance Company,Tadawul,Financial Services,Insurance - Specialty,SAR,,2025-09-30 22:23:29.241172+03:00,2025-09-30 22:23:29.241172+03:00
+8230.SR,Al Rajhi Company for Cooperative Insurance,Tadawul,Financial Services,Insurance - Property & Casualty,SAR,,2025-09-30 22:23:33.511624+03:00,2025-09-30 22:23:33.511624+03:00
+8240.SR,Chubb Arabia Cooperative Insurance Company,Tadawul,Financial Services,Insurance - Diversified,SAR,,2025-09-30 22:23:37.968498+03:00,2025-09-30 22:23:37.968498+03:00
+8250.SR,Gulf Insurance Group,Tadawul,Financial Services,Insurance - Diversified,SAR,,2025-09-30 22:23:42.257128+03:00,2025-09-30 22:23:42.257128+03:00
+8260.SR,Gulf General Cooperative Insurance Company,Tadawul,Financial Services,Insurance - Diversified,SAR,,2025-09-30 22:23:46.940380+03:00,2025-09-30 22:23:46.940380+03:00
+8270.SR,Buruj Cooperative Insurance Company,Tadawul,Financial Services,Insurance - Diversified,SAR,,2025-09-30 22:23:51.298539+03:00,2025-09-30 22:23:51.298539+03:00
+8280.SR,Liva Insurance Company,Tadawul,Financial Services,Insurance - Diversified,SAR,,2025-09-30 22:23:55.659559+03:00,2025-09-30 22:23:55.659559+03:00
+8300.SR,Wataniya Insurance Company,Tadawul,Financial Services,Insurance - Diversified,SAR,,2025-09-30 22:24:00.079106+03:00,2025-09-30 22:24:00.079106+03:00
+8310.SR,Amana Cooperative Insurance Company,Tadawul,Financial Services,Insurance - Life,SAR,,2025-09-30 22:24:04.580857+03:00,2025-09-30 22:24:04.580857+03:00
+8311.SR,Saudi Enaya Cooperative Insurance Company,Tadawul,Financial Services,Insurance - Life,SAR,,2025-09-30 22:24:08.905420+03:00,2025-09-30 22:24:08.905420+03:00
+7020.SR,Etihad Etisalat Company,Tadawul,Communication Services,Telecom Services,SAR,,2025-09-30 22:24:13.449930+03:00,2025-09-30 22:24:13.449930+03:00
+7030.SR,Mobile Telecommunications Company Saudi Arabia,Tadawul,Communication Services,Telecom Services,SAR,,2025-09-30 22:24:17.814461+03:00,2025-09-30 22:24:17.814461+03:00
+7040.SR,Etihad Atheeb Telecommunication Company,Tadawul,Communication Services,Telecom Services,SAR,,2025-09-30 22:24:22.232687+03:00,2025-09-30 22:24:22.232687+03:00
+2080.SR,National Gas and Industrialization Company,Tadawul,Energy,Oil & Gas Integrated,SAR,,2025-09-30 22:24:26.776456+03:00,2025-09-30 22:24:26.776456+03:00
+5110.SR,Saudi Electricity Company,Tadawul,Utilities,Utilities - Regulated Electric,SAR,,2025-09-30 22:24:31.191817+03:00,2025-09-30 22:24:31.191817+03:00
+2081.SR,Alkhorayef Water and Power Technologies Company,Tadawul,Utilities,Utilities - Regulated Water,SAR,,2025-09-30 22:24:35.562281+03:00,2025-09-30 22:24:35.562281+03:00
+2082.SR,ACWA Power Company,Tadawul,Utilities,Utilities - Diversified,SAR,,2025-09-30 22:24:39.879666+03:00,2025-09-30 22:24:39.879666+03:00
+2083.SR,Power and Water Utility Company for Jubail and Yanbu,Tadawul,Utilities,Utilities - Diversified,SAR,,2025-09-30 22:24:44.184293+03:00,2025-09-30 22:24:44.184293+03:00
+2084.SR,Miahona Company Limited,Tadawul,Industrials,Conglomerates,SAR,,2025-09-30 22:24:48.491666+03:00,2025-09-30 22:24:48.491666+03:00
+4330.SR,Riyad REIT Fund,Tadawul,Real Estate,REIT - Hotel & Motel,SAR,,2025-09-30 22:24:52.732050+03:00,2025-09-30 22:24:52.732050+03:00
+4331.SR,Aljazira Mawten REIT Fund,Tadawul,Real Estate,REIT - Industrial,SAR,,2025-09-30 22:24:56.956620+03:00,2025-09-30 22:24:56.956620+03:00
+4332.SR,Jadwa REIT Al Haramain Fund,Tadawul,Real Estate,REIT - Hotel & Motel,SAR,,2025-09-30 22:25:01.425793+03:00,2025-09-30 22:25:01.425793+03:00
+4333.SR,Taleem REIT Fund,Tadawul,Real Estate,REIT - Diversified,SAR,,2025-09-30 22:25:05.876522+03:00,2025-09-30 22:25:05.876522+03:00
+4334.SR,Al Maather Reit Fund,Tadawul,Real Estate,REIT - Diversified,SAR,,2025-09-30 22:25:10.162533+03:00,2025-09-30 22:25:10.162533+03:00
+4335.SR,Musharaka REIT Fund,Tadawul,Real Estate,REIT - Diversified,SAR,,2025-09-30 22:25:14.625280+03:00,2025-09-30 22:25:14.625280+03:00
+4336.SR,Mulkia Gulf Real Estate REIT,Tadawul,Real Estate,REIT - Diversified,SAR,,2025-09-30 22:25:18.941228+03:00,2025-09-30 22:25:18.941228+03:00
+4337.SR,Muscat Capital - Al Masha'ar REIT Fund,Tadawul,Real Estate,REIT - Diversified,SAR,,2025-09-30 22:25:23.215884+03:00,2025-09-30 22:25:23.215884+03:00
+4338.SR,Alahli Capital - Al-Ahli Reit Fund,Tadawul,Real Estate,REIT - Diversified,SAR,,2025-09-30 22:25:27.498797+03:00,2025-09-30 22:25:27.498797+03:00
+4344.SR,SEDCO Capital REIT Fund,Tadawul,Real Estate,REIT - Diversified,SAR,,2025-09-30 22:25:31.783444+03:00,2025-09-30 22:25:31.783444+03:00
+4339.SR,Derayah Financial - Derayah Reit Fund,Tadawul,Real Estate,REIT - Diversified,SAR,,2025-09-30 22:25:36.125610+03:00,2025-09-30 22:25:36.125610+03:00
+4340.SR,Al Rajhi REIT Fund,Tadawul,Real Estate,REIT - Diversified,SAR,,2025-09-30 22:25:41.069276+03:00,2025-09-30 22:25:41.069276+03:00
+4345.SR,Alinma Retail REIT Fund,Tadawul,Real Estate,REIT - Retail,SAR,,2025-09-30 22:25:45.568545+03:00,2025-09-30 22:25:45.568545+03:00
+4342.SR,Jadwa Investment - Jadwa Reit Saudi Fund,Tadawul,Real Estate,REIT - Residential,SAR,,2025-09-30 22:25:49.830960+03:00,2025-09-30 22:25:49.830960+03:00
+4346.SR,MEFIC REIT Fund,Tadawul,Real Estate,REIT - Diversified,SAR,,2025-09-30 22:25:54.194786+03:00,2025-09-30 22:25:54.194786+03:00
+4347.SR,Bonyan REIT Fund,Tadawul,Real Estate,REIT - Diversified,SAR,,2025-09-30 22:25:58.572790+03:00,2025-09-30 22:25:58.572790+03:00
+4348.SR,Alkhabeer REIT Fund,Tadawul,Real Estate,REIT - Diversified,SAR,,2025-09-30 22:26:02.902253+03:00,2025-09-30 22:26:02.902253+03:00
+4349.SR,Alinma Hospitality REIT,Tadawul,Real Estate,REIT - Hotel & Motel,SAR,,2025-09-30 22:26:07.111816+03:00,2025-09-30 22:26:07.111816+03:00
+4350.SR,Alistithmar AREIC Diversified REIT,Tadawul,Real Estate,REIT - Diversified,SAR,,2025-09-30 22:26:11.358505+03:00,2025-09-30 22:26:11.358505+03:00
+4020.SR,Saudi Real Estate Company,Tadawul,Real Estate,Real Estate Services,SAR,,2025-09-30 22:26:15.791466+03:00,2025-09-30 22:26:15.791466+03:00
+4090.SR,Taiba Investment Company,Tadawul,Consumer Cyclical,Lodging,SAR,,2025-09-30 22:26:20.244949+03:00,2025-09-30 22:26:20.244949+03:00
+4150.SR,Arriyadh Development Co.,Tadawul,Real Estate,Real Estate - Diversified,SAR,,2025-09-30 22:26:29.016287+03:00,2025-09-30 22:26:29.016287+03:00
+4220.SR,Emaar The Economic City,Tadawul,Real Estate,Real Estate - Development,SAR,,2025-09-30 22:26:33.486359+03:00,2025-09-30 22:26:33.486359+03:00
+4250.SR,Jabal Omar Development Company,Tadawul,Consumer Cyclical,Lodging,SAR,,2025-09-30 22:26:37.764527+03:00,2025-09-30 22:26:37.764527+03:00
+4300.SR,Dar Al Arkan Real Estate Development Company,Tadawul,Real Estate,Real Estate - Development,SAR,,2025-09-30 22:26:42.373241+03:00,2025-09-30 22:26:42.373241+03:00
+4310.SR,Knowledge Economic City Company,Tadawul,Real Estate,Real Estate - Development,SAR,,2025-09-30 22:26:47.088421+03:00,2025-09-30 22:26:47.088421+03:00
+4320.SR,Alandalus Property Company,Tadawul,Real Estate,Real Estate Services,SAR,,2025-09-30 22:26:51.395627+03:00,2025-09-30 22:26:51.395627+03:00
+4321.SR,Arabian Centres Company,Tadawul,Real Estate,Real Estate Services,SAR,,2025-09-30 22:26:55.739719+03:00,2025-09-30 22:26:55.739719+03:00
+4322.SR,Retal Urban Development Company,Tadawul,Real Estate,Real Estate - Diversified,SAR,,2025-09-30 22:27:00.062419+03:00,2025-09-30 22:27:00.062419+03:00
+4326.SR,Dar Al Majed Real Estate Company,Tadawul,Real Estate,Real Estate - Development,SAR,,2025-09-30 22:27:04.292095+03:00,2025-09-30 22:27:04.292095+03:00
+4323.SR,Sumou Real Estate Company,Tadawul,Real Estate,Real Estate - Development,SAR,,2025-09-30 22:27:08.711337+03:00,2025-09-30 22:27:08.711337+03:00
+4324.SR,Banan Real Estate Co.,Tadawul,Real Estate,Real Estate Services,SAR,,2025-09-30 22:27:13.272152+03:00,2025-09-30 22:27:13.272152+03:00
+4325.SR,Umm Al Qura for Development and,Tadawul,Real Estate,Real Estate - Diversified,SAR,,2025-09-30 22:27:17.635071+03:00,2025-09-30 22:27:17.635071+03:00
+4230.SR,Red Sea International Company,Tadawul,Real Estate,Real Estate Services,SAR,,2025-09-30 22:27:21.924216+03:00,2025-09-30 22:27:21.924216+03:00
+7200.SR,Al Moammar Information Systems Company,Tadawul,Technology,Information Technology Services,SAR,,2025-09-30 22:27:26.383185+03:00,2025-09-30 22:27:26.383185+03:00
+7201.SR,Arab Sea Information Systems Company,Tadawul,Technology,Software - Application,SAR,,2025-09-30 22:27:30.733853+03:00,2025-09-30 22:27:30.733853+03:00
+7202.SR,Arabian Internet and Communication Services Company,Tadawul,Communication Services,Telecom Services,SAR,,2025-09-30 22:27:35.260514+03:00,2025-09-30 22:27:35.260514+03:00
+7203.SR,Elm Company,Tadawul,Technology,Information Technology Services,SAR,,2025-09-30 22:27:39.626402+03:00,2025-09-30 22:27:39.626402+03:00
+7204.SR,Perfect Presentation for Commercial Services Company,Tadawul,Technology,Software - Infrastructure,SAR,,2025-09-30 22:27:44.072021+03:00,2025-09-30 22:27:44.072021+03:00
+7211.SR,Saudi Azm for Communication and Information Technology Company,Tadawul,Technology,Software - Application,SAR,,2025-09-30 22:27:48.419751+03:00,2025-09-30 22:27:48.419751+03:00
+4165.SR,Al Majed Oud Co.,Tadawul,Consumer Cyclical,Specialty Retail,SAR,,2025-09-30 22:27:52.813764+03:00,2025-09-30 22:27:52.813764+03:00
+9406.SR,Albilad Capital - Msci US Equity ETF,Tadawul,,,SAR,,2025-09-30 22:27:56.993401+03:00,2025-09-30 22:27:56.993401+03:00
+9402.SR,HSBC Amanah Saudi 20 ETF,Tadawul,,,SAR,,2025-09-30 22:28:01.445354+03:00,2025-09-30 22:28:01.445354+03:00
+9403.SR,Albilad Saudi Sovereign Sukuk Etf,Tadawul,,,SAR,,2025-09-30 22:28:05.588170+03:00,2025-09-30 22:28:05.588170+03:00
+4701.SR,Alkhabeer Growth A - Alkhabeer Growth And Income Fund,Tadawul,,,SAR,,2025-09-30 22:28:09.910309+03:00,2025-09-30 22:28:09.910309+03:00
+9400.SR,FALCOM Saudi Equity ETF,Tadawul,,,SAR,,2025-09-30 22:28:14.195462+03:00,2025-09-30 22:28:14.195462+03:00
+9401.SR,FALCOM Petrochemical ETF,Tadawul,,,SAR,,2025-09-30 22:28:18.422490+03:00,2025-09-30 22:28:18.422490+03:00
+9404.SR,Alinma Saudi Government Sukuk Etf Fund - Short Maturity - Alinma Sukuk Fund,Tadawul,,,SAR,,2025-09-30 22:28:51.195134+03:00,2025-09-30 22:28:51.195134+03:00
+9405.SR,Albilad Gold ETF,Tadawul,,,SAR,,2025-09-30 22:28:55.413719+03:00,2025-09-30 22:28:55.413719+03:00
+4700.SR,Alkhabeer Capital - Diversified Income ETF,Tadawul,,,SAR,,2025-09-30 22:28:59.744549+03:00,2025-09-30 22:28:59.744549+03:00
+9407.SR,Albilad Capital - MSCI US Tech ETF,Tadawul,,,SAR,,2025-09-30 22:29:03.973969+03:00,2025-09-30 22:29:03.973969+03:00
+9408.SR,Albilad MSCI Saudi Growth ETF,Tadawul,,,SAR,,2025-09-30 22:29:08.151038+03:00,2025-09-30 22:29:08.151038+03:00
+4702.SR,Al Khabeer Diversified Income T,Tadawul,,,SAR,,2025-09-30 22:29:12.334074+03:00,2025-09-30 22:29:12.334074+03:00
+4703.SR,Sedco Capital - Multi Asset Traded Fund,Tadawul,,,SAR,,2025-09-30 22:29:16.565623+03:00,2025-09-30 22:29:16.565623+03:00
+9410.SR,Albilad CSOP MSCI Hong Kong China -  Class  Sarency Series,Tadawul,,,SAR,,2025-09-30 22:29:20.861382+03:00,2025-09-30 22:29:20.861382+03:00
+9411.SR,Sab Invest Hang Seng Homg Etf,Tadawul,,,SAR,,2025-09-30 22:29:25.256528+03:00,2025-09-30 22:29:25.256528+03:00
+9409.SR,YAQEEN S&P ESG MENA ETF Fund,Tadawul,,,SAR,,2025-09-30 22:29:29.659418+03:00,2025-09-30 22:29:29.659418+03:00
+9615.SR,Mufeed Company,NOMU,Communication Services,Entertainment,SAR,,2025-09-30 22:29:34.202710+03:00,2025-09-30 22:29:34.202710+03:00
+9642.SR,Time Entertainment Company,NOMU,Communication Services,Entertainment,SAR,,2025-09-30 22:29:38.422352+03:00,2025-09-30 22:29:38.422352+03:00
+9618.SR,Al-Fakhera Men's Tailoring Company,NOMU,Consumer Cyclical,Apparel Retail,SAR,,2025-09-30 22:29:42.865943+03:00,2025-09-30 22:29:42.865943+03:00
+9640.SR,ASAS Makeen Real Estate Development and Investment Company,NOMU,Real Estate,Real Estate Services,SAR,,2025-09-30 22:29:47.104503+03:00,2025-09-30 22:29:47.104503+03:00
+9641.SR,Hawyia Auctions Co.,NOMU,Real Estate,Real Estate Services,SAR,,2025-09-30 22:29:51.297813+03:00,2025-09-30 22:29:51.297813+03:00
+9648.SR,Hamad Mohammed Bin Saedan Real Estate Company,NOMU,Real Estate,Real Estate - Development,SAR,,2025-09-30 22:29:55.534257+03:00,2025-09-30 22:29:55.534257+03:00
+9634.SR,Adeer Real Estate Co.,NOMU,Real Estate,Real Estate Services,SAR,,2025-09-30 22:29:59.895098+03:00,2025-09-30 22:29:59.895098+03:00
+9610.SR,First Avenue for Real Estate De,NOMU,Real Estate,Real Estate - Development,SAR,,2025-09-30 22:30:04.484292+03:00,2025-09-30 22:30:04.484292+03:00
+9521.SR,INMAR Company,NOMU,Real Estate,Real Estate - Development,SAR,,2025-09-30 22:30:08.745727+03:00,2025-09-30 22:30:08.745727+03:00
+9535.SR,Ladun Investment Company,NOMU,Real Estate,Real Estate - Development,SAR,,2025-09-30 22:30:13.151600+03:00,2025-09-30 22:30:13.151600+03:00
+9591.SR,View United Real Estate Development Co.,NOMU,Real Estate,Real Estate - Development,SAR,,2025-09-30 22:30:17.481179+03:00,2025-09-30 22:30:17.481179+03:00
+9515.SR,Fesh Fash Snack Food Production Company,NOMU,Consumer Defensive,Packaged Foods,SAR,,2025-09-30 22:30:21.776416+03:00,2025-09-30 22:30:21.776416+03:00
+9536.SR,Arabian Food and Dairy Factories Company,NOMU,Consumer Defensive,Packaged Foods,SAR,,2025-09-30 22:30:26.059619+03:00,2025-09-30 22:30:26.059619+03:00
+9555.SR,Leen Alkhair Trading Company,NOMU,Consumer Defensive,Farm Products,SAR,,2025-09-30 22:30:30.397189+03:00,2025-09-30 22:30:30.397189+03:00
+9556.SR,Nofoth Food Products Company,NOMU,Consumer Defensive,Grocery Stores,SAR,,2025-09-30 22:30:34.755823+03:00,2025-09-30 22:30:34.755823+03:00
+9559.SR,Balady Poultry Company,NOMU,Consumer Defensive,Farm Products,SAR,,2025-09-30 22:30:39.040149+03:00,2025-09-30 22:30:39.040149+03:00
+9564.SR,Horizon Food Company Limited,NOMU,Consumer Defensive,Packaged Foods,SAR,,2025-09-30 22:30:43.407525+03:00,2025-09-30 22:30:43.407525+03:00
+9622.SR,Shmoh Almadi Co.,NOMU,Consumer Defensive,Packaged Foods,SAR,,2025-09-30 22:30:47.739375+03:00,2025-09-30 22:30:47.739375+03:00
+9644.SR,Naf Company for Feed for Indust,NOMU,Basic Materials,Agricultural Inputs,SAR,,2025-09-30 22:30:52.050589+03:00,2025-09-30 22:30:52.050589+03:00
+9532.SR,Aljouf Mineral Water Bottling Co.,NOMU,Consumer Defensive,Beverages - Non-Alcoholic,SAR,,2025-09-30 22:30:56.270249+03:00,2025-09-30 22:30:56.270249+03:00
+9612.SR,Sama Healthy Water Factory Co.,NOMU,Consumer Defensive,Beverages - Non-Alcoholic,SAR,,2025-09-30 22:31:00.670634+03:00,2025-09-30 22:31:00.670634+03:00
+9620.SR,Balsm Alofoq Medical Co.,NOMU,Healthcare,Medical Devices,SAR,,2025-09-30 22:31:04.952048+03:00,2025-09-30 22:31:04.952048+03:00
+9627.SR,Twareat Medical Care Company,NOMU,Healthcare,Medical Care Facilities,SAR,,2025-09-30 22:31:09.189625+03:00,2025-09-30 22:31:09.189625+03:00
+9626.SR,Basma Adeem Medical Co.,NOMU,Healthcare,Medical Care Facilities,SAR,,2025-09-30 22:31:13.630760+03:00,2025-09-30 22:31:13.630760+03:00
+9600.SR,Qomel Company Limited,NOMU,Healthcare,Pharmaceutical Retailers,SAR,,2025-09-30 22:31:18.129368+03:00,2025-09-30 22:31:18.129368+03:00
+9594.SR,Al-Modawat Specialized Medical ,NOMU,Healthcare,Medical Care Facilities,SAR,,2025-09-30 22:31:22.391504+03:00,2025-09-30 22:31:22.391504+03:00
+9604.SR,Miral Dental Clinics Co.,NOMU,Healthcare,Medical Care Facilities,SAR,,2025-09-30 22:31:26.642875+03:00,2025-09-30 22:31:26.642875+03:00
+9647.SR,Wajd life trading Company,NOMU,Healthcare,Medical Distribution,SAR,,2025-09-30 22:31:31.302813+03:00,2025-09-30 22:31:31.302813+03:00
+9616.SR,Jana Medical Co.,NOMU,Healthcare,Medical Devices,SAR,,2025-09-30 22:31:35.834185+03:00,2025-09-30 22:31:35.834185+03:00
+9546.SR,Naba Al Saha Medical Services Company,NOMU,Healthcare,Medical Care Facilities,SAR,,2025-09-30 22:31:40.430095+03:00,2025-09-30 22:31:40.430095+03:00
+9527.SR,Alf Meem Yaa for Medical Supplies and Equipment Company,NOMU,Healthcare,Medical Distribution,SAR,,2025-09-30 22:31:44.866328+03:00,2025-09-30 22:31:44.866328+03:00
+9530.SR,Arabian International Healthcare Holding Company,NOMU,Healthcare,Medical Care Facilities,SAR,,2025-09-30 22:31:49.293475+03:00,2025-09-30 22:31:49.293475+03:00
+9572.SR,Al-Razi Medical Company,NOMU,Healthcare,Pharmaceutical Retailers,SAR,,2025-09-30 22:31:53.867074+03:00,2025-09-30 22:31:53.867074+03:00
+9518.SR,Canadian General Medical Center Complex Company,NOMU,Healthcare,Medical Care Facilities,SAR,,2025-09-30 22:31:58.193787+03:00,2025-09-30 22:31:58.193787+03:00
+9574.SR,Professional Medical Expertise Company,NOMU,Healthcare,Medical Devices,SAR,,2025-09-30 22:32:02.559634+03:00,2025-09-30 22:32:02.559634+03:00
+9544.SR,Future Care Trading Co.,NOMU,Healthcare,Medical Care Facilities,SAR,,2025-09-30 22:32:06.945403+03:00,2025-09-30 22:32:06.945403+03:00
+9587.SR,Lana Medical Co.,NOMU,,,SAR,,2025-09-30 22:32:11.156559+03:00,2025-09-30 22:32:11.156559+03:00
+9516.SR,Natural Gas Distribution Company,NOMU,Utilities,Utilities - Regulated Gas,SAR,,2025-09-30 22:32:15.683547+03:00,2025-09-30 22:32:15.683547+03:00
+9300.SR,Alwaha REIT Fund,NOMU,Real Estate,REIT - Diversified,SAR,,2025-09-30 22:32:19.931148+03:00,2025-09-30 22:32:19.931148+03:00
+9549.SR,Abdulaziz and Mansour Ibrahim Albabtin Co.,NOMU,Consumer Defensive,Packaged Foods,SAR,,2025-09-30 22:32:24.236159+03:00,2025-09-30 22:32:24.236159+03:00
+9592.SR,Almujtama Alraida Medical Co.,NOMU,Healthcare,Pharmaceutical Retailers,SAR,,2025-09-30 22:32:28.424241+03:00,2025-09-30 22:32:28.424241+03:00
+9577.SR,DAR ALMARKABAH For Renting Cars Company,NOMU,Industrials,Rental & Leasing Services,SAR,,2025-09-30 22:32:32.740773+03:00,2025-09-30 22:32:32.740773+03:00
+9584.SR,Riyal Investment and Developmen,NOMU,Industrials,Rental & Leasing Services,SAR,,2025-09-30 22:32:37.038148+03:00,2025-09-30 22:32:37.038148+03:00
+9571.SR,Munawla Cargo Co. Ltd.,NOMU,Industrials,Integrated Freight & Logistics,SAR,,2025-09-30 22:32:41.369472+03:00,2025-09-30 22:32:41.369472+03:00
+9586.SR,Osool and Bakheet Investment Co,NOMU,,,SAR,,2025-09-30 22:32:45.685441+03:00,2025-09-30 22:32:45.685441+03:00
+9585.SR,Mulkia Investment Co.,NOMU,,,SAR,,2025-09-30 22:32:50.019288+03:00,2025-09-30 22:32:50.019288+03:00
+9602.SR,Yaqeen Capital Co.,NOMU,Financial Services,Asset Management,SAR,,2025-09-30 22:32:54.332860+03:00,2025-09-30 22:32:54.332860+03:00
+9596.SR,Quara Finance Company,NOMU,Financial Services,Credit Services,SAR,,2025-09-30 22:32:58.539845+03:00,2025-09-30 22:32:58.539845+03:00
+9635.SR,Dkhoun National Trading Co.,NOMU,Consumer Defensive,Household & Personal Products,SAR,,2025-09-30 22:33:02.795463+03:00,2025-09-30 22:33:02.795463+03:00
+9579.SR,Intelligent Oud Co.,NOMU,Consumer Defensive,Household & Personal Products,SAR,,2025-09-30 22:33:07.114515+03:00,2025-09-30 22:33:07.114515+03:00
+9517.SR,MOBI Industry Co.,NOMU,Basic Materials,Chemicals,SAR,,2025-09-30 22:33:11.357435+03:00,2025-09-30 22:33:11.357435+03:00
+9514.SR,Mohammed Hasan AlNaqool Sons Co.,NOMU,Basic Materials,Building Materials,SAR,,2025-09-30 22:33:15.773000+03:00,2025-09-30 22:33:15.773000+03:00
+9513.SR,Watani Iron Steel Company,NOMU,Basic Materials,Steel,SAR,,2025-09-30 22:33:20.094206+03:00,2025-09-30 22:33:20.094206+03:00
+9523.SR,Group Five Pipe Saudi Company,NOMU,Basic Materials,Steel,SAR,,2025-09-30 22:33:24.509678+03:00,2025-09-30 22:33:24.509678+03:00
+9548.SR,Arabian Plastic Industrial Company Limited,NOMU,Basic Materials,Specialty Chemicals,SAR,,2025-09-30 22:33:28.692096+03:00,2025-09-30 22:33:28.692096+03:00
+9539.SR,Aqaseem Factory for Chemicals and Plastics Co.,NOMU,Energy,Oil & Gas Refining & Marketing,SAR,,2025-09-30 22:33:32.995463+03:00,2025-09-30 22:33:32.995463+03:00
+9563.SR,BENA Steel Industries,NOMU,Basic Materials,Steel,SAR,,2025-09-30 22:33:37.458581+03:00,2025-09-30 22:33:37.458581+03:00
+9565.SR,Meyar Company,NOMU,Basic Materials,Building Materials,SAR,,2025-09-30 22:33:41.857185+03:00,2025-09-30 22:33:41.857185+03:00
+9553.SR,Molan Steel Company,NOMU,Basic Materials,Steel,SAR,,2025-09-30 22:33:46.100255+03:00,2025-09-30 22:33:46.100255+03:00
+9566.SR,Saudi Lime Industries Company,NOMU,Basic Materials,Building Materials,SAR,,2025-09-30 22:33:50.399731+03:00,2025-09-30 22:33:50.399731+03:00
+9588.SR,Riyadh Steel Co.,NOMU,,,SAR,,2025-09-30 22:33:54.648529+03:00,2025-09-30 22:33:54.648529+03:00
+9576.SR,Paper Home Company,NOMU,Consumer Cyclical,Packaging & Containers,SAR,,2025-09-30 22:33:58.863551+03:00,2025-09-30 22:33:58.863551+03:00
+9580.SR,"Al Rashid Industrial Co.,",NOMU,Consumer Cyclical,Packaging & Containers,SAR,,2025-09-30 22:34:03.191897+03:00,2025-09-30 22:34:03.191897+03:00
+9575.SR,Marble Design Factory Company,NOMU,Basic Materials,Building Materials,SAR,,2025-09-30 22:34:07.535773+03:00,2025-09-30 22:34:07.535773+03:00
+9552.SR,Saudi Top for Trading Company,NOMU,Basic Materials,Specialty Chemicals,SAR,,2025-09-30 22:34:11.832448+03:00,2025-09-30 22:34:11.832448+03:00
+9623.SR,Al Battal Factory for Chemical Industries Company,NOMU,Basic Materials,Specialty Chemicals,SAR,,2025-09-30 22:34:16.054812+03:00,2025-09-30 22:34:16.054812+03:00
+9631.SR,Hedab Alkhaleej Trading Co.,NOMU,,,SAR,,2025-09-30 22:34:20.287083+03:00,2025-09-30 22:34:20.287083+03:00
+9607.SR,ASG Plastic Factory Co.,NOMU,Basic Materials,Specialty Chemicals,SAR,,2025-09-30 22:34:24.502685+03:00,2025-09-30 22:34:24.502685+03:00
+9605.SR,Neft Alsharq Company for Chemic,NOMU,Basic Materials,Specialty Chemicals,SAR,,2025-09-30 22:34:28.732272+03:00,2025-09-30 22:34:28.732272+03:00
+9601.SR,Mohammed Hadi Al-Rasheed Company,NOMU,Basic Materials,Other Industrial Metals & Mining,SAR,,2025-09-30 22:34:33.047318+03:00,2025-09-30 22:34:33.047318+03:00
+9599.SR,Taqat Mineral Trading Co.,NOMU,Industrials,Metal Fabrication,SAR,,2025-09-30 22:34:37.276310+03:00,2025-09-30 22:34:37.276310+03:00
+9609.SR,Nass Petrol Factory Company,NOMU,Energy,Oil & Gas E&P,SAR,,2025-09-30 22:34:41.694870+03:00,2025-09-30 22:34:41.694870+03:00
+9611.SR,Arabian United Float Glass Company,NOMU,Basic Materials,Building Materials,SAR,,2025-09-30 22:34:46.004379+03:00,2025-09-30 22:34:46.004379+03:00
+9608.SR,Al Ashghal Al Moysra Co.,NOMU,Industrials,Integrated Freight & Logistics,SAR,,2025-09-30 22:34:50.248401+03:00,2025-09-30 22:34:50.248401+03:00
+9624.SR,Alshehili Company for metal industries,NOMU,Consumer Cyclical,Auto Parts,SAR,,2025-09-30 22:34:54.370703+03:00,2025-09-30 22:34:54.370703+03:00
+9639.SR,Anmat Technology for Trading Co,NOMU,,,SAR,,2025-09-30 22:34:58.654412+03:00,2025-09-30 22:34:58.654412+03:00
+9633.SR,Service Equipment Co.,NOMU,Industrials,Specialty Industrial Machinery,SAR,,2025-09-30 22:35:02.879172+03:00,2025-09-30 22:35:02.879172+03:00
+9547.SR,Rawasi Albina Investment Co.,NOMU,Industrials,Engineering & Construction,SAR,,2025-09-30 22:35:07.156867+03:00,2025-09-30 22:35:07.156867+03:00
+9533.SR,Saudi Parts Center Company,NOMU,Consumer Cyclical,Auto Parts,SAR,,2025-09-30 22:35:11.389466+03:00,2025-09-30 22:35:11.389466+03:00
+9569.SR,"AlMuneef Company for Trade, Industry, Agriculture and Contracting",NOMU,Basic Materials,Agricultural Inputs,SAR,,2025-09-30 22:35:15.755624+03:00,2025-09-30 22:35:15.755624+03:00
+9568.SR,Mayar Holding Company,NOMU,Industrials,Conglomerates,SAR,,2025-09-30 22:35:20.040011+03:00,2025-09-30 22:35:20.040011+03:00
+9560.SR,Waja Company,NOMU,Industrials,Engineering & Construction,SAR,,2025-09-30 22:35:24.342953+03:00,2025-09-30 22:35:24.342953+03:00
+9583.SR,United Mining Industries Company,NOMU,Basic Materials,Building Materials,SAR,,2025-09-30 22:35:28.589966+03:00,2025-09-30 22:35:28.589966+03:00
+9578.SR,Atlas Elevators General Trading & Contracting Company,NOMU,Industrials,Industrial Distribution,SAR,,2025-09-30 22:35:33.221594+03:00,2025-09-30 22:35:33.221594+03:00
+9542.SR,Keir International Co.,NOMU,Technology,Communication Equipment,SAR,,2025-09-30 22:35:37.440812+03:00,2025-09-30 22:35:37.440812+03:00
+9525.SR,Alwasail Industrial Company,NOMU,Basic Materials,Specialty Chemicals,SAR,,2025-09-30 22:35:41.967977+03:00,2025-09-30 22:35:41.967977+03:00
+9528.SR,Gas Arabian Services Company,NOMU,Energy,Oil & Gas Equipment & Services,SAR,,2025-09-30 22:35:46.359243+03:00,2025-09-30 22:35:46.359243+03:00
+9510.SR,National Building and Marketing Co.,NOMU,Basic Materials,Steel,SAR,,2025-09-30 22:35:50.611757+03:00,2025-09-30 22:35:50.611757+03:00
+9545.SR,International Human Resources Company,NOMU,Industrials,Staffing & Employment Services,SAR,,2025-09-30 22:35:54.927860+03:00,2025-09-30 22:35:54.927860+03:00
+9570.SR,Tam Development Company,NOMU,Industrials,Consulting Services,SAR,,2025-09-30 22:35:59.374078+03:00,2025-09-30 22:35:59.374078+03:00
+9593.SR,Pan Gulf Marketing Co.,NOMU,Consumer Cyclical,Specialty Retail,SAR,,2025-09-30 22:36:03.579221+03:00,2025-09-30 22:36:03.579221+03:00
+9540.SR,National Environmental Recycling Company,NOMU,Industrials,Waste Management,SAR,,2025-09-30 22:36:07.868156+03:00,2025-09-30 22:36:07.868156+03:00
+9645.SR,National Signage Industrial Co.,NOMU,Industrials,Electrical Equipment & Parts,SAR,,2025-09-30 22:36:12.228761+03:00,2025-09-30 22:36:12.228761+03:00
+9625.SR,Itmam Consultancy Co.,NOMU,Industrials,Consulting Services,SAR,,2025-09-30 22:36:16.535367+03:00,2025-09-30 22:36:16.535367+03:00
+9619.SR,Multi Business Group Company for Projects,NOMU,Industrials,Engineering & Construction,SAR,,2025-09-30 22:36:21.006545+03:00,2025-09-30 22:36:21.006545+03:00
+9621.SR,Digital Research Company,NOMU,Industrials,Consulting Services,SAR,,2025-09-30 22:36:25.267253+03:00,2025-09-30 22:36:25.267253+03:00
+9613.SR,Shalfa Facilities Management Company,NOMU,Industrials,Specialty Business Services,SAR,,2025-09-30 22:36:29.614843+03:00,2025-09-30 22:36:29.614843+03:00
+9606.SR,Altharwah Albashariyyah Co.,NOMU,Industrials,Consulting Services,SAR,,2025-09-30 22:36:34.105972+03:00,2025-09-30 22:36:34.105972+03:00
+9597.SR,Leaf Global Environmental Servi,NOMU,Industrials,Waste Management,SAR,,2025-09-30 22:36:38.437870+03:00,2025-09-30 22:36:38.437870+03:00
+9598.SR,Al Mohafaza Company for Educati,NOMU,Consumer Defensive,Education & Training Services,SAR,,2025-09-30 22:36:42.728814+03:00,2025-09-30 22:36:42.728814+03:00
+9603.SR,Horizon Educational Co.,NOMU,Consumer Defensive,Education & Training Services,SAR,,2025-09-30 22:36:47.053929+03:00,2025-09-30 22:36:47.053929+03:00
+9630.SR,Ratio Speciality Company for Tr,NOMU,Consumer Cyclical,Restaurants,SAR,,2025-09-30 22:36:51.345145+03:00,2025-09-30 22:36:51.345145+03:00
+9628.SR,Lamasat Co.,NOMU,Consumer Defensive,Household & Personal Products,SAR,,2025-09-30 22:36:55.608704+03:00,2025-09-30 22:36:55.608704+03:00
+9617.SR,Arabica Star Co.,NOMU,Consumer Cyclical,Restaurants,SAR,,2025-09-30 22:36:59.789845+03:00,2025-09-30 22:36:59.789845+03:00
+9632.SR,Future Vision for Health Traini,NOMU,Consumer Defensive,Education & Training Services,SAR,,2025-09-30 22:37:04.076319+03:00,2025-09-30 22:37:04.076319+03:00
+9636.SR,Al Kuzama Trading Co,NOMU,Industrials,Specialty Business Services,SAR,,2025-09-30 22:37:08.622746+03:00,2025-09-30 22:37:08.622746+03:00
+9541.SR,Academy of Learning Company,NOMU,Consumer Defensive,Education & Training Services,SAR,,2025-09-30 22:37:12.829285+03:00,2025-09-30 22:37:12.829285+03:00
+9581.SR,Clean Life Co.,NOMU,Consumer Cyclical,Personal Services,SAR,,2025-09-30 22:37:17.279833+03:00,2025-09-30 22:37:17.279833+03:00
+9590.SR,Armah Sports Co.,NOMU,Consumer Cyclical,Leisure,SAR,,2025-09-30 22:37:21.598408+03:00,2025-09-30 22:37:21.598408+03:00
+9562.SR,Foods Gate Trading Co.,NOMU,Consumer Cyclical,Restaurants,SAR,,2025-09-30 22:37:25.995276+03:00,2025-09-30 22:37:25.995276+03:00
+9567.SR,Ghida Al-Sultan Company,NOMU,Consumer Cyclical,Restaurants,SAR,,2025-09-30 22:37:30.295915+03:00,2025-09-30 22:37:30.295915+03:00
+9551.SR,Knowledge Tower,NOMU,Consumer Cyclical,Specialty Retail,SAR,,2025-09-30 22:37:34.601181+03:00,2025-09-30 22:37:34.601181+03:00
+9522.SR,Alhasoob Co.,NOMU,Technology,Electronics & Computer Distribution,SAR,,2025-09-30 22:37:39.105735+03:00,2025-09-30 22:37:39.105735+03:00
+9537.SR,Amwaj International Company,NOMU,Consumer Cyclical,"Furnishings, Fixtures & Appliances",SAR,,2025-09-30 22:37:43.315462+03:00,2025-09-30 22:37:43.315462+03:00
+9589.SR,Fad International Company,NOMU,Consumer Cyclical,Apparel Manufacturing,SAR,,2025-09-30 22:37:47.599755+03:00,2025-09-30 22:37:47.599755+03:00
+9649.SR,Jamjoom Fashion Trading Company,NOMU,Consumer Cyclical,Apparel Manufacturing,SAR,,2025-09-30 22:37:51.986646+03:00,2025-09-30 22:37:51.986646+03:00
+9637.SR,Axelerated Solutions for Inform,NOMU,Technology,Information Technology Services,SAR,,2025-09-30 22:37:56.242099+03:00,2025-09-30 22:37:56.242099+03:00
+9614.SR,Purity for Information Technology Company,NOMU,Technology,Information Technology Services,SAR,,2025-09-30 22:38:00.464243+03:00,2025-09-30 22:38:00.464243+03:00
+9595.SR,WSM for Information Technology ,NOMU,Industrials,Consulting Services,SAR,,2025-09-30 22:38:04.725316+03:00,2025-09-30 22:38:04.725316+03:00
+9538.SR,Naseej for Technology Co.,NOMU,Technology,Information Technology Services,SAR,,2025-09-30 22:38:08.990295+03:00,2025-09-30 22:38:08.990295+03:00
+9550.SR,Sure Global Tech Co.,NOMU,Technology,Information Technology Services,SAR,,2025-09-30 22:38:13.389333+03:00,2025-09-30 22:38:13.389333+03:00
+9524.SR,Advance International Company for Communication and Information Technology,NOMU,Industrials,Security & Protection Services,SAR,,2025-09-30 22:38:17.711192+03:00,2025-09-30 22:38:17.711192+03:00
+9557.SR,Edarat Communication and Information Technology Co.,NOMU,Technology,Information Technology Services,SAR,,2025-09-30 22:38:22.049870+03:00,2025-09-30 22:38:22.049870+03:00
+9561.SR,Knowledge Net Computer Company,NOMU,Technology,Software - Application,SAR,,2025-09-30 22:38:26.459860+03:00,2025-09-30 22:38:26.459860+03:00
+9543.SR,Saudi Networkers Services Company,NOMU,Industrials,Consulting Services,SAR,,2025-09-30 22:38:30.795064+03:00,2025-09-30 22:38:30.795064+03:00
+9558.SR,Alqemam for Computer Systems Co.,NOMU,Technology,Software - Infrastructure,SAR,,2025-09-30 22:38:35.261512+03:00,2025-09-30 22:38:35.261512+03:00
+4100.SR,Makkah Construction and Development Company,Tadawul,Consumer Cyclical,Lodging,SAR,,2025-09-30 22:43:18.730836+03:00,2025-09-30 22:43:18.730836+03:00

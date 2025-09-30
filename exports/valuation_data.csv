@@ -1,0 +1,404 @@
+symbol,company_name,exchange,market_cap,total_debt,total_cash,book_value,status
+2222.SR,Saudi Arabian Oil Company,Tadawul,6103020077056,348455993344,202129997824,6.064,complete
+1120.SR,Al Rajhi Banking and Investment Corporation,Tadawul,434291998720,16179259392,22310856704,26.247,complete
+7010.SR,Saudi Telecom Company,Tadawul,227664117760,17490081792,20245565440,16.574,complete
+2381.SR,Arabian Drilling Company,Tadawul,7086684672,3152934144,510428512,66.239,complete
+2382.SR,ADES Holding Company,Tadawul,17956659200,13011062784,886252032,5.981,complete
+2380.SR,Rabigh Refining and Petrochemical Company,Tadawul,12582557696,28545736704,463158016,5.758,complete
+4030.SR,The National Shipping Company of Saudi Arabia,Tadawul,25461006336,12337446912,2312636928,14.918,complete
+2030.SR,Saudi Arabian Refineries Company,Tadawul,952733184,395771,282432704,21.317,complete
+1202.SR,Middle East Company for Manufacturing and Producing Paper,Tadawul,2393733376,708987776,551485760,18.664,complete
+3007.SR,Zahrat Al Waha For Trading Company,Tadawul,594449984,181807296,27197408,12.442,complete
+1201.SR,Takween Advanced Industries,Tadawul,598769024,676451968,27868000,4.661,complete
+1322.SR,Al Masane Al Kobra Mining Company,Tadawul,6688800256,117643120,10130487,14.505,complete
+4143.SR,Al Taiseer Group TALCO Industrial Company,Tadawul,1700800000,68718392,144559824,12.148,complete
+2150.SR,The National Company for Glass Industries,Tadawul,1361401984,15684270,38757740,24.085,complete
+2180.SR,Filling and Packing Materials Manufacturing Company,Tadawul,424399200,66284272,6080741,11.332,complete
+2220.SR,National Metal Manufacturing and Casting Co.,Tadawul,634721984,89101680,36915692,6.692,complete
+2300.SR,Saudi Paper Manufacturing Company,Tadawul,2163759872,530975200,53428836,14.824,complete
+1323.SR,United Carton Industries Company,Tadawul,1266400000,60694504,55589092,14.49,complete
+3008.SR,Al Kathiri Holding Company,Tadawul,488255072,148944512,6282201,0.462,complete
+1301.SR,United Wire Factories Company,Tadawul,690768000,2564462,51747996,13.134,complete
+1320.SR,Saudi Steel Pipes Company,Tadawul,2693905152,278785504,127442656,15.509,complete
+2090.SR,National Gypsum Company,Tadawul,666687872,37407932,4145729,10.901,complete
+2200.SR,Arabian Pipes Company,Tadawul,1250000000,211339008,55332000,2.267,complete
+2240.SR,Zamil Industrial Investment Company,Tadawul,2010000000,2270188032,443361984,8.348,complete
+2360.SR,Saudi Vitrified Clay Pipe Company,Tadawul,426000000,46886612,6117953,5.455,complete
+1210.SR,Basic Chemical Industries Company,Tadawul,782330176,355449824,53007200,20.893,complete
+1211.SR,Saudi Arabian Mining Company (Ma'aden),Tadawul,253933469696,35369775104,10372094976,15.119,complete
+1304.SR,Al Yamamah Steel Industries Company,Tadawul,1909703680,975092096,43004180,11.921,complete
+1321.SR,East Pipes Integrated Company for Industry,Tadawul,4054049792,80816296,216837728,38.891,complete
+2223.SR,Saudi Aramco Base Oil Company - Luberef,Tadawul,15396943872,1008315008,815236992,25.745,complete
+2001.SR,Methanol Chemicals Company,Tadawul,761538496,632426880,111354824,4.462,complete
+2010.SR,Saudi Basic Industries Corporation,Tadawul,191987089408,41532530688,44241997824,51.294,complete
+2020.SR,SABIC Agri-Nutrients Company,Tadawul,58046201856,215790000,11876193280,42.342,complete
+2060.SR,National Industrialization Company,Tadawul,7715677696,5638559232,2439553024,15.667,complete
+2170.SR,Alujain Corporation,Tadawul,2516153856,15447000,442184000,48.909,complete
+2210.SR,Nama Chemicals Company,Tadawul,640684800,593395008,755000,14.563,complete
+2250.SR,Saudi Industrial Investment Group,Tadawul,13705254912,0,278996992,13.405,complete
+2290.SR,Yanbu National Petrochemical Company,Tadawul,20960077824,108820000,3036454912,20.086,complete
+2310.SR,Sahara International Petrochemical Company,Tadawul,15200561152,2190415872,1353684992,20.535,complete
+2330.SR,Advanced Petrochemical Company,Tadawul,9603749888,9162437632,270574016,11.627,complete
+2350.SR,Saudi Kayan Petrochemical Company,Tadawul,8766126080,9387725824,611860992,6.825,complete
+3002.SR,Najran Cement Company,Tadawul,1339633536,301356992,19801000,12.236,complete
+3003.SR,City Cement Company,Tadawul,2257382144,2153432,604765760,13.447,complete
+3004.SR,Northern Region Cement Company,Tadawul,1481399936,1029666304,32446200,12.64,complete
+3010.SR,Arabian Cement Company,Tadawul,2240841216,60309000,59417000,25.218,complete
+3020.SR,YAMAMA Cement Company,Tadawul,6532785664,1976001024,137190128,24.216,complete
+3030.SR,Saudi Cement Company,Tadawul,6245568512,385348000,166036992,13.477,complete
+3040.SR,Qassim Cement Company,Tadawul,4882645504,2352198,550764864,24.82,complete
+3050.SR,Southern Province Cement Company,Tadawul,3889838848,1101206528,164517344,23.683,complete
+3060.SR,Yanbu Cement Company,Tadawul,2745694464,199472320,93493640,16.874,complete
+3080.SR,Eastern Province Cement Company,Tadawul,2341204480,4883000,193794000,26.754,complete
+3090.SR,Tabuk Cement Company,Tadawul,919878912,66913544,25871264,13.205,complete
+3091.SR,Al Jouf Cement Company,Tadawul,743579520,707471680,215600,9.916,complete
+3005.SR,Umm Al-Qura Cement Company,Tadawul,850684736,239864128,13722049,15.17,complete
+3092.SR,Riyadh Cement Company,Tadawul,3514479872,4027547,130745928,14.69,complete
+1010.SR,Riyad Bank,Tadawul,83812958208,32153800704,39362232320,20.378,complete
+4142.SR,Riyadh Cables Group Company,Tadawul,19014123520,887148544,235354880,19.467,complete
+1214.SR,Al Hassan Ghazi Ibrahim Shaker Company,Tadawul,1522008832,359638016,86334000,14.736,complete
+1212.SR,Astra Industrial Group Company,Tadawul,11120000000,478921824,795309568,32.942,complete
+1302.SR,Bawan Company,Tadawul,3576996352,1345438976,116090000,16.913,complete
+2370.SR,Middle East Specialized Cables Company,Tadawul,1251280256,229985232,24869602,12.47,complete
+1303.SR,Electrical Industries Company,Tadawul,12170748928,68863776,212871840,0.963,complete
+2320.SR,Al-Babtain Power and Telecommunications Company,Tadawul,3732114688,988722176,137018528,18.495,complete
+2160.SR,The Saudi Arabian Amiantit Company,Tadawul,958023168,234648000,35715000,20.518,complete
+2110.SR,Saudi Cable Company,Tadawul,1064543744,108287000,9599000,-53.975,complete
+2040.SR,Saudi Ceramic Company,Tadawul,3305009152,880211008,94779000,15.63,complete
+4110.SR,Batic Investments and Logistics Company,Tadawul,1416184192,286216736,119145048,0.685,complete
+4140.SR,Saudi Industrial Export Company,Tadawul,412127968,0,106654472,0.611,complete
+4145.SR,Al Obeikan Glass Company,Tadawul,1072640000,106161568,54401116,17.467,complete
+4144.SR,Raoom Trading Co.,Tadawul,813580224,36073040,84440240,12.315,complete
+4141.SR,Al-Omran Industrial Trading Company,Tadawul,370080000,50415824,4422768,13.069,complete
+4270.SR,Saudi Printing and Packaging Co.,Tadawul,684656320,634922752,18386742,3.765,complete
+1831.SR,Maharah for Human Resources Company,Tadawul,2146499968,629304896,88029216,1.364,complete
+1832.SR,Sadr Logistics Company,Tadawul,512750016,66012096,1217751,0.916,complete
+6004.SR,CATRION Catering Holding Company,Tadawul,8204700160,786441664,304336416,18.231,complete
+1835.SR,Tamkeen Human Resources Company,Tadawul,1529049984,14903450,199569856,13.133,complete
+1833.SR,Almawarid Manpower Company,Tadawul,1858499968,58821116,124978712,29.612,complete
+1834.SR,Saudi Manpower Solutions Company,Tadawul,2440106752,42238128,267762080,1.535,complete
+4260.SR,United International Transportation Company,Tadawul,5780425216,1766376960,46179000,35.659,complete
+4031.SR,Saudi Ground Services Company,Tadawul,8753280000,232478000,856604992,13.498,complete
+4261.SR,Theeb Rent A Car Company,Tadawul,2851926016,1703576320,51439676,20.369,complete
+4262.SR,Lumi Rental Company,Tadawul,3468873472,1876842240,52722352,23.993,complete
+4263.SR,SAL Saudi Logistics Services Co,Tadawul,14480000000,1305396992,1456311040,18.711,complete
+4264.SR,Flynas Company,Tadawul,13460481024,7736126464,4586195968,19.762,complete
+4040.SR,Saudi Public Transport Company,Tadawul,1684999936,1446094976,218186000,7.463,complete
+2190.SR,Sustained Infrastructure Holding Company,Tadawul,2777188864,1320404992,967170176,17.79,complete
+4012.SR,Thob Al Aseel Company,Tadawul,1552975488,32297690,261023200,1.562,complete
+2340.SR,Artex Industrial Investment Company,Tadawul,1077500032,234254000,26223000,12.812,complete
+4011.SR,L'azurde Company for Jewelry,Tadawul,754974976,1600941952,69555440,4.679,complete
+4180.SR,Fitaihi Holding Group,Tadawul,918499968,1550232,3783228,1.76,complete
+2130.SR,Saudi Industrial Development Co.,Tadawul,394205216,48510280,1067832,4.003,complete
+1213.SR,Naseej International Trading Company,Tadawul,1022247744,137638000,587000,5.102,complete
+6002.SR,Herfy Food Services Company,Tadawul,1452712704,481014944,14113757,14.027,complete
+1810.SR,Seera Holding Group,Tadawul,8009452032,2494932224,1054185664,21.514,complete
+4170.SR,Tourism Enterprise Company (Shams),Tadawul,54945012,185136,251519344,0.433,complete
+1820.SR,BAAN Holding Group Company,Tadawul,724472512,1367833984,52299000,0.611,complete
+6016.SR,Shatirah House Restaurant Co.,Tadawul,560700032,38863312,10908183,2.138,complete
+6018.SR,Sport Clubs Company,Tadawul,1156583936,516120032,5652880,1.7,complete
+6017.SR,Jahez International Company for Information Systems Technology,Tadawul,4482538496,144493328,1073619008,6.426,complete
+6013.SR,Development Works Food Company,Tadawul,388051968,30196896,2458586,8.26,complete
+4290.SR,Al Khaleej Training and Education Company,Tadawul,1691299968,1273024384,28379420,8.174,complete
+1830.SR,Leejam Sports Company,Tadawul,7474196992,1924590080,73124288,24.25,complete
+4291.SR,National Company for Learning and Education,Tadawul,6832699904,396942976,25313924,19.135,complete
+4292.SR,Ataa Educational Company,Tadawul,2784987648,1089211648,63168420,19.662,complete
+6014.SR,Alamar Foods Company,Tadawul,1308087552,179337504,78867776,11.47,complete
+6015.SR,Americana Restaurants International PLC,Tadawul,16965238784,607144000,285502016,0.043,complete
+6012.SR,Raydan Food Company,Tadawul,225744912,54969424,994815,3.959,complete
+4071.SR,Arabian Contracting Services Company,Tadawul,5538499584,4097448960,115684464,23.001,complete
+4072.SR,MBC Group Co.,Tadawul,12089700352,114403000,929539968,13.451,complete
+4070.SR,"Tihama for Advertising, Public Relations and Marketing Company",Tadawul,670000000,28521228,189970688,4.994,complete
+4210.SR,Saudi Research and Media Group,Tadawul,14599999488,912031616,721179456,41.158,complete
+4194.SR,Marketing Home Group Company for Trading Company,Tadawul,1200000000,103499880,93957104,21.39,complete
+4051.SR,Baazeem Trading Company,Tadawul,643950016,19643152,36306896,1.998,complete
+4192.SR,Al-Saif Stores for Development & Investment Company,Tadawul,2348499968,235163440,13683704,1.36,complete
+4193.SR,Nice One Beauty Digital Marketing Company,Tadawul,2858625024,51623552,113197728,3.465,complete
+4008.SR,Saudi Company for Hardware SACO,Tadawul,931173760,421818656,23806868,9.368,complete
+4191.SR,Abdullah Saad Mohammed Abo Moati for Bookstores Company,Tadawul,889600000,72451944,6326116,12.283,complete
+4003.SR,United Electronics Company,Tadawul,6860914688,2156564992,283753984,21.28,complete
+4050.SR,Saudi Automotive Services Company,Tadawul,4023389952,4685520384,200308880,12.619,complete
+4190.SR,Jarir Marketing Company,Tadawul,16885670912,970864000,55247000,1.38,complete
+4200.SR,Aldrees Petroleum and Transport Services Company,Tadawul,12529999872,4497606144,246644400,15.373,complete
+4240.SR,Fawaz Abdulaziz Al Hokair & Company,Tadawul,3259367168,3193158400,98726960,-9.309,complete
+4160.SR,Thimar Development Holding Company,Tadawul,290558400,15279113,18471926,2.452,complete
+4006.SR,Saudi Marketing Company,Tadawul,783105600,1392600192,33992096,15.524,complete
+4001.SR,Abdullah Al-Othaim Markets Company,Tadawul,7047845888,2941562112,128561096,1.438,complete
+4162.SR,Almunajem Foods Company,Tadawul,3656999936,335065344,38646528,17.017,complete
+4164.SR,Nahdi Medical Company,Tadawul,15605940224,1678300416,691873536,20.681,complete
+4163.SR,Al-Dawaa Medical Services Company,Tadawul,5664939520,2133240960,24960478,18.006,complete
+4161.SR,BinDawood Holding Company,Tadawul,6526530048,2785122304,338210944,1.244,complete
+4061.SR,Anaam International Holding Group Company,Tadawul,515684768,158648384,12074284,8.076,complete
+6001.SR,Halwani Bros. Co. Ltd.,Tadawul,1470582016,271953536,24357264,8.611,complete
+2282.SR,Naqi Water Company,Tadawul,1100055424,7150003,98535408,14.112,complete
+2283.SR,The First Milling Company,Tadawul,3011427840,1288005504,107140912,18.17,complete
+2284.SR,Modern Mills for Food Products ,Tadawul,2658868992,764698688,55202936,3.664,complete
+2285.SR,Arabian Mills for Food Products,Tadawul,2208953088,1003911616,87276256,21.892,complete
+2286.SR,Fourth Milling Co.,Tadawul,2105999872,376457248,197349360,1.372,complete
+6010.SR,The National Agricultural Development Company,Tadawul,6691460096,557319360,1867841024,14.774,complete
+6020.SR,Al Gassim Investment Holding Company,Tadawul,570308224,0,106783688,10.111,complete
+6040.SR,Tabuk Agricultural Development Company,Tadawul,418647296,81855936,3973916,3.958,complete
+6050.SR,Saudi Fisheries Company,Tadawul,676214592,38534052,38805892,9.156,complete
+6060.SR,Ash-Sharqiyah Development Co.,Tadawul,521439648,488417,122741744,11.766,complete
+6070.SR,Al-Jouf Agricultural Development Co.,Tadawul,1415359360,284638272,28210110,26.434,complete
+6090.SR,Jazan Development and Investment Company,Tadawul,547171136,41133260,11154588,6.736,complete
+2281.SR,Tanmiah Food Company,Tadawul,1651000064,1691486208,54790240,32.831,complete
+2050.SR,Savola Group Company,Tadawul,7396694528,6291339776,1721238016,16.221,complete
+2100.SR,Wafrah for Industry and Development Company,Tadawul,638970496,11023003,14004754,9.847,complete
+2270.SR,Saudia Dairy & Foodstuff Company,Tadawul,8785050624,54424000,672425984,55.393,complete
+2280.SR,Almarai Company,Tadawul,50693554176,11687081984,458724992,19.572,complete
+2287.SR,Arabian Company for Agricultura,Tadawul,1202999936,757115136,47076224,16.179,complete
+4080.SR,Sinad Holding Company,Tadawul,1363736064,640046720,240652752,9.311,complete
+2140.SR,Ayyan Investment Company,Tadawul,1284105472,3510613,697693312,9.857,complete
+2230.SR,Saudi Chemical Holding Company,Tadawul,6113200128,1722178944,143336000,2.61,complete
+4014.SR,Scientific and Medical Equipment House Company,Tadawul,1177298304,194494048,27274760,17.689,complete
+4017.SR,Dr. Soliman Abdel Kader Fakeeh ,Tadawul,9521999872,1074435968,277265984,13.193,complete
+4013.SR,Dr. Sulaiman Al Habib Medical Services Group Company,Tadawul,95153725440,9034331136,2184749824,21.414,complete
+4005.SR,National Medical Care Company,Tadawul,7878846976,453701344,477185184,38.161,complete
+4002.SR,Mouwasat Medical Services Company,Tadawul,14923014144,954070912,326156128,17.762,complete
+4004.SR,Dallah Healthcare Company,Tadawul,15293512704,3286811904,118766576,40.857,complete
+4007.SR,Al Hammadi Holding Company,Tadawul,5520196096,287409664,193603968,12.422,complete
+4009.SR,Middle East Healthcare Company,Tadawul,5264688128,2419134976,31922304,19.596,complete
+4018.SR,Almoosa Health Company,Tadawul,7469689856,611152320,159933760,43.076,complete
+4019.SR,Specialized Medical Company,Tadawul,4852499968,940860032,252330960,3.969,complete
+2070.SR,Saudi Pharmaceutical Industries and Medical Appliances Corporation,Tadawul,3499475712,1581046016,436212992,12.905,complete
+4015.SR,Jamjoom Pharmaceuticals Factory Company,Tadawul,11032000512,4047872,183893088,24.026,complete
+4016.SR,Middle East Pharmaceutical Industries Company,Tadawul,2532270848,60809440,24268484,19.259,complete
+1020.SR,Bank AlJazira,Tadawul,17268576256,22244556800,4156510976,11.144,complete
+1030.SR,The Saudi Investment Bank,Tadawul,18265913344,26342023168,6505845760,12.774,complete
+1050.SR,Banque Saudi Fransi,Tadawul,45981696000,47923769344,9405394944,16.485,complete
+1060.SR,Saudi Awwal Bank,Tadawul,67072094208,46219116544,8327264256,31.194,complete
+1080.SR,Arab National Bank,Tadawul,49725112320,4162862080,8486251008,19.839,complete
+1140.SR,Bank Albilad,Tadawul,45105356800,3144456960,6740794880,13.824,complete
+1150.SR,Alinma Bank,Tadawul,70029672448,8390042112,10708829184,13.731,complete
+1180.SR,The Saudi National Bank,Tadawul,234490331136,234386227200,92048973824,30.04,complete
+4083.SR,United International Holding Company,Tadawul,4002484480,1512500352,93138752,49.211,complete
+1183.SR,SHL Finance Company,Tadawul,2100000000,2886881024,63603000,17.132,complete
+1182.SR,Amlak International Finance Company,Tadawul,1329814912,3244468992,76505000,12.279,complete
+4081.SR,Nayifat Finance Company,Tadawul,1611856128,526311008,47236000,12.065,complete
+1111.SR,Saudi Tadawul Group Holding Company,Tadawul,24719998976,671158080,2732711424,27.255,complete
+4082.SR,Morabaha Marina Financing Company,Tadawul,795700032,672122304,146681232,12.111,complete
+4084.SR,Derayah Financial Company,Tadawul,7719732224,15506822,74398504,4.605,complete
+2120.SR,Saudi Advanced Industries Company,Tadawul,1476179968,206755808,573610048,17.953,complete
+4280.SR,Kingdom Holding Company,Tadawul,28536199168,14042964992,2410274048,11.641,complete
+4130.SR,Darb Saudi Investment Company,Tadawul,657067968,15368125,2105194,1.035,complete
+8313.SR,Rasan Information Technology Company,Tadawul,7936716800,5757290,534426912,6.545,complete
+8010.SR,The Company for Cooperative Insurance,Tadawul,20912826368,0,5257238016,33.101,complete
+8020.SR,Malath Cooperative Insurance Company,Tadawul,671534336,470000,1017787008,9.027,complete
+8030.SR,The Mediterranean and Gulf Cooperative Insurance and Reinsurance Company,Tadawul,1809149952,23229000,1141440000,9.994,complete
+8060.SR,Walaa Cooperative Insurance Company,Tadawul,1556211584,17080000,1332551936,13.419,complete
+8040.SR,Mutakamela Insurance Company,Tadawul,838946176,2623729,48143544,13.921,complete
+8070.SR,Arabian Shield Cooperative Insurance Company,Tadawul,1110230784,1199000,1373085952,20.484,complete
+8050.SR,Salama Cooperative Insurance Company,Tadawul,374700000,14884000,380438016,10.455,complete
+8100.SR,Saudi Arabian Cooperative Insurance Company,Tadawul,429000000,0,398496992,13.733,complete
+8012.SR,Aljazira Takaful Taawuni Company,Tadawul,844139968,14672000,373060000,14.827,complete
+8120.SR,Gulf Union Alahlia Cooperative Insurance Company,Tadawul,616827840,6898421,521657600,12.288,complete
+8150.SR,Allied Cooperative Insurance Group,Tadawul,313988992,5051000,704766016,9.305,complete
+8160.SR,Arabia Insurance Cooperative Company,Tadawul,598899968,4180525,326432384,11.645,complete
+8170.SR,Al-Etihad Cooperative Insurance Company,Tadawul,562558080,6855000,230912992,12.171,complete
+8180.SR,Al Sagr Cooperative Insurance Company,Tadawul,403540064,3812586,389410112,12.351,complete
+8190.SR,United Cooperative Assurance Company,Tadawul,222476544,767000,97979000,4.149,complete
+8200.SR,Saudi Reinsurance Company,Tadawul,5703469568,56797020,696682880,18.307,complete
+8210.SR,Bupa Arabia for Cooperative Insurance Company,Tadawul,24734998528,194024000,3249135104,35.133,complete
+8230.SR,Al Rajhi Company for Cooperative Insurance,Tadawul,12230748160,31482000,2012646016,22.803,complete
+8240.SR,Chubb Arabia Cooperative Insurance Company,Tadawul,1194000000,3481892,220890528,15.392,complete
+8250.SR,Gulf Insurance Group,Tadawul,1392300032,27170000,397012000,21.463,complete
+8260.SR,Gulf General Cooperative Insurance Company,Tadawul,160080736,2994000,67125000,5.785,complete
+8270.SR,Buruj Cooperative Insurance Company,Tadawul,521699968,1804571,466237760,15.991,complete
+8280.SR,Liva Insurance Company,Tadawul,536400000,0,46115000,11.208,complete
+8300.SR,Wataniya Insurance Company,Tadawul,639600000,3836000,1315331968,15.445,complete
+8310.SR,Amana Cooperative Insurance Company,Tadawul,345720000,0,272153984,7.326,complete
+8311.SR,Saudi Enaya Cooperative Insurance Company,Tadawul,212060000,1823000,207198000,7.156,complete
+7020.SR,Etihad Etisalat Company,Tadawul,54662340608,9438917632,3461626112,25.261,complete
+7030.SR,Mobile Telecommunications Company Saudi Arabia,Tadawul,10426580992,10000861184,385904992,11.639,complete
+7040.SR,Etihad Atheeb Telecommunication Company,Tadawul,3894635776,62613724,612893184,24.338,complete
+2080.SR,National Gas and Industrialization Company,Tadawul,6187500032,38564088,221026240,25.709,complete
+5110.SR,Saudi Electricity Company,Tadawul,64610885632,179698253824,1875874944,20.731,complete
+2081.SR,Alkhorayef Water and Power Technologies Company,Tadawul,4903500288,948714368,252952800,23.562,complete
+2082.SR,ACWA Power Company,Tadawul,174115504128,29799356416,4283981056,29.135,complete
+2083.SR,Power and Water Utility Company for Jubail and Yanbu,Tadawul,10027083776,14230630400,1411281024,21.695,complete
+2084.SR,Miahona Company Limited,Tadawul,4022077184,676442304,267355872,2.921,complete
+4330.SR,Riyad REIT Fund,Tadawul,928890944,1375483136,765558528,6.843,complete
+4331.SR,Aljazira Mawten REIT Fund,Tadawul,163569968,0,2479747,7.736,complete
+4332.SR,Jadwa REIT Al Haramain Fund,Tadawul,348499040,214349008,24507630,7.667,complete
+4333.SR,Taleem REIT Fund,Tadawul,514070240,298259328,9228037,10.778,complete
+4334.SR,Al Maather Reit Fund,Tadawul,557239616,199052544,34354120,8.362,complete
+4335.SR,Musharaka REIT Fund,Tadawul,381926144,796534400,37837680,8.179,complete
+4336.SR,Mulkia Gulf Real Estate REIT,Tadawul,497039104,680429184,25930664,7.162,complete
+4337.SR,Muscat Capital - Al Masha'ar REIT Fund,Tadawul,240413520,149891648,9718443,4.255,complete
+4338.SR,Alahli Capital - Al-Ahli Reit Fund,Tadawul,929614592,735142976,14222000,8.513,complete
+4344.SR,SEDCO Capital REIT Fund,Tadawul,1318001408,965588928,183299072,7.779,complete
+4339.SR,Derayah Financial - Derayah Reit Fund,Tadawul,607422464,610000000,15349693,7.985,complete
+4340.SR,Al Rajhi REIT Fund,Tadawul,2323571200,896399616,93164400,8.155,complete
+4345.SR,Alinma Retail REIT Fund,Tadawul,543967040,662438848,49892552,6.939,complete
+4342.SR,Jadwa Investment - Jadwa Reit Saudi Fund,Tadawul,2164190720,542499968,57748744,9.314,complete
+4346.SR,MEFIC REIT Fund,Tadawul,268151488,430562976,109640,7.139,complete
+4347.SR,Bonyan REIT Fund,Tadawul,1524598912,638205184,57644224,8.338,complete
+4348.SR,Alkhabeer REIT Fund,Tadawul,817870976,750612416,93333936,7.333,complete
+4349.SR,Alinma Hospitality REIT,Tadawul,841524736,0,0,,complete
+4350.SR,Alistithmar AREIC Diversified REIT,Tadawul,510014976,0,0,,complete
+4020.SR,Saudi Real Estate Company,Tadawul,6058204672,3158053120,1359308032,14.068,complete
+4090.SR,Taiba Investment Company,Tadawul,10931316736,2158780928,99753816,26.135,complete
+4150.SR,Arriyadh Development Co.,Tadawul,7516731904,55664156,961605888,17.086,complete
+4220.SR,Emaar The Economic City,Tadawul,7323281920,8533315072,481415008,9.733,complete
+4250.SR,Jabal Omar Development Company,Tadawul,22868844544,10924288000,1673554048,11.596,complete
+4300.SR,Dar Al Arkan Real Estate Development Company,Tadawul,21535201280,10759543808,6035383808,19.934,complete
+4310.SR,Knowledge Economic City Company,Tadawul,4410926592,1830220800,136284816,8.634,complete
+4320.SR,Alandalus Property Company,Tadawul,1905861760,952348160,80731744,10.525,complete
+4321.SR,Arabian Centres Company,Tadawul,10795133952,15573751808,496467616,31.827,complete
+4322.SR,Retal Urban Development Company,Tadawul,6302012416,1687058304,937439360,1.824,complete
+4326.SR,Dar Al Majed Real Estate Company,Tadawul,3921509632,1361863168,181968032,3.675,complete
+4323.SR,Sumou Real Estate Company,Tadawul,2012000128,19853552,245769824,13.128,complete
+4324.SR,Banan Real Estate Co.,Tadawul,922000000,205363408,25199652,2.071,complete
+4325.SR,Umm Al Qura for Development and,Tadawul,35534594048,9233061888,716212096,10.617,complete
+4230.SR,Red Sea International Company,Tadawul,1362499584,622566016,35214000,-0.163,complete
+7200.SR,Al Moammar Information Systems Company,Tadawul,4229070080,997770624,75151272,12.986,complete
+7201.SR,Arab Sea Information Systems Company,Tadawul,550044480,42761048,1491814,1.266,complete
+7202.SR,Arabian Internet and Communication Services Company,Tadawul,32094447616,901782016,1628841984,30.226,complete
+7203.SR,Elm Company,Tadawul,74534592512,2562948096,2918756864,41.974,complete
+7204.SR,Perfect Presentation for Commercial Services Company,Tadawul,3330000128,540359680,22123204,2.024,complete
+7211.SR,Saudi Azm for Communication and Information Technology Company,Tadawul,1699847168,27630088,139567872,2.391,complete
+4165.SR,Al Majed Oud Co.,Tadawul,3161144320,209741904,132321312,20.474,complete
+9406.SR,Albilad Capital - Msci US Equity ETF,Tadawul,,0,0,,failed
+9402.SR,HSBC Amanah Saudi 20 ETF,Tadawul,,0,0,,failed
+9403.SR,Albilad Saudi Sovereign Sukuk Etf,Tadawul,,0,0,,failed
+4701.SR,Alkhabeer Growth A - Alkhabeer Growth And Income Fund,Tadawul,,0,0,,failed
+9400.SR,FALCOM Saudi Equity ETF,Tadawul,31304000,0,0,47.129,complete
+9401.SR,FALCOM Petrochemical ETF,Tadawul,,0,0,,failed
+9404.SR,Alinma Saudi Government Sukuk Etf Fund - Short Maturity - Alinma Sukuk Fund,Tadawul,,0,0,,failed
+9405.SR,Albilad Gold ETF,Tadawul,,0,0,,failed
+4700.SR,Alkhabeer Capital - Diversified Income ETF,Tadawul,,0,0,,failed
+9407.SR,Albilad Capital - MSCI US Tech ETF,Tadawul,,0,0,,failed
+9408.SR,Albilad MSCI Saudi Growth ETF,Tadawul,,0,0,,failed
+4702.SR,Al Khabeer Diversified Income T,Tadawul,,0,0,,failed
+4703.SR,Sedco Capital - Multi Asset Traded Fund,Tadawul,,0,0,,failed
+9410.SR,Albilad CSOP MSCI Hong Kong China -  Class  Sarency Series,Tadawul,,0,0,,failed
+9411.SR,Sab Invest Hang Seng Homg Etf,Tadawul,,0,0,,failed
+9409.SR,YAQEEN S&P ESG MENA ETF Fund,Tadawul,,0,0,,failed
+9615.SR,Mufeed Company,NOMU,244200000,15355304,35177108,19.683,complete
+9642.SR,Time Entertainment Company,NOMU,61000000,527475,1543349,12.769,complete
+9618.SR,Al-Fakhera Men's Tailoring Company,NOMU,203760000,55113620,33015100,2.257,complete
+9640.SR,ASAS Makeen Real Estate Development and Investment Company,NOMU,995233152,403332064,54771084,35.352,complete
+9641.SR,Hawyia Auctions Co.,NOMU,261375008,0,21090724,1.358,complete
+9648.SR,Hamad Mohammed Bin Saedan Real Estate Company,NOMU,316189984,168619568,23772808,10.862,complete
+9634.SR,Adeer Real Estate Co.,NOMU,639500032,361695,114479544,28.668,complete
+9610.SR,First Avenue for Real Estate De,NOMU,1690154880,470258048,239278320,3.201,complete
+9521.SR,INMAR Company,NOMU,783994944,136000000,28544108,16.475,complete
+9535.SR,Ladun Investment Company,NOMU,1473444480,1209905024,72557392,1.307,complete
+9591.SR,View United Real Estate Development Co.,NOMU,204600000,34687556,28372136,2.343,complete
+9515.SR,Fesh Fash Snack Food Production Company,NOMU,127238000,3373325,7140789,1.775,complete
+9536.SR,Arabian Food and Dairy Factories Company,NOMU,91820192,11664313,11547896,24.434,complete
+9555.SR,Leen Alkhair Trading Company,NOMU,118966384,108307456,4089788,17.973,complete
+9556.SR,Nofoth Food Products Company,NOMU,1124149120,45902592,85767888,1.702,complete
+9559.SR,Balady Poultry Company,NOMU,1067625024,27236088,19122636,48.036,complete
+9564.SR,Horizon Food Company Limited,NOMU,254400000,541439,4867727,14.835,complete
+9622.SR,Shmoh Almadi Co.,NOMU,122199992,5176613,43063544,8.116,complete
+9644.SR,Naf Company for Feed for Indust,NOMU,127126040,0,0,,complete
+9532.SR,Aljouf Mineral Water Bottling Co.,NOMU,192187488,64354244,4073899,0.98,complete
+9612.SR,Sama Healthy Water Factory Co.,NOMU,110488896,22168584,11750954,1.869,complete
+9620.SR,Balsm Alofoq Medical Co.,NOMU,72702224,1702090,18103996,24.209,complete
+9627.SR,Twareat Medical Care Company,NOMU,528000000,36219692,1062087,1.569,complete
+9626.SR,Basma Adeem Medical Co.,NOMU,100000000,12149351,35154412,2.25,complete
+9600.SR,Qomel Company Limited,NOMU,348600000,56996200,33770164,16.434,complete
+9594.SR,Al-Modawat Specialized Medical ,NOMU,380722816,21533360,11515875,3.662,complete
+9604.SR,Miral Dental Clinics Co.,NOMU,219704096,0,0,,complete
+9647.SR,Wajd life trading Company,NOMU,68750000,48334404,1654096,1.542,complete
+9616.SR,Jana Medical Co.,NOMU,45585372,29077932,18435720,12.24,complete
+9546.SR,Naba Al Saha Medical Services Company,NOMU,655200000,88329376,6790732,20.069,complete
+9527.SR,Alf Meem Yaa for Medical Supplies and Equipment Company,NOMU,863196608,50101008,48625780,24.571,complete
+9530.SR,Arabian International Healthcare Holding Company,NOMU,567459584,559462400,98682480,16.176,complete
+9572.SR,Al-Razi Medical Company,NOMU,61434780,13091681,300264,14.959,complete
+9518.SR,Canadian General Medical Center Complex Company,NOMU,566720000,6695151,38987524,1.27,complete
+9574.SR,Professional Medical Expertise Company,NOMU,318150016,111057224,7244256,37.658,complete
+9544.SR,Future Care Trading Co.,NOMU,1325000064,1776927,21458480,0.181,complete
+9587.SR,Lana Medical Co.,NOMU,162000000,0,0,11.296,complete
+9516.SR,Natural Gas Distribution Company,NOMU,189999984,6273447,13676362,11.803,complete
+9300.SR,Alwaha REIT Fund,NOMU,193975472,0,0,,complete
+9549.SR,Abdulaziz and Mansour Ibrahim Albabtin Co.,NOMU,112200000,19197120,12463210,20.466,complete
+9592.SR,Almujtama Alraida Medical Co.,NOMU,307766816,0,0,,complete
+9577.SR,DAR ALMARKABAH For Renting Cars Company,NOMU,84075952,0,0,0.839,complete
+9584.SR,Riyal Investment and Developmen,NOMU,159600000,154727648,1272827,21.137,complete
+9571.SR,Munawla Cargo Co. Ltd.,NOMU,95520000,0,0,20.686,complete
+9586.SR,Osool and Bakheet Investment Co,NOMU,195210000,0,0,29.357,complete
+9585.SR,Mulkia Investment Co.,NOMU,289380000,0,0,12.465,complete
+9602.SR,Yaqeen Capital Co.,NOMU,285048448,5828000,97386000,11.439,complete
+9596.SR,Quara Finance Company,NOMU,522000000,502391360,96264992,15.644,complete
+9635.SR,Dkhoun National Trading Co.,NOMU,146000000,45790752,10474977,30.278,complete
+9579.SR,Intelligent Oud Co.,NOMU,78672440,0,0,,complete
+9517.SR,MOBI Industry Co.,NOMU,575000000,22208544,8970927,1.627,complete
+9514.SR,Mohammed Hasan AlNaqool Sons Co.,NOMU,140592000,23792160,7802405,19.028,complete
+9513.SR,Watani Iron Steel Company,NOMU,370565984,75095992,20927200,1.39,complete
+9523.SR,Group Five Pipe Saudi Company,NOMU,1156400000,954699264,225082848,12.917,complete
+9548.SR,Arabian Plastic Industrial Company Limited,NOMU,274519488,79479576,5456675,15.956,complete
+9539.SR,Aqaseem Factory for Chemicals and Plastics Co.,NOMU,150000000,81166352,36652144,2.161,complete
+9563.SR,BENA Steel Industries,NOMU,212880000,155064112,2299518,14.848,complete
+9565.SR,Meyar Company,NOMU,62369000,24773400,1571167,23.82,complete
+9553.SR,Molan Steel Company,NOMU,54530000,26547932,4570558,0.759,complete
+9566.SR,Saudi Lime Industries Company,NOMU,281820000,133388768,19946520,13.279,complete
+9588.SR,Riyadh Steel Co.,NOMU,123900000,0,0,1.112,complete
+9576.SR,Paper Home Company,NOMU,224477600,11276997,4446337,14.962,complete
+9580.SR,"Al Rashid Industrial Co.,",NOMU,427945920,2694427,39338140,20.161,complete
+9575.SR,Marble Design Factory Company,NOMU,450000000,61789,7090928,1.421,complete
+9552.SR,Saudi Top for Trading Company,NOMU,276000000,29028604,27100720,1.789,complete
+9623.SR,Al Battal Factory for Chemical Industries Company,NOMU,78654552,0,0,16.077,complete
+9631.SR,Hedab Alkhaleej Trading Co.,NOMU,,157319520,34296004,26.119,partial
+9607.SR,ASG Plastic Factory Co.,NOMU,331350016,5766281,7868556,20.283,complete
+9605.SR,Neft Alsharq Company for Chemic,NOMU,92744712,16033291,5376654,1.839,complete
+9601.SR,Mohammed Hadi Al-Rasheed Company,NOMU,1335348864,32907772,45125272,19.222,complete
+9599.SR,Taqat Mineral Trading Co.,NOMU,168172512,9202814,1389120,9.648,complete
+9609.SR,Nass Petrol Factory Company,NOMU,126000000,0,0,,complete
+9611.SR,Arabian United Float Glass Company,NOMU,632543296,105321224,24072054,26.747,complete
+9608.SR,Al Ashghal Al Moysra Co.,NOMU,123265752,0,0,11.446,complete
+9624.SR,Alshehili Company for metal industries,NOMU,142690016,7350430,10845939,31.652,complete
+9639.SR,Anmat Technology for Trading Co,NOMU,,35005264,18445696,3.279,partial
+9633.SR,Service Equipment Co.,NOMU,128757528,2013255,9603640,17.453,complete
+9547.SR,Rawasi Albina Investment Co.,NOMU,20350000,134383344,35808288,2.658,complete
+9533.SR,Saudi Parts Center Company,NOMU,110940000,12391479,4532409,13.709,complete
+9569.SR,"AlMuneef Company for Trade, Industry, Agriculture and Contracting",NOMU,269420000,3423376,24296696,2.9,complete
+9568.SR,Mayar Holding Company,NOMU,370704512,257494528,10871769,0.33,complete
+9560.SR,Waja Company,NOMU,522226624,45466024,74567,1.466,complete
+9583.SR,United Mining Industries Company,NOMU,630000000,113587200,9096890,13.596,complete
+9578.SR,Atlas Elevators General Trading & Contracting Company,NOMU,117211568,3728735,11694397,16.646,complete
+9542.SR,Keir International Co.,NOMU,474000000,57946832,10927008,2.033,complete
+9525.SR,Alwasail Industrial Company,NOMU,900000000,38887680,16021853,1.462,complete
+9528.SR,Gas Arabian Services Company,NOMU,2708888832,4411360,31820772,2.774,complete
+9510.SR,National Building and Marketing Co.,NOMU,1327200000,709712064,11288739,29.162,complete
+9545.SR,International Human Resources Company,NOMU,292500000,20178996,9203681,1.091,complete
+9570.SR,Tam Development Company,NOMU,299149024,41382744,39466844,44.081,complete
+9593.SR,Pan Gulf Marketing Co.,NOMU,151500000,151365520,6467508,10.73,complete
+9540.SR,National Environmental Recycling Company,NOMU,835592000,169164144,16493223,2.202,complete
+9645.SR,National Signage Industrial Co.,NOMU,83853824,0,0,,complete
+9625.SR,Itmam Consultancy Co.,NOMU,347976960,2256375,11026458,4.276,complete
+9619.SR,Multi Business Group Company for Projects,NOMU,203301936,1015742,31606396,5.989,complete
+9621.SR,Digital Research Company,NOMU,60750000,8466744,16946422,21.838,complete
+9613.SR,Shalfa Facilities Management Company,NOMU,239794464,125162456,43266304,22.701,complete
+9606.SR,Altharwah Albashariyyah Co.,NOMU,185483648,10940858,27804394,21.38,complete
+9597.SR,Leaf Global Environmental Servi,NOMU,257000000,0,12116174,7.414,complete
+9598.SR,Al Mohafaza Company for Educati,NOMU,200000000,0,0,,complete
+9603.SR,Horizon Educational Co.,NOMU,180000000,0,0,,complete
+9630.SR,Ratio Speciality Company for Tr,NOMU,156000000,3514899,11610811,2.506,complete
+9628.SR,Lamasat Co.,NOMU,461700000,4399067,70226992,2.078,complete
+9617.SR,Arabica Star Co.,NOMU,60830004,19377772,3011726,27.908,complete
+9632.SR,Future Vision for Health Traini,NOMU,66100000,3876370,7313486,2.498,complete
+9636.SR,Al Kuzama Trading Co,NOMU,280705536,0,0,32.189,complete
+9541.SR,Academy of Learning Company,NOMU,990211264,122229464,32866996,1.368,complete
+9581.SR,Clean Life Co.,NOMU,156000000,0,0,16.265,complete
+9590.SR,Armah Sports Co.,NOMU,2693088512,375175552,88221416,14.545,complete
+9562.SR,Foods Gate Trading Co.,NOMU,103950000,7021827,17515526,17.319,complete
+9567.SR,Ghida Al-Sultan Company,NOMU,108480008,26882636,10880145,22.101,complete
+9551.SR,Knowledge Tower,NOMU,242205344,10289983,2339906,1.129,complete
+9522.SR,Alhasoob Co.,NOMU,124600000,1368058,5211380,15.319,complete
+9537.SR,Amwaj International Company,NOMU,215280000,120260720,8899878,22.327,complete
+9589.SR,Fad International Company,NOMU,90827944,28063998,9566198,23.065,complete
+9649.SR,Jamjoom Fashion Trading Company,NOMU,1137338752,245880992,16694000,25.671,complete
+9637.SR,Axelerated Solutions for Inform,NOMU,772240000,5282284,121361480,9.86,complete
+9614.SR,Purity for Information Technology Company,NOMU,314849984,17843144,29983942,2.739,complete
+9595.SR,WSM for Information Technology ,NOMU,84244720,0,0,,complete
+9538.SR,Naseej for Technology Co.,NOMU,244800000,24905390,10962721,26.787,complete
+9550.SR,Sure Global Tech Co.,NOMU,507720288,2396823,26515884,16.291,complete
+9524.SR,Advance International Company for Communication and Information Technology,NOMU,151971984,14592790,3662455,0.605,complete
+9557.SR,Edarat Communication and Information Technology Co.,NOMU,1070116416,7558997,19834460,15.166,complete
+9561.SR,Knowledge Net Computer Company,NOMU,80500000,1373540,119781,18.065,complete
+9543.SR,Saudi Networkers Services Company,NOMU,450000000,4153578,12082356,18.45,complete
+9558.SR,Alqemam for Computer Systems Co.,NOMU,207000000,1339752,822669,26.552,complete
+4100.SR,Makkah Construction and Development Company,Tadawul,17839998976,92609752,949985664,20.35,complete

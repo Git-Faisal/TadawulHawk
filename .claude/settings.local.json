@@ -1,7 +1,14 @@
 {
   "permissions": {
     "allow": [
-      "Bash(python:*)"
+      "Bash(python:*)",
+      "Bash(dir:*)",
+      "Bash(if [ -d .git ])",
+      "Bash(then echo \"Git repository exists\")",
+      "Bash(else echo \"No git repository\")",
+      "Bash(fi)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
     ],
     "deny": [],
     "ask": []

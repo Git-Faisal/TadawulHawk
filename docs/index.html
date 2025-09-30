@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saudi Stock Analysis</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>Saudi Stock Analysis</h1>
+            <p class="subtitle">Comprehensive analysis of 403 Saudi stocks (Tadawul & NOMU)</p>
+            <div id="metadata" class="metadata"></div>
+        </header>
+
+        <!-- Sector Overview Section -->
+        <section id="sector-overview" class="overview-section">
+            <h2>Sector Overview</h2>
+            <div class="table-container">
+                <table id="sector-table" class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Sector</th>
+                            <th>Stocks</th>
+                            <th>Avg P/E</th>
+                            <th>Med P/E</th>
+                            <th>Avg P/B</th>
+                            <th>Med P/B</th>
+                            <th>Avg EV/FCF</th>
+                            <th>Med EV/FCF</th>
+                            <th>Avg Rev Growth 3Y</th>
+                            <th>Med Rev Growth 3Y</th>
+                            <th>Avg Net Margin</th>
+                            <th>Med Net Margin</th>
+                            <th>Avg Volatility</th>
+                            <th>Med Volatility</th>
+                        </tr>
+                    </thead>
+                    <tbody id="sector-body">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Industry Overview Section -->
+        <section id="industry-overview" class="overview-section">
+            <h2>Industry Overview (Top 20)</h2>
+            <div class="table-container">
+                <table id="industry-table" class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Industry</th>
+                            <th>Stocks</th>
+                            <th>Avg P/E</th>
+                            <th>Med P/E</th>
+                            <th>Avg P/B</th>
+                            <th>Med P/B</th>
+                            <th>Avg EV/FCF</th>
+                            <th>Med EV/FCF</th>
+                            <th>Avg Rev Growth 3Y</th>
+                            <th>Med Rev Growth 3Y</th>
+                            <th>Avg Net Margin</th>
+                            <th>Med Net Margin</th>
+                            <th>Avg Volatility</th>
+                            <th>Med Volatility</th>
+                        </tr>
+                    </thead>
+                    <tbody id="industry-body">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Tadawul Stocks Section -->
+        <section id="tadawul-section" class="stocks-section">
+            <h2>Tadawul Stocks</h2>
+
+            <!-- Filters -->
+            <div class="filters">
+                <div class="filter-group">
+                    <label for="tadawul-sector-filter">Sector:</label>
+                    <select id="tadawul-sector-filter" class="filter-select">
+                        <option value="">All Sectors</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="tadawul-industry-filter">Industry:</label>
+                    <select id="tadawul-industry-filter" class="filter-select">
+                        <option value="">All Industries</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="tadawul-search">Search:</label>
+                    <input type="text" id="tadawul-search" placeholder="Symbol or name...">
+                </div>
+                <button id="tadawul-clear-filters" class="btn-clear">Clear Filters</button>
+                <button id="tadawul-export-csv" class="btn-export">Export to CSV</button>
+            </div>
+
+            <!-- Stocks Table -->
+            <div class="table-container">
+                <table id="tadawul-table" class="data-table stocks-table">
+                    <thead>
+                        <tr>
+                            <th data-sort="symbol">Symbol ⇅</th>
+                            <th data-sort="company_name">Company ⇅</th>
+                            <th data-sort="sector">Sector ⇅</th>
+                            <th data-sort="industry">Industry ⇅</th>
+                            <th data-sort="price.current">Price ⇅</th>
+                            <th data-sort="price.52w_ratio">52W Ratio ⇅</th>
+                            <th data-sort="price.percentile_52w">52W % ⇅</th>
+                            <th data-sort="price.volatility">Volatility ⇅</th>
+                            <th data-sort="valuation.pe_ltm">P/E ⇅</th>
+                            <th data-sort="valuation.pb">P/B ⇅</th>
+                            <th data-sort="valuation.ev_fcf">EV/FCF ⇅</th>
+                            <th data-sort="valuation.peg">PEG ⇅</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tadawul-body">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- NOMU Stocks Section -->
+        <section id="nomu-section" class="stocks-section">
+            <h2>NOMU Stocks</h2>
+
+            <!-- Filters -->
+            <div class="filters">
+                <div class="filter-group">
+                    <label for="nomu-sector-filter">Sector:</label>
+                    <select id="nomu-sector-filter" class="filter-select">
+                        <option value="">All Sectors</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="nomu-industry-filter">Industry:</label>
+                    <select id="nomu-industry-filter" class="filter-select">
+                        <option value="">All Industries</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="nomu-search">Search:</label>
+                    <input type="text" id="nomu-search" placeholder="Symbol or name...">
+                </div>
+                <button id="nomu-clear-filters" class="btn-clear">Clear Filters</button>
+                <button id="nomu-export-csv" class="btn-export">Export to CSV</button>
+            </div>
+
+            <!-- Stocks Table -->
+            <div class="table-container">
+                <table id="nomu-table" class="data-table stocks-table">
+                    <thead>
+                        <tr>
+                            <th data-sort="symbol">Symbol ⇅</th>
+                            <th data-sort="company_name">Company ⇅</th>
+                            <th data-sort="sector">Sector ⇅</th>
+                            <th data-sort="industry">Industry ⇅</th>
+                            <th data-sort="price.current">Price ⇅</th>
+                            <th data-sort="52w_ratio">52W Ratio ⇅</th>
+                            <th data-sort="percentile_52w">52W % ⇅</th>
+                            <th data-sort="volatility">Volatility ⇅</th>
+                            <th data-sort="pe_ltm">P/E ⇅</th>
+                            <th data-sort="pb">P/B ⇅</th>
+                            <th data-sort="ev_fcf">EV/FCF ⇅</th>
+                            <th data-sort="peg">PEG ⇅</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="nomu-body">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <!-- Detail Modal Template (hidden, cloned for each stock) -->
+    <template id="stock-detail-template">
+        <tr class="detail-row">
+            <td colspan="13">
+                <div class="stock-detail">
+                    <div class="detail-section">
+                        <h3>Price Metrics</h3>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <span class="label">Current Price:</span>
+                                <span class="value" data-field="price.current"></span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">52W High:</span>
+                                <span class="value" data-field="price.52w_high"></span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">52W Low:</span>
+                                <span class="value" data-field="price.52w_low"></span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">Position Momentum:</span>
+                                <span class="value" data-field="price.position_momentum"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-section">
+                        <h3>Valuation</h3>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <span class="label">Market Cap:</span>
+                                <span class="value" data-field="valuation.market_cap"></span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">P/E (LTM):</span>
+                                <span class="value" data-field="valuation.pe_ltm"></span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">P/B:</span>
+                                <span class="value" data-field="valuation.pb"></span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">EV/FCF:</span>
+                                <span class="value" data-field="valuation.ev_fcf"></span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">PEG:</span>
+                                <span class="value" data-field="valuation.peg"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-section">
+                        <h3>Growth (CAGR %)</h3>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <span class="label">Revenue 3Y:</span>
+                                <span class="value" data-field="growth.revenue_cagr_3y"></span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">Revenue 4Y:</span>
+                                <span class="value" data-field="growth.revenue_cagr_4y"></span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">Revenue YoY:</span>
+                                <span class="value" data-field="growth.revenue_yoy"></span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">Net Income 3Y:</span>
+                                <span class="value" data-field="growth.net_income_cagr_3y"></span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">FCF 3Y:</span>
+                                <span class="value" data-field="growth.fcf_cagr_3y"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-section">
+                        <h3>Margins (%)</h3>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <span class="label">Gross Margin:</span>
+                                <span class="value" data-field="margins.gross_ltm"></span>
+                                <span class="trend" data-field="margins.gross_trend"></span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">Net Margin:</span>
+                                <span class="value" data-field="margins.net_ltm"></span>
+                                <span class="trend" data-field="margins.net_trend"></span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">OCF Margin:</span>
+                                <span class="value" data-field="margins.ocf_ltm"></span>
+                                <span class="trend" data-field="margins.ocf_trend"></span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">FCF Margin:</span>
+                                <span class="value" data-field="margins.fcf_ltm"></span>
+                                <span class="trend" data-field="margins.fcf_trend"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-section">
+                        <h3>Quality</h3>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <span class="label">Net Income Consistency:</span>
+                                <span class="value" data-field="quality.net_income_consistency"></span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">FCF Consistency:</span>
+                                <span class="value" data-field="quality.fcf_consistency"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </template>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

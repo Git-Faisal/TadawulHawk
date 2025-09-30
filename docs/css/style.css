@@ -1,0 +1,348 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #333;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.metadata {
+    font-size: 0.9em;
+    color: #888;
+}
+
+/* Sections */
+.overview-section,
+.stocks-section {
+    margin-bottom: 50px;
+}
+
+.overview-section h2,
+.stocks-section h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #000;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+/* Filters */
+.filters {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.filter-group label {
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #555;
+}
+
+.filter-select,
+#tadawul-search,
+#nomu-search {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+    min-width: 150px;
+}
+
+.filter-select:focus,
+#tadawul-search:focus,
+#nomu-search:focus {
+    outline: none;
+    border-color: #666;
+}
+
+.btn-clear,
+.btn-export {
+    padding: 8px 16px;
+    border: 1px solid #333;
+    background-color: #f5f5f5;
+    color: #333;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.2s;
+}
+
+.btn-clear:hover,
+.btn-export:hover {
+    background-color: #e0e0e0;
+}
+
+.btn-export {
+    background-color: #333;
+    color: #fff;
+}
+
+.btn-export:hover {
+    background-color: #555;
+}
+
+/* Tables */
+.table-container {
+    overflow-x: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+.data-table thead {
+    background-color: #f5f5f5;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.data-table th {
+    padding: 12px 8px;
+    text-align: left;
+    font-weight: bold;
+    border-bottom: 2px solid #333;
+    font-size: 0.9em;
+    white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+}
+
+.data-table th:hover {
+    background-color: #e8e8e8;
+}
+
+.data-table td {
+    padding: 10px 8px;
+    border-bottom: 1px solid #eee;
+    font-size: 0.9em;
+}
+
+.data-table tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+.data-table tbody tr.expanded {
+    background-color: #f0f0f0;
+}
+
+/* Stock row specific */
+.stock-row {
+    cursor: pointer;
+}
+
+/* Detail Row */
+.detail-row {
+    display: none;
+}
+
+.detail-row.visible {
+    display: table-row;
+}
+
+.detail-row td {
+    padding: 0;
+    border-bottom: 2px solid #333;
+}
+
+.stock-detail {
+    padding: 20px;
+    background-color: #fafafa;
+}
+
+.detail-section {
+    margin-bottom: 20px;
+}
+
+.detail-section:last-child {
+    margin-bottom: 0;
+}
+
+.detail-section h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.detail-item .label {
+    font-size: 0.85em;
+    color: #666;
+    font-weight: bold;
+}
+
+.detail-item .value {
+    font-size: 1em;
+    color: #000;
+}
+
+.detail-item .trend {
+    font-size: 0.85em;
+    font-weight: bold;
+    margin-top: 2px;
+}
+
+/* Color Coding */
+.positive {
+    color: #00aa00;
+}
+
+.negative {
+    color: #cc0000;
+}
+
+.neutral {
+    color: #888;
+}
+
+.trend.expanding {
+    color: #00aa00;
+}
+
+.trend.expanding::before {
+    content: "↗ ";
+}
+
+.trend.contracting {
+    color: #cc0000;
+}
+
+.trend.contracting::before {
+    content: "↘ ";
+}
+
+.trend.flat {
+    color: #888;
+}
+
+.trend.flat::before {
+    content: "→ ";
+}
+
+/* Action Buttons */
+.btn-detail {
+    padding: 6px 12px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 0.85em;
+    font-family: Arial, sans-serif;
+}
+
+.btn-detail:hover {
+    background-color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    .filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-group {
+        width: 100%;
+    }
+
+    .filter-select,
+    #tadawul-search,
+    #nomu-search {
+        width: 100%;
+    }
+
+    .detail-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Loading State */
+.loading {
+    text-align: center;
+    padding: 40px;
+    font-size: 1.2em;
+    color: #666;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 40px;
+    color: #999;
+    font-style: italic;
+}
+
+/* Number Formatting */
+.number-value {
+    text-align: right;
+}
+
+/* Hidden */
+.hidden {
+    display: none;
+}
