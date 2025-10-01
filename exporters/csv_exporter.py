@@ -175,6 +175,7 @@ class CSVExporter:
                     QuarterlyFundamental.gross_profit,
                     QuarterlyFundamental.net_income,
                     QuarterlyFundamental.operating_cash_flow,
+                    QuarterlyFundamental.capital_expenditure,
                     QuarterlyFundamental.free_cash_flow,
                     QuarterlyFundamental.created_at,
                     QuarterlyFundamental.updated_at
@@ -185,7 +186,7 @@ class CSVExporter:
                     'symbol', 'company_name', 'exchange', 'fiscal_year',
                     'fiscal_quarter', 'quarter_end_date', 'revenue',
                     'gross_profit', 'net_income', 'operating_cash_flow',
-                    'free_cash_flow', 'created_at', 'updated_at'
+                    'capital_expenditure', 'free_cash_flow', 'created_at', 'updated_at'
                 ])
 
                 # Sort by symbol, year, quarter
@@ -233,6 +234,7 @@ class CSVExporter:
                     AnnualFundamental.gross_profit,
                     AnnualFundamental.net_income,
                     AnnualFundamental.operating_cash_flow,
+                    AnnualFundamental.capital_expenditure,
                     AnnualFundamental.free_cash_flow,
                     AnnualFundamental.created_at,
                     AnnualFundamental.updated_at
@@ -242,7 +244,7 @@ class CSVExporter:
                 df = pd.DataFrame(query, columns=[
                     'symbol', 'company_name', 'exchange', 'fiscal_year',
                     'year_end_date', 'revenue', 'gross_profit', 'net_income',
-                    'operating_cash_flow', 'free_cash_flow', 'created_at', 'updated_at'
+                    'operating_cash_flow', 'capital_expenditure', 'free_cash_flow', 'created_at', 'updated_at'
                 ])
 
                 # Sort by symbol, year

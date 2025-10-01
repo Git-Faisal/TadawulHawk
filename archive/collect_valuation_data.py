@@ -74,6 +74,7 @@ def collect_valuation_data():
                     'total_debt': val_data.get('total_debt', 0),
                     'total_cash': val_data.get('total_cash', 0),
                     'book_value': val_data.get('book_value'),
+                    'balance_sheet_date': val_data.get('balance_sheet_date'),
                     'status': status
                 })
 
@@ -88,6 +89,7 @@ def collect_valuation_data():
                     'total_debt': 0,
                     'total_cash': 0,
                     'book_value': None,
+                    'balance_sheet_date': None,
                     'status': 'error'
                 })
 
@@ -100,7 +102,7 @@ def collect_valuation_data():
 
     with open(output_path, 'w', newline='', encoding='utf-8') as f:
         fieldnames = ['symbol', 'company_name', 'exchange', 'market_cap',
-                     'total_debt', 'total_cash', 'book_value', 'status']
+                     'total_debt', 'total_cash', 'book_value', 'balance_sheet_date', 'status']
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
         writer.writerows(valuation_records)

@@ -12,6 +12,18 @@ from decimal import Decimal
 from typing import Dict, List, Any, Optional
 from collections import defaultdict
 
+def clean_for_json(obj):
+    """Convert NaN and inf values to None for JSON compatibility."""
+    if isinstance(obj, dict):
+        return {k: clean_for_json(v) for k, v in obj.items()}
+    elif isinstance(obj, list):
+        return [clean_for_json(item) for item in obj]
+    elif isinstance(obj, float):
+        if np.isnan(obj) or np.isinf(obj):
+            return None
+        return obj
+    return obj
+
 class StockAnalyzer:
     """Calculate all metrics for stock screening and analysis."""
 
@@ -239,16 +251,19 @@ class StockAnalyzer:
                 total_debt = val_data.get('total_debt', 0)
                 total_cash = val_data.get('total_cash', 0)
                 book_value = val_data.get('book_value')
+                balance_sheet_date = val_data.get('balance_sheet_date')
             else:
                 market_cap = None
                 total_debt = 0
                 total_cash = 0
                 book_value = None
+                balance_sheet_date = None
         else:
             market_cap = None
             total_debt = 0
             total_cash = 0
             book_value = None
+            balance_sheet_date = None
 
         # Calculate LTM metrics
         ltm_revenue = self.calculate_ltm(symbol, 'revenue')
@@ -290,16 +305,20 @@ class StockAnalyzer:
         pe_ltm = None
         pb = None
         ev_fcf = None
+        ev = None
 
-        if market_cap:
+        if market_cap and market_cap > 0:
+            # Calculate Enterprise Value
+            ev = market_cap + total_debt - total_cash
+
             if ltm_net_income and ltm_net_income > 0:
                 pe_ltm = round(market_cap / ltm_net_income, 2)
 
             if book_value and book_value > 0:
+                # P/B = Market Cap / Book Value (both should be in same units)
                 pb = round(market_cap / book_value, 2)
 
             if ltm_fcf and ltm_fcf > 0:
-                ev = market_cap + total_debt - total_cash
                 ev_fcf = round(ev / ltm_fcf, 2)
 
         # Growth calculations (CAGR)
@@ -378,6 +397,50 @@ class StockAnalyzer:
         # Position momentum
         position_momentum = self.calculate_52w_position_momentum(symbol)
 
+        # Get historical annual data (2021-2024)
+        annual_history = []
+        for _, row in annual_data.iterrows():
+            if row['fiscal_year'] >= 2021:
+                # Check if capital_expenditure column exists
+                capex = None
+                if 'capital_expenditure' in row.index:
+                    capex = float(row['capital_expenditure']) if pd.notna(row['capital_expenditure']) else None
+
+                annual_history.append({
+                    'fiscal_year': int(row['fiscal_year']),
+                    'revenue': float(row['revenue']) if pd.notna(row['revenue']) else None,
+                    'gross_profit': float(row['gross_profit']) if pd.notna(row['gross_profit']) else None,
+                    'net_income': float(row['net_income']) if pd.notna(row['net_income']) else None,
+                    'operating_cash_flow': float(row['operating_cash_flow']) if pd.notna(row['operating_cash_flow']) else None,
+                    'capital_expenditure': capex,
+                    'free_cash_flow': float(row['free_cash_flow']) if pd.notna(row['free_cash_flow']) else None
+                })
+
+        # Get quarterly data for 2024-2025
+        quarterly_data = self.quarterly_df[
+            self.quarterly_df['symbol'] == symbol
+        ].sort_values('quarter_end_date', ascending=False)
+
+        quarterly_history = []
+        for _, row in quarterly_data.iterrows():
+            if row['fiscal_year'] >= 2024:
+                # Check if capital_expenditure column exists
+                capex = None
+                if 'capital_expenditure' in row.index:
+                    capex = float(row['capital_expenditure']) if pd.notna(row['capital_expenditure']) else None
+
+                quarterly_history.append({
+                    'fiscal_year': int(row['fiscal_year']),
+                    'fiscal_quarter': int(row['fiscal_quarter']),
+                    'quarter_end_date': str(row['quarter_end_date']),
+                    'revenue': float(row['revenue']) if pd.notna(row['revenue']) else None,
+                    'gross_profit': float(row['gross_profit']) if pd.notna(row['gross_profit']) else None,
+                    'net_income': float(row['net_income']) if pd.notna(row['net_income']) else None,
+                    'operating_cash_flow': float(row['operating_cash_flow']) if pd.notna(row['operating_cash_flow']) else None,
+                    'capital_expenditure': capex,
+                    'free_cash_flow': float(row['free_cash_flow']) if pd.notna(row['free_cash_flow']) else None
+                })
+
         # Compile all metrics
         return {
             'symbol': symbol,
@@ -398,6 +461,10 @@ class StockAnalyzer:
 
             'valuation': {
                 'market_cap': float(market_cap) if market_cap else None,
+                'enterprise_value': float(ev) if ev else None,
+                'total_debt': float(total_debt) if total_debt else None,
+                'total_cash': float(total_cash) if total_cash else None,
+                'balance_sheet_date': balance_sheet_date,
                 'pe_ltm': pe_ltm,
                 'pb': pb,
                 'ev_fcf': ev_fcf,
@@ -420,6 +487,11 @@ class StockAnalyzer:
             'quality': {
                 'net_income_consistency': net_income_consistency,
                 'fcf_consistency': fcf_consistency
+            },
+
+            'historical': {
+                'annual': annual_history,
+                'quarterly': quarterly_history
             }
         }
 
@@ -441,9 +513,9 @@ class StockAnalyzer:
             sector = stock['sector']
             industry = stock['industry']
 
-            if sector and sector != 'nan':
+            if sector and str(sector).lower() not in ['nan', 'none', '']:
                 sector_data[sector].append(stock)
-            if industry and industry != 'nan':
+            if industry and str(industry).lower() not in ['nan', 'none', '']:
                 industry_data[industry].append(stock)
 
         # Calculate sector aggregates
@@ -561,8 +633,10 @@ class StockAnalyzer:
 
         # Export to JSON
         print(f"\nExporting to {output_path}...")
+        # Clean data to remove NaN values
+        clean_data = clean_for_json(data)
         with open(output_file, 'w', encoding='utf-8') as f:
-            json.dump(data, f, indent=2, ensure_ascii=False)
+            json.dump(clean_data, f, indent=2, ensure_ascii=False)
 
         print(f"[OK] Exported successfully!")
         print(f"  File size: {output_file.stat().st_size / 1024:.1f} KB")

@@ -10,7 +10,7 @@
     <div class="container">
         <!-- Header -->
         <header>
-            <h1>Saudi Stock Analysis</h1>
+            <h1>Tadawul Hawk</h1>
             <p class="subtitle">Comprehensive analysis of 403 Saudi stocks (Tadawul & NOMU)</p>
             <div id="metadata" class="metadata"></div>
         </header>
@@ -24,18 +24,18 @@
                         <tr>
                             <th>Sector</th>
                             <th>Stocks</th>
-                            <th>Avg P/E</th>
-                            <th>Med P/E</th>
-                            <th>Avg P/B</th>
-                            <th>Med P/B</th>
-                            <th>Avg EV/FCF</th>
-                            <th>Med EV/FCF</th>
-                            <th>Avg Rev Growth 3Y</th>
-                            <th>Med Rev Growth 3Y</th>
-                            <th>Avg Net Margin</th>
-                            <th>Med Net Margin</th>
-                            <th>Avg Volatility</th>
-                            <th>Med Volatility</th>
+                            <th data-tooltip="Price-to-Earnings = Market Cap / Net Income (LTM)">Avg P/E</th>
+                            <th data-tooltip="Price-to-Earnings = Market Cap / Net Income (LTM)">Med P/E</th>
+                            <th data-tooltip="Price-to-Book = Market Cap / Book Value">Avg P/B</th>
+                            <th data-tooltip="Price-to-Book = Market Cap / Book Value">Med P/B</th>
+                            <th data-tooltip="Enterprise Value to Free Cash Flow = (Market Cap + Debt - Cash) / FCF (LTM)">Avg EV/FCF</th>
+                            <th data-tooltip="Enterprise Value to Free Cash Flow = (Market Cap + Debt - Cash) / FCF (LTM)">Med EV/FCF</th>
+                            <th data-tooltip="3-Year Revenue Compound Annual Growth Rate">Avg Rev Growth 3Y</th>
+                            <th data-tooltip="3-Year Revenue Compound Annual Growth Rate">Med Rev Growth 3Y</th>
+                            <th data-tooltip="Net Margin = Net Income / Revenue">Avg Net Margin</th>
+                            <th data-tooltip="Net Margin = Net Income / Revenue">Med Net Margin</th>
+                            <th data-tooltip="52-Week Price Range / Average Price (simplified volatility measure)">Avg Volatility</th>
+                            <th data-tooltip="52-Week Price Range / Average Price (simplified volatility measure)">Med Volatility</th>
                         </tr>
                     </thead>
                     <tbody id="sector-body">
@@ -53,18 +53,18 @@
                         <tr>
                             <th>Industry</th>
                             <th>Stocks</th>
-                            <th>Avg P/E</th>
-                            <th>Med P/E</th>
-                            <th>Avg P/B</th>
-                            <th>Med P/B</th>
-                            <th>Avg EV/FCF</th>
-                            <th>Med EV/FCF</th>
-                            <th>Avg Rev Growth 3Y</th>
-                            <th>Med Rev Growth 3Y</th>
-                            <th>Avg Net Margin</th>
-                            <th>Med Net Margin</th>
-                            <th>Avg Volatility</th>
-                            <th>Med Volatility</th>
+                            <th data-tooltip="Price-to-Earnings = Market Cap / Net Income (LTM)">Avg P/E</th>
+                            <th data-tooltip="Price-to-Earnings = Market Cap / Net Income (LTM)">Med P/E</th>
+                            <th data-tooltip="Price-to-Book = Market Cap / Book Value">Avg P/B</th>
+                            <th data-tooltip="Price-to-Book = Market Cap / Book Value">Med P/B</th>
+                            <th data-tooltip="Enterprise Value to Free Cash Flow = (Market Cap + Debt - Cash) / FCF (LTM)">Avg EV/FCF</th>
+                            <th data-tooltip="Enterprise Value to Free Cash Flow = (Market Cap + Debt - Cash) / FCF (LTM)">Med EV/FCF</th>
+                            <th data-tooltip="3-Year Revenue Compound Annual Growth Rate">Avg Rev Growth 3Y</th>
+                            <th data-tooltip="3-Year Revenue Compound Annual Growth Rate">Med Rev Growth 3Y</th>
+                            <th data-tooltip="Net Margin = Net Income / Revenue">Avg Net Margin</th>
+                            <th data-tooltip="Net Margin = Net Income / Revenue">Med Net Margin</th>
+                            <th data-tooltip="52-Week Price Range / Average Price (simplified volatility measure)">Avg Volatility</th>
+                            <th data-tooltip="52-Week Price Range / Average Price (simplified volatility measure)">Med Volatility</th>
                         </tr>
                     </thead>
                     <tbody id="industry-body">
@@ -95,6 +95,34 @@
                     <label for="tadawul-search">Search:</label>
                     <input type="text" id="tadawul-search" placeholder="Symbol or name...">
                 </div>
+                <div class="filter-group">
+                    <label for="tadawul-52w-filter">52W Percentile:</label>
+                    <select id="tadawul-52w-filter" class="filter-select">
+                        <option value="">All</option>
+                        <option value="0-30">Below 30% (Deep Value)</option>
+                        <option value="0-50">Below 50% (Value)</option>
+                        <option value="50-70">50-70% (Mid Range)</option>
+                        <option value="70-100">Above 70% (Momentum)</option>
+                        <option value="80-100">Above 80% (Strong Momentum)</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Quality Filters:</label>
+                    <div style="display: flex; flex-direction: column; gap: 5px;">
+                        <label style="font-weight: normal; font-size: 0.85em;">
+                            <input type="checkbox" id="tadawul-filter-ni-positive"> Net Income Always Positive
+                        </label>
+                        <label style="font-weight: normal; font-size: 0.85em;">
+                            <input type="checkbox" id="tadawul-filter-ni-growing"> Net Income Growing
+                        </label>
+                        <label style="font-weight: normal; font-size: 0.85em;">
+                            <input type="checkbox" id="tadawul-filter-fcf-positive"> FCF Always Positive
+                        </label>
+                        <label style="font-weight: normal; font-size: 0.85em;">
+                            <input type="checkbox" id="tadawul-filter-fcf-growing"> FCF Growing
+                        </label>
+                    </div>
+                </div>
                 <button id="tadawul-clear-filters" class="btn-clear">Clear Filters</button>
                 <button id="tadawul-export-csv" class="btn-export">Export to CSV</button>
             </div>
@@ -109,13 +137,13 @@
                             <th data-sort="sector">Sector ⇅</th>
                             <th data-sort="industry">Industry ⇅</th>
                             <th data-sort="price.current">Price ⇅</th>
-                            <th data-sort="price.52w_ratio">52W Ratio ⇅</th>
-                            <th data-sort="price.percentile_52w">52W % ⇅</th>
-                            <th data-sort="price.volatility">Volatility ⇅</th>
-                            <th data-sort="valuation.pe_ltm">P/E ⇅</th>
-                            <th data-sort="valuation.pb">P/B ⇅</th>
-                            <th data-sort="valuation.ev_fcf">EV/FCF ⇅</th>
-                            <th data-sort="valuation.peg">PEG ⇅</th>
+                            <th data-sort="price.52w_ratio" data-tooltip="Current Price / 52-Week Low">52W Ratio ⇅</th>
+                            <th data-sort="price.percentile_52w" data-tooltip="Position within 52-week range (0-100%)">52W % ⇅</th>
+                            <th data-sort="price.volatility" data-tooltip="52-Week Price Range / Average Price (simplified volatility measure)">Volatility ⇅</th>
+                            <th data-sort="valuation.pe_ltm" data-tooltip="Price-to-Earnings = Market Cap / Net Income (LTM)">P/E ⇅</th>
+                            <th data-sort="valuation.pb" data-tooltip="Price-to-Book = Market Cap / Book Value">P/B ⇅</th>
+                            <th data-sort="valuation.ev_fcf" data-tooltip="Enterprise Value to Free Cash Flow = (Market Cap + Debt - Cash) / FCF (LTM)">EV/FCF ⇅</th>
+                            <th data-sort="valuation.peg" data-tooltip="Price/Earnings to Growth = P/E / Earnings Growth Rate">PEG ⇅</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -147,6 +175,34 @@
                     <label for="nomu-search">Search:</label>
                     <input type="text" id="nomu-search" placeholder="Symbol or name...">
                 </div>
+                <div class="filter-group">
+                    <label for="nomu-52w-filter">52W Percentile:</label>
+                    <select id="nomu-52w-filter" class="filter-select">
+                        <option value="">All</option>
+                        <option value="0-30">Below 30% (Deep Value)</option>
+                        <option value="0-50">Below 50% (Value)</option>
+                        <option value="50-70">50-70% (Mid Range)</option>
+                        <option value="70-100">Above 70% (Momentum)</option>
+                        <option value="80-100">Above 80% (Strong Momentum)</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Quality Filters:</label>
+                    <div style="display: flex; flex-direction: column; gap: 5px;">
+                        <label style="font-weight: normal; font-size: 0.85em;">
+                            <input type="checkbox" id="nomu-filter-ni-positive"> Net Income Always Positive
+                        </label>
+                        <label style="font-weight: normal; font-size: 0.85em;">
+                            <input type="checkbox" id="nomu-filter-ni-growing"> Net Income Growing
+                        </label>
+                        <label style="font-weight: normal; font-size: 0.85em;">
+                            <input type="checkbox" id="nomu-filter-fcf-positive"> FCF Always Positive
+                        </label>
+                        <label style="font-weight: normal; font-size: 0.85em;">
+                            <input type="checkbox" id="nomu-filter-fcf-growing"> FCF Growing
+                        </label>
+                    </div>
+                </div>
                 <button id="nomu-clear-filters" class="btn-clear">Clear Filters</button>
                 <button id="nomu-export-csv" class="btn-export">Export to CSV</button>
             </div>
@@ -161,13 +217,13 @@
                             <th data-sort="sector">Sector ⇅</th>
                             <th data-sort="industry">Industry ⇅</th>
                             <th data-sort="price.current">Price ⇅</th>
-                            <th data-sort="52w_ratio">52W Ratio ⇅</th>
-                            <th data-sort="percentile_52w">52W % ⇅</th>
-                            <th data-sort="volatility">Volatility ⇅</th>
-                            <th data-sort="pe_ltm">P/E ⇅</th>
-                            <th data-sort="pb">P/B ⇅</th>
-                            <th data-sort="ev_fcf">EV/FCF ⇅</th>
-                            <th data-sort="peg">PEG ⇅</th>
+                            <th data-sort="52w_ratio" data-tooltip="Current Price / 52-Week Low">52W Ratio ⇅</th>
+                            <th data-sort="percentile_52w" data-tooltip="Position within 52-week range (0-100%)">52W % ⇅</th>
+                            <th data-sort="volatility" data-tooltip="52-Week Price Range / Average Price (simplified volatility measure)">Volatility ⇅</th>
+                            <th data-sort="pe_ltm" data-tooltip="Price-to-Earnings = Market Cap / Net Income (LTM)">P/E ⇅</th>
+                            <th data-sort="pb" data-tooltip="Price-to-Book = Market Cap / Book Value">P/B ⇅</th>
+                            <th data-sort="ev_fcf" data-tooltip="Enterprise Value to Free Cash Flow = (Market Cap + Debt - Cash) / FCF (LTM)">EV/FCF ⇅</th>
+                            <th data-sort="peg" data-tooltip="Price/Earnings to Growth = P/E / Earnings Growth Rate">PEG ⇅</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -199,7 +255,7 @@
                                 <span class="value" data-field="price.52w_low"></span>
                             </div>
                             <div class="detail-item">
-                                <span class="label">Position Momentum:</span>
+                                <span class="label" data-tooltip="Current price position within 52-week range, indicating momentum: >70% is strong upward momentum, <30% is downward momentum">Position Momentum:</span>
                                 <span class="value" data-field="price.position_momentum"></span>
                             </div>
                         </div>
@@ -213,19 +269,35 @@
                                 <span class="value" data-field="valuation.market_cap"></span>
                             </div>
                             <div class="detail-item">
-                                <span class="label">P/E (LTM):</span>
+                                <span class="label" data-tooltip="Enterprise Value = Market Cap + Total Debt - Total Cash. Represents the total cost to acquire the company">Enterprise Value:</span>
+                                <span class="value" data-field="valuation.enterprise_value"></span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">Total Debt:</span>
+                                <span class="value" data-field="valuation.total_debt"></span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">Total Cash:</span>
+                                <span class="value" data-field="valuation.total_cash"></span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label">Balance Sheet Date:</span>
+                                <span class="value" data-field="valuation.balance_sheet_date"></span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="label" data-tooltip="Price-to-Earnings = Market Cap / Net Income (LTM). Lower values may indicate undervaluation">P/E (LTM):</span>
                                 <span class="value" data-field="valuation.pe_ltm"></span>
                             </div>
                             <div class="detail-item">
-                                <span class="label">P/B:</span>
+                                <span class="label" data-tooltip="Price-to-Book = Market Cap / Total Book Value (Stockholders Equity). Measures market value relative to accounting book value">P/B:</span>
                                 <span class="value" data-field="valuation.pb"></span>
                             </div>
                             <div class="detail-item">
-                                <span class="label">EV/FCF:</span>
+                                <span class="label" data-tooltip="Enterprise Value to Free Cash Flow = (Market Cap + Debt - Cash) / FCF (LTM). Measures how many years of FCF to pay off enterprise value">EV/FCF:</span>
                                 <span class="value" data-field="valuation.ev_fcf"></span>
                             </div>
                             <div class="detail-item">
-                                <span class="label">PEG:</span>
+                                <span class="label" data-tooltip="Price/Earnings to Growth = P/E / Earnings Growth Rate. Values below 1 may indicate undervaluation relative to growth">PEG:</span>
                                 <span class="value" data-field="valuation.peg"></span>
                             </div>
                         </div>
@@ -235,23 +307,23 @@
                         <h3>Growth (CAGR %)</h3>
                         <div class="detail-grid">
                             <div class="detail-item">
-                                <span class="label">Revenue 3Y:</span>
+                                <span class="label" data-tooltip="3-Year Revenue Compound Annual Growth Rate (CAGR). Measures average annual revenue growth over 3 years">Revenue 3Y:</span>
                                 <span class="value" data-field="growth.revenue_cagr_3y"></span>
                             </div>
                             <div class="detail-item">
-                                <span class="label">Revenue 4Y:</span>
+                                <span class="label" data-tooltip="4-Year Revenue Compound Annual Growth Rate (CAGR). Measures average annual revenue growth over 4 years">Revenue 4Y:</span>
                                 <span class="value" data-field="growth.revenue_cagr_4y"></span>
                             </div>
                             <div class="detail-item">
-                                <span class="label">Revenue YoY:</span>
+                                <span class="label" data-tooltip="Year-over-Year Revenue Growth. Compares most recent annual revenue to previous year">Revenue YoY:</span>
                                 <span class="value" data-field="growth.revenue_yoy"></span>
                             </div>
                             <div class="detail-item">
-                                <span class="label">Net Income 3Y:</span>
+                                <span class="label" data-tooltip="3-Year Net Income Compound Annual Growth Rate (CAGR). Measures average annual profit growth over 3 years">Net Income 3Y:</span>
                                 <span class="value" data-field="growth.net_income_cagr_3y"></span>
                             </div>
                             <div class="detail-item">
-                                <span class="label">FCF 3Y:</span>
+                                <span class="label" data-tooltip="3-Year Free Cash Flow Compound Annual Growth Rate (CAGR). Measures average annual FCF growth over 3 years">FCF 3Y:</span>
                                 <span class="value" data-field="growth.fcf_cagr_3y"></span>
                             </div>
                         </div>
@@ -261,22 +333,22 @@
                         <h3>Margins (%)</h3>
                         <div class="detail-grid">
                             <div class="detail-item">
-                                <span class="label">Gross Margin:</span>
+                                <span class="label" data-tooltip="Gross Margin = (Revenue - Cost of Goods Sold) / Revenue. Measures profitability before operating expenses. Trend shows if expanding ↗, flat →, or contracting ↘">Gross Margin:</span>
                                 <span class="value" data-field="margins.gross_ltm"></span>
                                 <span class="trend" data-field="margins.gross_trend"></span>
                             </div>
                             <div class="detail-item">
-                                <span class="label">Net Margin:</span>
+                                <span class="label" data-tooltip="Net Margin = Net Income / Revenue. Measures bottom-line profitability after all expenses. Trend shows if expanding ↗, flat →, or contracting ↘">Net Margin:</span>
                                 <span class="value" data-field="margins.net_ltm"></span>
                                 <span class="trend" data-field="margins.net_trend"></span>
                             </div>
                             <div class="detail-item">
-                                <span class="label">OCF Margin:</span>
+                                <span class="label" data-tooltip="Operating Cash Flow Margin = Operating Cash Flow / Revenue. Measures cash generation efficiency. Trend shows if expanding ↗, flat →, or contracting ↘">OCF Margin:</span>
                                 <span class="value" data-field="margins.ocf_ltm"></span>
                                 <span class="trend" data-field="margins.ocf_trend"></span>
                             </div>
                             <div class="detail-item">
-                                <span class="label">FCF Margin:</span>
+                                <span class="label" data-tooltip="Free Cash Flow Margin = Free Cash Flow / Revenue. Measures cash available after capital expenditures. Trend shows if expanding ↗, flat →, or contracting ↘">FCF Margin:</span>
                                 <span class="value" data-field="margins.fcf_ltm"></span>
                                 <span class="trend" data-field="margins.fcf_trend"></span>
                             </div>
@@ -287,13 +359,27 @@
                         <h3>Quality</h3>
                         <div class="detail-grid">
                             <div class="detail-item">
-                                <span class="label">Net Income Consistency:</span>
+                                <span class="label" data-tooltip="Standard deviation of annual net income growth rates over 4 years. Lower values indicate more consistent, predictable earnings (better quality)">Net Income Consistency:</span>
                                 <span class="value" data-field="quality.net_income_consistency"></span>
                             </div>
                             <div class="detail-item">
-                                <span class="label">FCF Consistency:</span>
+                                <span class="label" data-tooltip="Standard deviation of annual free cash flow growth rates over 4 years. Lower values indicate more consistent, predictable cash generation (better quality)">FCF Consistency:</span>
                                 <span class="value" data-field="quality.fcf_consistency"></span>
                             </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-section">
+                        <h3>Annual History (FY2021-2024)</h3>
+                        <div class="history-table-container">
+                            <table class="history-table" data-field="historical.annual"></table>
+                        </div>
+                    </div>
+
+                    <div class="detail-section">
+                        <h3>Quarterly History (FY2024-2025)</h3>
+                        <div class="history-table-container">
+                            <table class="history-table" data-field="historical.quarterly"></table>
                         </div>
                     </div>
                 </div>

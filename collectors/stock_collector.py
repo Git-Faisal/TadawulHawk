@@ -296,6 +296,10 @@ class StockCollector:
                         if 'Operating Cash Flow' in quarterly_cashflow.index and col in quarterly_cashflow.columns:
                             quarter_data['operating_cash_flow'] = float(quarterly_cashflow.loc['Operating Cash Flow', col]) if pd.notna(quarterly_cashflow.loc['Operating Cash Flow', col]) else None
 
+                        # Capital Expenditure
+                        if 'Capital Expenditure' in quarterly_cashflow.index and col in quarterly_cashflow.columns:
+                            quarter_data['capital_expenditure'] = float(quarterly_cashflow.loc['Capital Expenditure', col]) if pd.notna(quarterly_cashflow.loc['Capital Expenditure', col]) else None
+
                         # Free Cash Flow
                         if 'Free Cash Flow' in quarterly_cashflow.index and col in quarterly_cashflow.columns:
                             quarter_data['free_cash_flow'] = float(quarterly_cashflow.loc['Free Cash Flow', col]) if pd.notna(quarterly_cashflow.loc['Free Cash Flow', col]) else None
@@ -371,6 +375,10 @@ class StockCollector:
                         if 'Operating Cash Flow' in annual_cashflow.index and col in annual_cashflow.columns:
                             year_data['operating_cash_flow'] = float(annual_cashflow.loc['Operating Cash Flow', col]) if pd.notna(annual_cashflow.loc['Operating Cash Flow', col]) else None
 
+                        # Capital Expenditure
+                        if 'Capital Expenditure' in annual_cashflow.index and col in annual_cashflow.columns:
+                            year_data['capital_expenditure'] = float(annual_cashflow.loc['Capital Expenditure', col]) if pd.notna(annual_cashflow.loc['Capital Expenditure', col]) else None
+
                         # Free Cash Flow
                         if 'Free Cash Flow' in annual_cashflow.index and col in annual_cashflow.columns:
                             year_data['free_cash_flow'] = float(annual_cashflow.loc['Free Cash Flow', col]) if pd.notna(annual_cashflow.loc['Free Cash Flow', col]) else None
@@ -410,15 +418,46 @@ class StockCollector:
             # Get cash
             total_cash = info.get('totalCash') or info.get('cash', 0)
 
-            # Get book value (try multiple approaches)
-            book_value = (info.get('bookValue') or
-                         info.get('totalStockholderEquity'))
+            # Get TOTAL book value (stockholders equity) - NOT per share
+            # Try multiple approaches in order of preference
+            book_value = None
+            balance_sheet_date = None
+
+            # 1. Try to get from balance sheet (most reliable for TOTAL value)
+            try:
+                balance_sheet = ticker.balance_sheet
+                if balance_sheet is not None and not balance_sheet.empty:
+                    # Get the most recent balance sheet date (first column)
+                    balance_sheet_date = str(balance_sheet.columns[0].date())
+
+                    if 'Stockholders Equity' in balance_sheet.index:
+                        # Get most recent value (first column)
+                        book_value = float(balance_sheet.loc['Stockholders Equity'].iloc[0])
+                        if pd.notna(book_value):
+                            logger.debug(f"{self.symbol}: Got book value from balance sheet: {book_value}")
+            except Exception as e:
+                logger.debug(f"{self.symbol}: Could not get book value from balance sheet: {e}")
+
+            # 2. Try from info dict (totalStockholderEquity is total, not per share)
+            if book_value is None:
+                book_value = info.get('totalStockholderEquity')
+                if book_value:
+                    logger.debug(f"{self.symbol}: Got book value from info: {book_value}")
+
+            # 3. Last resort: calculate from bookValue (per share) × shares outstanding
+            if book_value is None:
+                book_value_per_share = info.get('bookValue')
+                shares_outstanding = info.get('sharesOutstanding')
+                if book_value_per_share and shares_outstanding:
+                    book_value = book_value_per_share * shares_outstanding
+                    logger.debug(f"{self.symbol}: Calculated book value = {book_value_per_share} × {shares_outstanding} = {book_value}")
 
             return {
                 'market_cap': market_cap,
                 'total_debt': total_debt if total_debt else 0,
                 'total_cash': total_cash if total_cash else 0,
-                'book_value': book_value
+                'book_value': book_value,
+                'balance_sheet_date': balance_sheet_date
             }
 
         result = self._retry_with_backoff(_fetch)
@@ -426,7 +465,7 @@ class StockCollector:
             logger.info(f"Successfully fetched valuation data for {self.symbol}")
         else:
             logger.warning(f"Limited valuation data available for {self.symbol}")
-        return result or {'market_cap': None, 'total_debt': 0, 'total_cash': 0, 'book_value': None}
+        return result or {'market_cap': None, 'total_debt': 0, 'total_cash': 0, 'book_value': None, 'balance_sheet_date': None}
 
     def collect_all_data(self) -> Dict[str, Any]:
         """

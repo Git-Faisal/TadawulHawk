@@ -117,6 +117,7 @@ class QuarterlyFundamental(Base):
     gross_profit = Column(Numeric(18, 2))
     net_income = Column(Numeric(18, 2))
     operating_cash_flow = Column(Numeric(18, 2))
+    capital_expenditure = Column(Numeric(18, 2))
     free_cash_flow = Column(Numeric(18, 2))
 
     created_at = Column(TIMESTAMP(timezone=True), server_default=func.now())
@@ -149,6 +150,7 @@ class AnnualFundamental(Base):
     gross_profit = Column(Numeric(18, 2))
     net_income = Column(Numeric(18, 2))
     operating_cash_flow = Column(Numeric(18, 2))
+    capital_expenditure = Column(Numeric(18, 2))
     free_cash_flow = Column(Numeric(18, 2))
 
     created_at = Column(TIMESTAMP(timezone=True), server_default=func.now())

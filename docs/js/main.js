@@ -20,12 +20,17 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 // Load JSON data
 async function loadData() {
+    console.log('Loading data...');
     const response = await fetch('data/stocks_analysis.json');
+    console.log('Response:', response);
     stocksData = await response.json();
+    console.log('Data loaded:', stocksData);
+    console.log('Total stocks:', stocksData.stocks.length);
 
     // Separate stocks by exchange
     tadawulStocks = stocksData.stocks.filter(s => s.exchange === 'Tadawul');
     nomuStocks = stocksData.stocks.filter(s => s.exchange === 'NOMU');
+    console.log('Tadawul:', tadawulStocks.length, 'NOMU:', nomuStocks.length);
 }
 
 // Render metadata
@@ -35,6 +40,7 @@ function renderMetadata() {
     metadataEl.innerHTML = `
         <p>Generated: ${date} | Total Stocks: ${stocksData.metadata.total_stocks}
         (Tadawul: ${stocksData.metadata.tadawul_count}, NOMU: ${stocksData.metadata.nomu_count})</p>
+        <p style="font-style: italic;">Created by Faisal Alkhorayef</p>
     `;
 }
 
@@ -179,6 +185,10 @@ function createDetailRow(stock) {
     populateDetailField(clone, 'price.position_momentum', formatPercent(stock.price.position_momentum));
 
     populateDetailField(clone, 'valuation.market_cap', formatLargeNumber(stock.valuation.market_cap));
+    populateDetailField(clone, 'valuation.enterprise_value', formatLargeNumber(stock.valuation.enterprise_value));
+    populateDetailField(clone, 'valuation.total_debt', formatLargeNumber(stock.valuation.total_debt));
+    populateDetailField(clone, 'valuation.total_cash', formatLargeNumber(stock.valuation.total_cash));
+    populateDetailField(clone, 'valuation.balance_sheet_date', stock.valuation.balance_sheet_date || 'N/A');
     populateDetailField(clone, 'valuation.pe_ltm', formatNumber(stock.valuation.pe_ltm));
     populateDetailField(clone, 'valuation.pb', formatNumber(stock.valuation.pb));
     populateDetailField(clone, 'valuation.ev_fcf', formatNumber(stock.valuation.ev_fcf));
@@ -202,7 +212,88 @@ function createDetailRow(stock) {
     populateDetailField(clone, 'quality.net_income_consistency', formatNumber(stock.quality.net_income_consistency));
     populateDetailField(clone, 'quality.fcf_consistency', formatNumber(stock.quality.fcf_consistency));
 
+    // Populate annual history table
+    const annualTable = clone.querySelector('[data-field="historical.annual"]');
+    if (annualTable && stock.historical && stock.historical.annual) {
+        annualTable.innerHTML = createHistoryTable(stock.historical.annual, 'annual');
+    }
+
+    // Populate quarterly history table
+    const quarterlyTable = clone.querySelector('[data-field="historical.quarterly"]');
+    if (quarterlyTable && stock.historical && stock.historical.quarterly) {
+        quarterlyTable.innerHTML = createHistoryTable(stock.historical.quarterly, 'quarterly');
+    }
+
     return clone;
+}
+
+// Create history table HTML (transposed: periods as columns)
+function createHistoryTable(data, type) {
+    if (!data || data.length === 0) {
+        return '<tr><td colspan="6" class="empty-state">No data available</td></tr>';
+    }
+
+    // Sort data by period (oldest to newest for left-to-right reading)
+    const sortedData = [...data].sort((a, b) => {
+        if (type === 'annual') {
+            return a.fiscal_year - b.fiscal_year;
+        } else {
+            // For quarterly: sort by year, then quarter
+            if (a.fiscal_year === b.fiscal_year) {
+                return a.fiscal_quarter - b.fiscal_quarter;
+            }
+            return a.fiscal_year - b.fiscal_year;
+        }
+    });
+
+    // Create period labels
+    const periods = sortedData.map(row => {
+        return type === 'annual'
+            ? `FY${row.fiscal_year}`
+            : `FY${row.fiscal_year} Q${row.fiscal_quarter}`;
+    });
+
+    // Build header row
+    const headerRow = '<tr><th>Metric</th>' + periods.map(p => `<th>${p}</th>`).join('') + '</tr>';
+
+    // Build metric rows with margins
+    const metrics = [
+        { label: 'Revenue', field: 'revenue', showMargin: false },
+        { label: 'Gross Profit', field: 'gross_profit', showMargin: true },
+        { label: 'Net Income', field: 'net_income', showMargin: true },
+        { label: 'OCF', field: 'operating_cash_flow', showMargin: true },
+        { label: 'CapEx', field: 'capital_expenditure', showMargin: false },
+        { label: 'FCF', field: 'free_cash_flow', showMargin: true }
+    ];
+
+    const metricRows = metrics.map(metric => {
+        // Main metric row
+        const values = sortedData.map(row => {
+            const formattedValue = formatLargeNumber(row[metric.field]);
+            const isNegative = formattedValue.startsWith('(');
+            return `<td class="number-value ${isNegative ? 'negative' : ''}">${formattedValue}</td>`;
+        }).join('');
+        let rows = `<tr><td><strong>${metric.label}</strong></td>${values}</tr>`;
+
+        // Add margin row if applicable
+        if (metric.showMargin) {
+            const marginValues = sortedData.map(row => {
+                const metricValue = row[metric.field];
+                const revenue = row['revenue'];
+                if (metricValue != null && revenue != null && revenue !== 0) {
+                    const margin = (metricValue / revenue * 100).toFixed(1);
+                    return `<td class="number-value margin-row">${margin}%</td>`;
+                } else {
+                    return `<td class="number-value margin-row">-</td>`;
+                }
+            }).join('');
+            rows += `<tr><td style="padding-left: 20px; font-style: italic; color: #888; font-size: 0.85em;">margin</td>${marginValues}</tr>`;
+        }
+
+        return rows;
+    }).join('');
+
+    return `<thead>${headerRow}</thead><tbody>${metricRows}</tbody>`;
 }
 
 // Populate detail field
@@ -259,6 +350,11 @@ function setupEventListeners() {
     document.getElementById('tadawul-sector-filter').addEventListener('change', () => filterStocks('tadawul'));
     document.getElementById('tadawul-industry-filter').addEventListener('change', () => filterStocks('tadawul'));
     document.getElementById('tadawul-search').addEventListener('input', () => filterStocks('tadawul'));
+    document.getElementById('tadawul-52w-filter').addEventListener('change', () => filterStocks('tadawul'));
+    document.getElementById('tadawul-filter-ni-positive').addEventListener('change', () => filterStocks('tadawul'));
+    document.getElementById('tadawul-filter-ni-growing').addEventListener('change', () => filterStocks('tadawul'));
+    document.getElementById('tadawul-filter-fcf-positive').addEventListener('change', () => filterStocks('tadawul'));
+    document.getElementById('tadawul-filter-fcf-growing').addEventListener('change', () => filterStocks('tadawul'));
     document.getElementById('tadawul-clear-filters').addEventListener('click', () => clearFilters('tadawul'));
     document.getElementById('tadawul-export-csv').addEventListener('click', () => exportToCSV('tadawul'));
 
@@ -266,6 +362,11 @@ function setupEventListeners() {
     document.getElementById('nomu-sector-filter').addEventListener('change', () => filterStocks('nomu'));
     document.getElementById('nomu-industry-filter').addEventListener('change', () => filterStocks('nomu'));
     document.getElementById('nomu-search').addEventListener('input', () => filterStocks('nomu'));
+    document.getElementById('nomu-52w-filter').addEventListener('change', () => filterStocks('nomu'));
+    document.getElementById('nomu-filter-ni-positive').addEventListener('change', () => filterStocks('nomu'));
+    document.getElementById('nomu-filter-ni-growing').addEventListener('change', () => filterStocks('nomu'));
+    document.getElementById('nomu-filter-fcf-positive').addEventListener('change', () => filterStocks('nomu'));
+    document.getElementById('nomu-filter-fcf-growing').addEventListener('change', () => filterStocks('nomu'));
     document.getElementById('nomu-clear-filters').addEventListener('click', () => clearFilters('nomu'));
     document.getElementById('nomu-export-csv').addEventListener('click', () => exportToCSV('nomu'));
 
@@ -274,11 +375,57 @@ function setupEventListeners() {
     setupSorting('nomu');
 }
 
+// Quality filter helper functions
+function checkNetIncomeAlwaysPositive(stock) {
+    if (!stock.historical || !stock.historical.annual || stock.historical.annual.length === 0) {
+        return false;
+    }
+    return stock.historical.annual.every(year =>
+        year.net_income != null && year.net_income > 0
+    );
+}
+
+function checkNetIncomeGrowing(stock) {
+    if (!stock.historical || !stock.historical.annual || stock.historical.annual.length < 2) {
+        return false;
+    }
+    const sorted = [...stock.historical.annual].sort((a, b) => a.fiscal_year - b.fiscal_year);
+    const oldest = sorted[0].net_income;
+    const newest = sorted[sorted.length - 1].net_income;
+    return oldest != null && newest != null && oldest > 0 && newest > oldest;
+}
+
+function checkFCFAlwaysPositive(stock) {
+    if (!stock.historical || !stock.historical.annual || stock.historical.annual.length === 0) {
+        return false;
+    }
+    return stock.historical.annual.every(year =>
+        year.free_cash_flow != null && year.free_cash_flow > 0
+    );
+}
+
+function checkFCFGrowing(stock) {
+    if (!stock.historical || !stock.historical.annual || stock.historical.annual.length < 2) {
+        return false;
+    }
+    const sorted = [...stock.historical.annual].sort((a, b) => a.fiscal_year - b.fiscal_year);
+    const oldest = sorted[0].free_cash_flow;
+    const newest = sorted[sorted.length - 1].free_cash_flow;
+    return oldest != null && newest != null && oldest > 0 && newest > oldest;
+}
+
 // Filter stocks
 function filterStocks(exchange) {
     const sectorFilter = document.getElementById(`${exchange}-sector-filter`).value;
     const industryFilter = document.getElementById(`${exchange}-industry-filter`).value;
     const searchText = document.getElementById(`${exchange}-search`).value.toLowerCase();
+    const percentile52wFilter = document.getElementById(`${exchange}-52w-filter`).value;
+
+    // Quality filters
+    const filterNIPositive = document.getElementById(`${exchange}-filter-ni-positive`).checked;
+    const filterNIGrowing = document.getElementById(`${exchange}-filter-ni-growing`).checked;
+    const filterFCFPositive = document.getElementById(`${exchange}-filter-fcf-positive`).checked;
+    const filterFCFGrowing = document.getElementById(`${exchange}-filter-fcf-growing`).checked;
 
     const allStocks = exchange === 'tadawul' ? tadawulStocks : nomuStocks;
 
@@ -289,7 +436,26 @@ function filterStocks(exchange) {
             stock.symbol.toLowerCase().includes(searchText) ||
             stock.company_name.toLowerCase().includes(searchText);
 
-        return matchSector && matchIndustry && matchSearch;
+        // 52W percentile filter
+        let match52w = true;
+        if (percentile52wFilter) {
+            const percentile = stock.price.percentile_52w;
+            if (percentile != null) {
+                const [min, max] = percentile52wFilter.split('-').map(Number);
+                match52w = percentile >= min && percentile <= max;
+            } else {
+                match52w = false;
+            }
+        }
+
+        // Quality filter checks
+        const matchNIPositive = !filterNIPositive || checkNetIncomeAlwaysPositive(stock);
+        const matchNIGrowing = !filterNIGrowing || checkNetIncomeGrowing(stock);
+        const matchFCFPositive = !filterFCFPositive || checkFCFAlwaysPositive(stock);
+        const matchFCFGrowing = !filterFCFGrowing || checkFCFGrowing(stock);
+
+        return matchSector && matchIndustry && matchSearch && match52w &&
+               matchNIPositive && matchNIGrowing && matchFCFPositive && matchFCFGrowing;
     });
 
     renderStocksTable(exchange, filtered);
@@ -300,6 +466,11 @@ function clearFilters(exchange) {
     document.getElementById(`${exchange}-sector-filter`).value = '';
     document.getElementById(`${exchange}-industry-filter`).value = '';
     document.getElementById(`${exchange}-search`).value = '';
+    document.getElementById(`${exchange}-52w-filter`).value = '';
+    document.getElementById(`${exchange}-filter-ni-positive`).checked = false;
+    document.getElementById(`${exchange}-filter-ni-growing`).checked = false;
+    document.getElementById(`${exchange}-filter-fcf-positive`).checked = false;
+    document.getElementById(`${exchange}-filter-fcf-growing`).checked = false;
     filterStocks(exchange);
 }
 
@@ -342,17 +513,15 @@ function sortStocks(exchange, sortKey) {
         }
     });
 
-    // Re-render with sorted data
-    renderStocksTable(exchange, sorted);
-
-    // Apply filters if any are active
-    const sectorFilter = document.getElementById(`${exchange}-sector-filter`).value;
-    const industryFilter = document.getElementById(`${exchange}-industry-filter`).value;
-    const searchText = document.getElementById(`${exchange}-search`).value;
-
-    if (sectorFilter || industryFilter || searchText) {
-        filterStocks(exchange);
+    // Update the source array with sorted data
+    if (exchange === 'tadawul') {
+        tadawulStocks = sorted;
+    } else {
+        nomuStocks = sorted;
     }
+
+    // Always re-apply filters to maintain filter state
+    filterStocks(exchange);
 }
 
 // Export to CSV
@@ -414,32 +583,64 @@ function getNestedValue(obj, path) {
     return path.split('.').reduce((current, key) => current?.[key], obj);
 }
 
-// Helper: Format number
+// Helper: Format number with commas and brackets for negatives
 function formatNumber(value) {
     if (value == null) return '-';
     if (typeof value === 'number') {
-        return value.toFixed(2);
+        const isNegative = value < 0;
+        const absValue = Math.abs(value);
+        const fixed = absValue.toFixed(2);
+        const [intPart, decPart] = fixed.split('.');
+        const withCommas = intPart.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+        const formatted = `${withCommas}.${decPart}`;
+        return isNegative ? `(${formatted})` : formatted;
     }
     return value;
 }
 
-// Helper: Format percentage
+// Helper: Format percentage with commas and brackets for negatives
 function formatPercent(value) {
     if (value == null) return '-';
     if (typeof value === 'number') {
-        return value.toFixed(2) + '%';
+        const isNegative = value < 0;
+        const absValue = Math.abs(value);
+        const fixed = absValue.toFixed(2);
+        const [intPart, decPart] = fixed.split('.');
+        const withCommas = intPart.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+        const formatted = `${withCommas}.${decPart}%`;
+        return isNegative ? `(${formatted})` : formatted;
     }
     return value;
 }
 
-// Helper: Format large number
+// Helper: Format large number with commas and brackets for negatives
 function formatLargeNumber(value) {
     if (value == null) return '-';
     if (typeof value === 'number') {
-        if (value >= 1e9) return (value / 1e9).toFixed(2) + 'B';
-        if (value >= 1e6) return (value / 1e6).toFixed(2) + 'M';
-        if (value >= 1e3) return (value / 1e3).toFixed(2) + 'K';
-        return value.toFixed(2);
+        const isNegative = value < 0;
+        const absValue = Math.abs(value);
+
+        let formatted;
+        if (absValue >= 1e9) {
+            formatted = (absValue / 1e9).toFixed(2) + 'B';
+        } else if (absValue >= 1e6) {
+            formatted = (absValue / 1e6).toFixed(2) + 'M';
+        } else if (absValue >= 1e3) {
+            formatted = (absValue / 1e3).toFixed(2) + 'K';
+        } else {
+            formatted = absValue.toFixed(2);
+        }
+
+        // Add commas to the number part (before B/M/K suffix)
+        const parts = formatted.match(/^([\d.]+)([BMK]?)$/);
+        if (parts) {
+            const [, num, suffix] = parts;
+            const [intPart, decPart] = num.split('.');
+            const withCommas = intPart.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+            formatted = decPart ? `${withCommas}.${decPart}${suffix}` : `${withCommas}${suffix}`;
+        }
+
+        return isNegative ? `(${formatted})` : formatted;
     }
     return value;
 }
